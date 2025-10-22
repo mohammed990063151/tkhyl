@@ -3,11 +3,11 @@
 
   <div class="container position-relative z-3">
     <div class="row gy-4">
-      
+
       <!-- تعريف -->
       <div class="col-lg-4 col-md-6">
         <h4 class="fw-bold mb-3 text-warning">عن تخيّل</h4>
-        <p class="small lh-lg">
+        <p class="small lh-lg" style="color: rgb(246, 244, 244)">
           شركة تخيّل للإبداع والتسويق الرقمي، نبتكر الحلول ونعيد تعريف التجربة التسويقية من خلال مزيج من الإبداع، التقنية، والهوية المحلية.
         </p>
         <div class="social-icons mt-4">
@@ -57,7 +57,7 @@
     <div class="row mt-5">
       <div class="col-12">
         <div class="map-wrapper rounded-4 overflow-hidden shadow-lg">
-          <iframe 
+          <iframe
             src="https://www.google.com/maps?q=Riyadh,Saudi%20Arabia&output=embed"
             width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
           </iframe>
@@ -70,7 +70,7 @@
 
     <!-- الحقوق -->
     <div class="text-center small text-light">
-      © 2025 <span class="text-warning fw-bold">Tkhyl</span> | جميع الحقوق محفوظة  
+      © 2025 <span class="text-warning fw-bold">Tkhyl</span> | جميع الحقوق محفوظة
       <br>
       <span class="text-secondary">تصميم وتنفيذ بفكر <span class="text-warning">تخيل</span> 💡</span>
     </div>
@@ -135,7 +135,7 @@
 
   /* خط الفاصل */
   footer hr {
-    border-top: 1px solid rgba(255,255,255,0.15);
+    border-top: 1px solid rgba(245, 253, 248, 0.15);
   }
 
   /* الحقوق */

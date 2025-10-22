@@ -6,6 +6,7 @@ use App\Http\Controllers\RoomController;
 use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
+use App\Http\Controllers\ContactController;
 Route::get('/custom-login', function() {
     return view('auth.custom-login');
 })->name('custom-login');
@@ -37,7 +38,7 @@ Route::get('/about-us', function () {
 })->name('frontend.about-us');
 
 // صفحة الغرف
-Route::get('/allrooms', function () {
+Route::get('/view', function () {
     return view('frontend.allrooms');
 })->name('frontend.rooms');
 Route::get('/guests-reviews', function () {
@@ -63,6 +64,10 @@ Route::post('/contact-send', function (Request $request) {
 
     return response()->json(['success' => true]);
 });
+
+
+
+Route::post('/contact-send', [ContactController::class, 'send'])->name('contact.send');
 
 
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');

@@ -4,7 +4,7 @@
     <div class="row align-items-center">
       <div class="col-12">
         <nav class="main-nav d-flex justify-content-between align-items-center">
-          
+
           <!-- ***** Logo ***** -->
           <a href="{{ route('frontend.home') }}" class="logo d-flex align-items-center">
             <img src="{{ asset('img/logo1.jpg') }}" alt="Logo" class="logo-img">
@@ -13,12 +13,13 @@
 
           <!-- ***** Menu ***** -->
           <ul class="nav d-none d-lg-flex">
-            <li class="scroll-to-section"><a href="#top" class="active">الرئيسية</a></li>
-            <li class="scroll-to-section"><a href="#services">خدماتنا</a></li>
-            <li class="scroll-to-section"><a href="#about">من نحن</a></li>
-            <li class="scroll-to-section"><a href="#portfolio">المعرض</a></li>
-            <li class="scroll-to-section"><a href="#video">الفيديوهات</a></li>
-            <li class="scroll-to-section"><a href="#contact">تواصل معنا</a></li>
+
+            <li class="scroll-to-section" style="color: black"><a href="{{ route('contact') }}">تواصل معنا</a></li>
+            <li class="scroll-to-section"><a href="{{ route('frontend.rooms') }}">المعرض</a></li>
+            <li class="scroll-to-section"><a href="{{ route('frontend.about-us') }}">من نحن</a></li>
+            <li class="scroll-to-section"><a href="{{ route('frontend.our-services') }}">خدماتنا</a></li>
+             <li class="scroll-to-section"><a href="{{ route('frontend.home') }}" class="active">الرئيسية</a></li>
+            <li class="scroll-to-section"><a href="#contact"></a></li>
           </ul>
 
           <div class="d-none d-lg-block">

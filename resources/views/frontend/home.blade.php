@@ -117,9 +117,138 @@
 }
 </style>
 @section('content')
+<section class="hero-video-section d-flex justify-content-center align-items-center text-center">
+    <!-- خلفية الفيديو -->
+    <video id="heroVideo" autoplay muted playsinline class="hero-bg-video"></video>
+
+    <!-- التعتيم فوق الفيديو -->
+    <div class="hero-overlay"></div>
+
+    <!-- المحتوى -->
+    <div class="hero-content container">
+        <h3 class="animate__animated animate__fadeInDown mb-3 fw-semibold"
+            style="font-size:1.5rem; letter-spacing:3px;">
+            <span style="background: linear-gradient(90deg, #4CAF50, #00BCD4, #FF9800);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;">
+                تـخـيّــل
+            </span>
+        </h3>
+
+        <h1 class="animate__animated animate__fadeInUp display-4 fw-bold mb-4"
+            style="background: linear-gradient(90deg, #4CAF50, #00BCD4, #FF9800);
+                   -webkit-background-clip: text;
+                   -webkit-text-fill-color: transparent;">
+            من مجرّد أفكـــار إلى واقـــع ملمـــــــوس
+        </h1>
+
+        <p class="animate__animated animate__fadeInUp text-light fs-5 mb-5" style="max-width: 700px; margin:auto;">
+            نحـوّل رؤيتك الإبداعية إلى تجربة واقعية تجمع بين الإتقان، الجمال، والابتكار.
+        </p>
+
+        <div class="animate__animated animate__zoomIn">
+            <a href="#services" class="btn btn-lg px-5 py-3 fw-bold hero-btn">
+                اكتشف خدماتنا
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+.hero-video-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    color: #fff;
+}
+
+/* 🎥 فيديو الخلفية */
+.hero-bg-video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+/* 🌑 التعتيم فوق الفيديو */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 2;
+}
+
+/* ✨ المحتوى */
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    animation-duration: 1.5s;
+}
+
+/* 🌈 زر أنيق */
+.hero-btn {
+    background: linear-gradient(90deg, #4CAF50, #00BCD4, #FF9800);
+    border: none;
+    color: #fff;
+    border-radius: 50px;
+    transition: 0.3s ease-in-out;
+}
+.hero-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* 📱 استجابة */
+@media (max-width:768px){
+    .hero-video-section { height: 80vh; }
+    .hero-content h1 { font-size: 2rem; }
+    .hero-content p { font-size: 1rem; }
+}
+</style>
+
+<!-- 🎬 سكربت تبديل الفيديوهات -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const videoElement = document.getElementById("heroVideo");
+
+  // ✨ قائمة الفيديوهات
+  const videos = [
+    "{{ asset('img/2.mp4') }}",
+    "{{ asset('img/3.mp4') }}",
+    "{{ asset('img/WhatsApp Video 2025-10-20 at 11.25.48 AM.mp4') }}"
+  ];
+
+  let index = 0;
+
+  // 🔁 دالة لتشغيل الفيديو الحالي
+  function playVideo() {
+    videoElement.style.opacity = 0;
+    setTimeout(() => {
+      videoElement.src = videos[index];
+      videoElement.load();
+      videoElement.play();
+      videoElement.style.opacity = 1;
+    }, 500);
+  }
+
+  // عند انتهاء الفيديو، انتقل إلى التالي
+  videoElement.addEventListener("ended", () => {
+    index = (index + 1) % videos.length;
+    playVideo();
+  });
+
+  // بدء التشغيل
+  playVideo();
+});
+</script>
 
 
-
+{{--
 <section class="hero-video-section d-flex justify-content-center align-items-center text-center">
     <!-- خلفية الفيديو -->
     <video autoplay loop muted playsinline class="hero-bg-video">
@@ -214,11 +343,11 @@
     .hero-content h1 { font-size: 2rem; }
     .hero-content p { font-size: 1rem; }
 }
-</style>
+</style> --}}
 
 
 
-<section id="groups" class="py-5" style="direction: rtl; background: linear-gradient(135deg, #007BFF, #28a745, #ff9800); position: relative; overflow:hidden;">
+{{-- <section id="groups" class="py-5" style="direction: rtl; background: linear-gradient(135deg, #007BFF, #28a745, #ff9800); position: relative; overflow:hidden;">
   <!-- خلفية فيديو خافتة -->
   <video autoplay muted loop playsinline class="position-absolute w-100 h-100" style="object-fit: cover; z-index:0; opacity:0.15;">
     <source src="{{ asset('img/2.mp4') }}" type="video/mp4">
@@ -345,10 +474,10 @@
 </style>
 
 <!-- مكتبة الأيقونات -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script> --}}
 
 
-<section id="vision" class="py-5" style="direction: rtl; background: linear-gradient(135deg, #007BFF, #28a745, #ff9800); position: relative; overflow:hidden;">
+{{-- <section id="vision" class="py-5" style="direction: rtl; background: linear-gradient(135deg, #007BFF, #28a745, #ff9800); position: relative; overflow:hidden;">
   <!-- خلفية فيديو ناعمة -->
   <video autoplay muted loop playsinline class="position-absolute w-100 h-100" style="object-fit: cover; z-index:0; opacity:0.15;">
     <source src="{{ asset('img/WhatsApp Video 2025-10-20 at 11.25.51 AM.mp4') }}" type="video/mp4">
@@ -426,44 +555,45 @@
     0%, 100% { transform: scale(1); opacity: 0.5; }
     50% { transform: scale(1.2); opacity: 0.2; }
   }
-</style>
-
-
-
-<section id="origin" class="py-5" style="direction: rtl; background: linear-gradient(135deg, #007BFF, #28a745, #ff9800); position: relative; overflow:hidden;">
-  <!-- خلفية فيديو خافتة -->
-  <video autoplay muted loop playsinline class="position-absolute w-100 h-100" style="object-fit: cover; z-index:0; opacity:0.12;">
-    <source src="{{ asset('img/3.mp4') }}" type="video/mp4">
+</style> --}}
+<section id="vision" class="py-5" style="direction: rtl; background:#fff; position: relative; overflow:hidden;">
+  <!-- خلفية فيديو ناعمة -->
+  <video autoplay muted loop playsinline class="position-absolute w-100 h-100" style="object-fit: cover; z-index:0; opacity:0.06;">
+    <source src="{{ asset('img/WhatsApp Video 2025-10-20 at 11.25.51 AM.mp4') }}" type="video/mp4">
   </video>
 
-  <!-- طبقة شفافة -->
-  <div style="background: rgba(0,0,0,0.6); position:absolute; inset:0; "></div>
+  <!-- طبقة شفافة بيضاء -->
+  <div style="background: rgba(255,255,255,0.9); position:absolute; inset:0;"></div>
 
-  <div class="container position-relative z-3 text-white">
+  <div class="container position-relative z-3 text-dark">
     <div class="row align-items-center g-5">
 
       <!-- النص -->
       <div class="col-lg-6 text-center text-lg-start">
-        <h2 class="fw-bold mb-3" style="font-family:'Cairo',sans-serif; font-size:2.3rem;">
-          نشـــأة <span class="text-warning">تخـــــيّل</span>
+        <h2 class="fw-bold mb-3" style="font-family:'Cairo',sans-serif; font-size:2.3rem; color:#111;">
+          في عالم التسويق
         </h2>
 
-        <p class="lead mb-4" style="font-family:'Cairo',sans-serif; line-height:1.9; font-size:1.2rem; color: rgb(6, 5, 21);">
-          في <span class="text-success fw-bold">بيئة تنافسية</span> جعلتنا أكثر <span class="text-info fw-bold">ابتكارًا</span>
-          لطرق تسويقية <span class="text-warning fw-bold">نوعية ومختلفة</span>،
-          مغلفة بهويتنا <span class="text-light fw-bold">المحلية</span>، نصنع فيها
-          <span class="text-warning fw-bold">الأصالة</span> و<span class="text-success fw-bold">الإبداع</span>
-          لنصنع <span class="text-info fw-bold">اللحظة</span>.
+        <h3 class="fw-bold mb-4" style="font-family:'Cairo',sans-serif; color:#ff9800;">
+          القصة تُروى والفرص تُصنع
+        </h3>
+
+        <p class="lead" style="font-family:'Cairo',sans-serif; line-height:1.9; font-size:1.15rem; color:#333;">
+          رؤيتنا الواضحة <span style="color:#007BFF; font-weight:bold;">تصنع محتوى</span> 
+          يُبنى عليه <span style="color:#28a745; font-weight:bold;">المجـــــــد</span>.
         </p>
 
-        <a href="#vision" class="btn btn-light btn-lg rounded-pill px-4 py-2 fw-bold">اكتشف رؤيتنا</a>
+        <a href="#services" class="btn gradient-btn btn-lg rounded-pill mt-4 px-4 py-2 fw-bold shadow-sm">
+          اكتشف خدماتنا
+        </a>
       </div>
 
       <!-- الصورة الجانبية -->
       <div class="col-lg-6 text-center">
-        <div class="image-wrapper position-relative">
-          <img src="{{ asset('img/3.jpg') }}" alt="تخيل الإبداع" class="img-fluid rounded-4 shadow-lg floating-img">
-          <!-- تأثيرات دائرية -->
+        <div class="image-wrapper position-relative d-inline-block">
+          <img src="{{ asset('img/2.jpg') }}" alt="Vision" class="img-fluid rounded-4 shadow-lg floating-img">
+          
+          <!-- تأثير الدوائر -->
           <div class="circle circle1"></div>
           <div class="circle circle2"></div>
         </div>
@@ -477,32 +607,40 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
 
-  #origin {
+  #vision {
     font-family: 'Cairo', sans-serif;
   }
 
+  /* الصورة العائمة */
   .floating-img {
     animation: float 4s ease-in-out infinite;
-    max-width: 100%;
+    transition: transform 0.3s ease;
   }
-  @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+  .floating-img:hover {
+    transform: scale(1.05);
   }
 
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+  }
+
+  /* الدوائر المتحركة */
   .circle {
     position: absolute;
     border-radius: 50%;
-    background: rgba(255,255,255,0.1);
+    background: rgba(0,0,0,0.05);
     animation: pulse 6s infinite ease-in-out;
     z-index: -1;
   }
+
   .circle1 {
     width: 180px;
     height: 180px;
     top: -40px;
     left: -30px;
   }
+
   .circle2 {
     width: 250px;
     height: 250px;
@@ -512,21 +650,33 @@
   }
 
   @keyframes pulse {
-    0%, 100% { transform: scale(1); opacity: 0.5; }
-    50% { transform: scale(1.3); opacity: 0.2; }
+    0%, 100% { transform: scale(1); opacity: 0.4; }
+    50% { transform: scale(1.3); opacity: 0.15; }
   }
 
-  .btn-light {
-    border-radius: 30px;
-    font-weight: 700;
+  /* الزر المتدرج */
+  .gradient-btn {
+    background: linear-gradient(90deg, #007BFF, #28a745, #ff9800);
+    color: #fff;
+    border: none;
     transition: all 0.3s ease;
   }
-  .btn-light:hover {
-    background: #ffca2c;
-    color: #000;
+  .gradient-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-3px);
+  }
+
+  @media (max-width: 767px) {
+    .circle1, .circle2 { opacity: 0.3; }
+    .floating-img { max-width: 90%; }
   }
 </style>
-<section id="communities" class="py-5" style="direction: rtl; background: linear-gradient(135deg, #007BFF, #28a745, #ff9800); position: relative; overflow:hidden;">
+
+
+
+
+
+{{-- <section id="communities" class="py-5" style="direction: rtl; background: linear-gradient(135deg, #007BFF, #28a745, #ff9800); position: relative; overflow:hidden;">
   <!-- خلفية فيديو خافتة -->
   <video autoplay muted loop playsinline class="position-absolute w-100 h-100" style="object-fit: cover; z-index:0; opacity:0.1;">
     <source src="{{ asset('img/3.mp4') }}" type="video/mp4">
@@ -640,10 +790,13 @@
     background: #ffc107;
     color: #000;
   }
-</style>
+</style> --}}
 
 
 
+
+
+{{-- 
 <section id="meetings" class="py-5" style="direction: rtl; background: linear-gradient(135deg, #ff9800, #007bff, #28a745); position: relative; overflow:hidden;">
   <!-- خلفية فيديو خافتة -->
   <video autoplay muted loop playsinline class="position-absolute w-100 h-100" style="object-fit: cover; z-index:0; opacity:0.1;">
@@ -789,8 +942,160 @@
     background: #ffc107;
     color: #000;
   }
-</style>
+</style> --}}
 
+
+{{-- <section id="sessions" class="py-5" style="direction: rtl; background: linear-gradient(135deg, #007BFF, #28a745, #ff9800); position: relative; overflow:hidden;">
+  <!-- خلفية فيديو خافتة -->
+  <video autoplay muted loop playsinline class="position-absolute w-100 h-100" style="object-fit: cover; z-index:0; opacity:0.1;">
+    <source src="{{ asset('img/3.mp4') }}" type="video/mp4">
+  </video>
+
+  <!-- طبقة شفافة -->
+  <div style="background: rgba(0,0,0,0.7); position:absolute; inset:0;"></div>
+
+  <div class="container position-relative z-3 text-white text-center">
+    <h2 class="fw-bold mb-4" style="font-family:'Cairo',sans-serif; font-size:2.5rem;">
+      سلسلة <span class="text-warning">لقاءات تخيّل</span>
+    </h2>
+    <p class="lead mb-5" style="max-width: 800px; margin:auto; font-family:'Cairo',sans-serif; color: rgb(5, 27, 15);">
+      لقاءات ملهمة تجمع نخبة من رواد الأعمال والمستشارين لتبادل الخبرات والرؤى حول التجارة، العلامات التجارية، والإبداع في بيئة الأعمال السعودية.
+    </p>
+
+    <!-- كروت اللقاءات -->
+    <div class="timeline position-relative">
+      <!-- اللقاء الأول -->
+      <div class="session-card fade-up">
+        <div class="speaker-img">
+          <img src="{{ asset('img/img1.jpeg') }}" alt="د. أحمد الذهيبي">
+        </div>
+        <h5 class="text-warning fw-bold mt-3">اللقاء الأول</h5>
+        <h4 class="fw-bold mb-2">الفرق بين التجارة التقليدية والتجارة الرقمية</h4>
+        <p class="text-light small mb-2">د. أحمد الذهيبي</p>
+        <p class="small mb-0"  style=" color: rgb(5, 27, 15);">صاحب تطبيق <span class="text-info fw-bold">مقضاك</span>، دكتوراه في إدارة المعرفة، مستشار وخبير في التحول الرقمي ومدرب دولي معتمد في القيادة والتخطيط الإداري.</p>
+      </div>
+
+      <!-- اللقاء الثاني -->
+      <div class="session-card fade-up" style="animation-delay:0.3s;">
+        <div class="speaker-img">
+          <img src="{{ asset('img/img2.jpeg') }}" alt="م. عبد العزيز السلامة">
+        </div>
+        <h5 class="text-warning fw-bold mt-3">اللقاء الثاني</h5>
+        <h4 class="fw-bold mb-2">كيف تواجه المطاعم والمقاهي انخفاض المبيعات</h4>
+        <p class="text-light small mb-2">م. عبد العزيز السلامة</p>
+        <p class="small mb-0" style=" color: rgb(5, 27, 15);">مدرب ومستشار ومستثمر في قطاع المطاعم والمقاهي، بخبرة في تطوير نماذج العمل واستراتيجيات زيادة الإيرادات.</p>
+      </div>
+
+      <!-- اللقاء الثالث -->
+      <div class="session-card fade-up" style="animation-delay:0.6s;">
+        <div class="speaker-img">
+          <img src="{{ asset('img/img3.jpg') }}" alt="أ. أحمد بن عامر بدوي">
+        </div>
+        <h5 class="text-warning fw-bold mt-3">اللقاء الثالث</h5>
+        <h4 class="fw-bold mb-2">رحلة التاجر من البدايات</h4>
+        <p class="text-light small mb-2">أ. أحمد بن عامر بدوي</p>
+        <p class="small mb-0" style=" color: rgb(5, 27, 15);">رائد أعمال، حاصل على جائزة الشخصية الإعلامية المؤثرة، ناشط بيئي، وأمين حاضنة الوجيه لريادة الأعمال.</p>
+      </div>
+
+      <!-- اللقاء الرابع -->
+      <div class="session-card fade-up" style="animation-delay:0.9s;">
+        <div class="speaker-img">
+          <img src="{{ asset('img/img4.jpg') }}" alt="د. خالد بن سليمان الراجحي">
+        </div>
+        <h5 class="text-warning fw-bold mt-3">اللقاء الرابع</h5>
+        <h4 class="fw-bold mb-2">استراتيجية العلامة التجارية وأسرارها</h4>
+        <p class="text-light small mb-2">د. خالد بن سليمان الراجحي</p>
+        <p class="small mb-0" style=" color: rgb(5, 27, 15);">نائب رئيس مجلس إدارة مجموعة الراجحي القابضة ومحاضر بجامعة اليمامة، بخبرة في بناء العلامات التجارية واستراتيجيات التسويق.</p>
+      </div>
+    </div>
+
+    <div class="mt-5">
+      <a href="#register" class="btn btn-light btn-lg rounded-pill px-5 py-2 fw-bold shadow">سجّل في اللقاء القادم</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CSS ===== -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+  #sessions {
+    font-family: 'Cairo', sans-serif;
+  }
+
+  .timeline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .session-card {
+    background: rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 2rem;
+    max-width: 340px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255,255,255,0.1);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(8px);
+  }
+
+  .session-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(255,255,255,0.3);
+  }
+
+  /* صور المتحدث */
+  .speaker-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 3px solid rgba(255,255,255,0.5);
+    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    transition: all 0.4s ease;
+  }
+
+  .speaker-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .session-card:hover .speaker-img img {
+    transform: scale(1.1);
+  }
+
+  /* animation */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s forwards;
+  }
+
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .btn-light {
+    border-radius: 30px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+  }
+
+  .btn-light:hover {
+    background: #ffc107;
+    color: #000;
+  }
+</style> --}}
 
 <section id="sessions" class="py-5" style="direction: rtl; background: linear-gradient(135deg, #007BFF, #28a745, #ff9800); position: relative; overflow:hidden;">
   <!-- خلفية فيديو خافتة -->
@@ -941,6 +1246,142 @@
   .btn-light:hover {
     background: #ffc107;
     color: #000;
+  }
+</style>
+
+
+<section id="communities" class="py-5" style="direction: rtl; background:#fff; position: relative; overflow:hidden;">
+  <!-- خلفية فيديو خافتة شفافة -->
+  <video autoplay muted loop playsinline class="position-absolute w-100 h-100" style="object-fit: cover; z-index:0; opacity:0.06;">
+    <source src="{{ asset('img/3.mp4') }}" type="video/mp4">
+  </video>
+
+  <!-- طبقة شفافة بيضاء -->
+  <div style="background: rgba(255,255,255,0.9); position:absolute; inset:0;"></div>
+
+  <div class="container position-relative z-3 text-dark">
+    <div class="row align-items-center g-5">
+
+      <!-- النص -->
+      <div class="col-lg-6 text-center text-lg-start">
+        <h2 class="fw-bold mb-3" style="font-family:'Cairo',sans-serif; font-size:2.3rem;">
+          مجتمعات ومجموعات <span style="color:#ff9800;">تخــيّل</span>
+        </h2>
+
+        <p class="lead mb-4" style="font-family:'Cairo',sans-serif; line-height:1.9; font-size:1.15rem; color:#333;">
+          في <span style="color:#007BFF; font-weight:bold;">عالم متصل</span>، نحن لا نقدم خدمات تسويقية فقط،
+          بل ننشئ <span style="color:#ff9800; font-weight:bold;">مجتمعات</span> تفتح الأفق وتخلق 
+          <span style="color:#28a745; font-weight:bold;">فرصًا جديدة</span>.
+          من خلال مجموعاتنا العامة والخاصة، نُمكّن عملاءنا من 
+          <span style="color:#000; font-weight:bold;">التفاعل</span>، 
+          <span style="color:#ff9800; font-weight:bold;">التطور</span>، 
+          وبناء علاقات تُسهم في فتح <span style="color:#007BFF; font-weight:bold;">أبواب النجاح</span>.
+        </p>
+
+        <a href="#join" class="btn gradient-btn btn-lg rounded-pill px-4 py-2 fw-bold shadow-sm">انضم إلى مجتمعنا</a>
+      </div>
+
+      <!-- الصورة الجانبية -->
+      <div class="col-lg-6 text-center">
+        <div class="image-wrapper position-relative d-inline-block">
+          <img src="{{ asset('img/4.jpg') }}" alt="مجتمعات تخيل" class="img-fluid rounded-4 shadow-lg floating-img">
+
+          <!-- تأثيرات دائرية خفيفة -->
+          <div class="circle circle1"></div>
+          <div class="circle circle2"></div>
+
+          <!-- رموز تفاعلية -->
+          <i class="bi bi-people-fill connect-icon icon1"></i>
+          <i class="bi bi-chat-dots-fill connect-icon icon2"></i>
+          <i class="bi bi-globe connect-icon icon3"></i>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CSS ===== -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+  @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css');
+
+  #communities {
+    font-family: 'Cairo', sans-serif;
+  }
+
+  /* الصورة العائمة */
+  .floating-img {
+    animation: float 4s ease-in-out infinite;
+    max-width: 100%;
+    transition: transform 0.3s ease;
+  }
+  .floating-img:hover {
+    transform: scale(1.05);
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* دوائر خلف الصورة */
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.05);
+    animation: pulse 6s infinite ease-in-out;
+    z-index: -1;
+  }
+  .circle1 {
+    width: 180px;
+    height: 180px;
+    top: -40px;
+    left: -30px;
+  }
+  .circle2 {
+    width: 250px;
+    height: 250px;
+    bottom: -50px;
+    right: -20px;
+    animation-delay: 2s;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.4; }
+    50% { transform: scale(1.3); opacity: 0.15; }
+  }
+
+  /* أيقونات الاتصال */
+  .connect-icon {
+    position: absolute;
+    color: rgba(0,0,0,0.6);
+    font-size: 2rem;
+    animation: blink 5s infinite alternate;
+  }
+  .icon1 { top: 10%; left: 15%; animation-delay: 1s; color:#007BFF; }
+  .icon2 { bottom: 20%; right: 15%; animation-delay: 2s; color:#28a745; }
+  .icon3 { top: 40%; right: 5%; animation-delay: 3s; color:#ff9800; }
+
+  @keyframes blink {
+    0%, 100% { opacity: 0.4; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+  }
+
+  /* الزر */
+  .gradient-btn {
+    background: linear-gradient(90deg, #007BFF, #28a745, #ff9800);
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease;
+  }
+  .gradient-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-3px);
+  }
+
+  @media (max-width: 767px) {
+    .connect-icon { font-size: 1.6rem; }
+    .circle1, .circle2 { opacity: 0.3; }
   }
 </style>
 
@@ -1100,7 +1541,7 @@
   });
 </script>
 
-<section id="majlis" class="py-5" style="direction: rtl; background: linear-gradient(135deg, #007BFF, #28a745, #ff9800); position: relative; overflow:hidden;">
+{{-- <section id="majlis" class="py-5" style="direction: rtl; background: linear-gradient(135deg, #007BFF, #28a745, #ff9800); position: relative; overflow:hidden;">
   <!-- خلفية فيديو -->
   <video autoplay muted loop playsinline class="position-absolute w-100 h-100" style="object-fit: cover; z-index:0; opacity:0.15;">
     <source src="{{ asset('img/3.mp4') }}" type="video/mp4">
@@ -1189,81 +1630,44 @@
     0% { opacity: 0.8; transform: scale(1); }
     100% { opacity: 1; transform: scale(1.05); }
   }
-</style>
+</style> --}}
 
+<section id="majlis" class="py-5" style="direction: rtl; background:#fff; position: relative; overflow:hidden;">
+  <div class="container text-center">
+    <!-- العنوان -->
+    <h2 class="fw-bold mb-4" style="font-family:'Cairo',sans-serif; font-size:2.5rem; color:#222;">
+      مـجــالــس <span style="color:#ff9800;">تـخـيّــــل</span>
+    </h2>
 
-<section id="contact" class="py-5 position-relative" style="direction: rtl; background: linear-gradient(135deg, #007BFF, #28a745, #ff9800); overflow:hidden;">
-  <!-- تدرج خلفي زجاجي -->
-  <div class="position-absolute w-100 h-100" style="background: rgba(0,0,0,0.65); inset:0;"></div>
+    <!-- النص الترحيبي -->
+    <div class="poem mx-auto mb-5" style="max-width: 650px; color:#28a745;">
+      <p class="fs-5 mb-1 fade-in" style="animation-delay:0.3s;">حنّا مجالسنا بليا مفاتيح</p>
+      <p class="fs-5 mb-1 fade-in" style="animation-delay:0.5s;">نستقبلك أربع وعشرين ساعه</p>
+      <p class="fs-5 mb-1 fade-in" style="animation-delay:0.7s;">يا ضيفنا اقلط على هبّة الريح</p>
+      <p class="fs-5 fade-in" style="animation-delay:0.9s;">مادام عندك للمجيء استطاعه</p>
+    </div>
 
-  <div class="container position-relative z-3">
-    <div class="row align-items-center gy-5">
+    <!-- صورة ترحيبية -->
+    <div class="campfire mx-auto mb-4 position-relative">
+      <img src="{{ asset('img/8.jpg') }}" alt="نار الكرم" class="rounded-4 shadow" style="width:300px;">
+      <div class="decor-circle"></div>
+    </div>
 
-      <!-- نموذج الاتصال -->
-      <div class="col-lg-6 order-2 order-lg-1">
-        <div class="contact-form p-4 p-md-5 rounded-4 shadow-lg">
-          <h2 class="fw-bold mb-4 text-white text-center">📬 تواصل معنا</h2>
+    <!-- معلومات التواصل -->
+    <div class="contact-info mt-4">
+      <p class="fs-6 mb-2" style="color:#333;">
+        <i class="bi bi-envelope-fill text-primary me-2"></i> info@tkhyl.com.sa
+      </p>
+      <p class="fs-6" style="color:#333;">
+        <i class="bi bi-telephone-fill text-success me-2"></i> 0568979769
+      </p>
+    </div>
 
-          <!-- معلومات الاتصال -->
-          <div class="row text-center text-white mb-4">
-            <div class="col-6 mb-3">
-              <div class="info-item">
-                <i class="bi bi-geo-alt-fill text-warning fs-3 mb-2"></i>
-                <p class="mb-0 small" style="color: #ccc">الرياض - المملكة العربية السعودية</p>
-              </div>
-            </div>
-            <div class="col-6 mb-3">
-              <div class="info-item">
-                <i class="bi bi-telephone-fill text-success fs-3 mb-2"></i>
-                <p class="mb-0 small"><a href="tel:0568979769" class="text-white text-decoration-none">0568979769</a></p>
-              </div>
-            </div>
-            <div class="col-6 mb-3">
-              <div class="info-item">
-                <i class="bi bi-envelope-fill text-info fs-3 mb-2"></i>
-                <p class="mb-0 small"><a href="mailto:info@tkhyl.com.sa" class="text-white text-decoration-none">info@tkhyl.com.sa</a></p>
-              </div>
-            </div>
-            <div class="col-6 mb-3">
-              <div class="info-item">
-                <i class="bi bi-whatsapp text-success fs-3 mb-2"></i>
-                <p class="mb-0 small"><a href="https://wa.me/966568979769" target="_blank" class="text-white text-decoration-none">واتساب مباشر</a></p>
-              </div>
-            </div>
-          </div>
-
-          <!-- نموذج -->
-          <form id="contactForm"  style="text-align: justify; !important" >
-            <div class="mb-3">
-              <label class="form-label text-white">الاسم الكامل</label>
-              <input type="text" id="name" class="form-control rounded-pill" placeholder="اكتب اسمك" required>
-            </div>
-            <div class="mb-3">
-              <label class="form-label text-white">البريد الإلكتروني</label>
-              <input type="email" id="email" class="form-control rounded-pill" placeholder="example@email.com" required>
-            </div>
-            <div class="mb-3">
-              <label class="form-label text-white">الرسالة</label>
-              <textarea id="message" rows="4" class="form-control rounded-4" placeholder="اكتب رسالتك..." required></textarea>
-            </div>
-            <div class="text-center">
-              <button type="submit" class="btn btn-light rounded-pill px-5 py-2 fw-bold glow-btn">إرسال</button>
-            </div>
-            <p id="successMsg" class="text-center mt-3 text-success fw-bold" style="display:none;">✅ تم إرسال رسالتك بنجاح</p>
-          </form>
-        </div>
-      </div>
-
-      <!-- الخريطة -->
-      <div class="col-lg-6 order-1 order-lg-2">
-        <div class="map-wrapper rounded-4 overflow-hidden shadow-lg">
-          <iframe
-            src="https://www.google.com/maps?q=Riyadh,Saudi%20Arabia&output=embed"
-            width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy">
-          </iframe>
-        </div>
-      </div>
-
+    <!-- زر التواصل -->
+    <div class="mt-4">
+      <a href="https://wa.me/966568979769" target="_blank" class="btn gradient-btn text-white fw-bold rounded-pill px-5 py-2 shadow-sm">
+        تواصل معنا الآن
+      </a>
     </div>
   </div>
 </section>
@@ -1273,129 +1677,64 @@
   @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
   @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css');
 
-  #contact {
+  #majlis {
     font-family: 'Cairo', sans-serif;
   }
 
-  /* صندوق التواصل */
-  .contact-form {
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    transition: all 0.4s ease;
-    animation: fadeInUp 1s ease forwards;
+  /* تأثيرات النص */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 1.5s forwards;
   }
-
-  .contact-form:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 25px rgba(255,255,255,0.2);
-  }
-
-  /* معلومات الاتصال */
-  .info-item i {
-    transition: transform 0.3s ease;
-  }
-  .info-item:hover i {
-    transform: scale(1.3) rotate(10deg);
-  }
-
-  /* الحقول */
-  .form-control {
-    background: rgba(255,255,255,0.15);
-    color: #fff;
-    border: none;
-    transition: all 0.3s ease;
-  }
-
-  .form-control::placeholder { color: #ccc; }
-  .form-control:focus {
-    outline: none;
-    box-shadow: 0 0 10px #ffc107;
-    background: rgba(255,255,255,0.25);
-  }
-
-  /* الزر */
-  .glow-btn {
-    box-shadow: 0 0 20px rgba(255,255,255,0.3);
-    transition: all 0.3s ease;
-  }
-  .glow-btn:hover {
-    background: #ffc107;
-    color: #000;
-    box-shadow: 0 0 40px rgba(255,255,255,0.6);
-  }
-
-  /* الخريطة */
-  .map-wrapper iframe {
-    filter: brightness(0.9) saturate(1.2);
-    transition: transform 0.6s ease;
-  }
-  .map-wrapper:hover iframe {
-    transform: scale(1.03);
-  }
-
-  /* أنيميشن الدخول */
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(40px); }
+  @keyframes fadeIn {
     to { opacity: 1; transform: translateY(0); }
   }
 
-  @media (max-width: 768px) {
-    .contact-form { margin-top: 20px; }
+  /* الصورة مع دائرة خلفية زخرفية */
+  .campfire {
+    position: relative;
+    display: inline-block;
+  }
+  .decor-circle {
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,152,0,0.15) 0%, rgba(0,123,255,0.05) 70%);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+  /* تأثير خفيف على الصورة */
+  .campfire img {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  }
+  .campfire img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255,152,0,0.4);
+  }
+
+  /* زر التدرج */
+  .gradient-btn {
+    background: linear-gradient(90deg, #007BFF, #28a745, #ff9800);
+    border: none;
+    transition: all 0.3s ease;
+  }
+  .gradient-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-3px);
+  }
+
+  /* استجابة للشاشات الصغيرة */
+  @media (max-width: 767px) {
+    h2 { font-size: 2rem; }
+    .campfire img { width: 220px; }
   }
 </style>
 
-<!-- ===== JS for Form ===== -->
-{{-- <script>
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-  e.preventDefault();
 
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
-  const successMsg = document.getElementById("successMsg");
-
-  if (name && email && message) {
-    successMsg.style.display = "block";
-    e.target.reset();
-    setTimeout(() => successMsg.style.display = "none", 4000);
-  }
-});
-</script> --}}
-<script>
-document.getElementById("contactForm").addEventListener("submit", async function(e) {
-  e.preventDefault();
-
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
-  const successMsg = document.getElementById("successMsg");
-
-  if (name && email && message) {
-    try {
-      const response = await fetch("/contact-send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').content
-        },
-        body: JSON.stringify({ name, email, message })
-      });
-
-      const result = await response.json();
-      if (result.success) {
-        successMsg.style.display = "block";
-        e.target.reset();
-        setTimeout(() => successMsg.style.display = "none", 4000);
-      } else {
-        alert("حدث خطأ أثناء الإرسال.");
-      }
-    } catch (error) {
-      alert("تعذر الإرسال، حاول لاحقًا.");
-    }
-  }
-});
-</script>
 
 
 

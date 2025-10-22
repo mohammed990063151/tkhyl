@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 
 <style>
     .logo {
@@ -43,6 +43,6 @@
 @include('frontend.layouts.footer')
 @include('frontend.layouts.script')
 
-               
+
 </body>
 </html>
