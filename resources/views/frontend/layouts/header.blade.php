@@ -8,7 +8,7 @@
           <!-- ***** Logo ***** -->
           <a href="{{ route('frontend.home') }}" class="logo d-flex align-items-center">
             <img src="{{ asset('img/logo1.jpg') }}" alt="Logo" class="logo-img">
-            <span class="logo-text ms-2">Tkhael</span>
+            {{-- <span class="logo-text ms-2"></span> --}}
           </a>
 
           <!-- ***** Menu ***** -->
@@ -95,7 +95,7 @@
 /* Button */
 .btn-gradient {
   padding: 10px 25px;
-  background: linear-gradient(90deg, #4CAF50, #00BCD4, #FF9800);
+  background:  #FF9800;
   border-radius: 30px;
   color: #fff;
   font-weight: bold;

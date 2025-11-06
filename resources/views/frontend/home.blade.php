@@ -192,7 +192,8 @@
 
 /* 🌈 زر أنيق */
 .hero-btn {
-    background: linear-gradient(90deg, #4CAF50, #00BCD4, #FF9800);
+    background:  #FF9800;
+    /* linear-gradient(90deg, #4CAF50, #00BCD4, */
     border: none;
     color: #fff;
     border-radius: 50px;
@@ -248,6 +249,162 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 
 
+
+<section id="projects" class="py-5" style="direction: rtl; background: linear-gradient(135deg, #007BFF, #28a745, #ff9800); position: relative; overflow:hidden;">
+  <!-- خلفية فيديو -->
+  <video autoplay muted loop playsinline class="position-absolute w-100 h-100" style="object-fit: cover; z-index:0; opacity:0.1;">
+    <source src="{{ asset('img/2.mp4') }}" type="video/mp4">
+  </video>
+
+  <div style="background: rgba(0,0,0,0.6); position:absolute; inset:0;"></div>
+
+  <div class="container position-relative z-3 text-white text-center">
+    <h2 class="fw-bold mb-4" style="font-family:'Cairo',sans-serif;">أعمالنــــــا</h2>
+    <p class="lead mb-5" style="max-width:750px; margin:auto; font-family:'Cairo',sans-serif; color: rgb(5, 27, 15);">
+      مجموعة من أبرز مشاريعنا الناجحة التي تعكس شغفنا بالإبداع والابتكار في تقديم الحلول الرقمية والتسويقية.
+    </p>
+
+    <!-- ====== الفلاتر ====== -->
+    <div class="mb-5 d-flex flex-wrap justify-content-center gap-2">
+      <button class="filter-btn active" data-filter="all">جميع الأعمال</button>
+      <button class="filter-btn" data-filter="tech">الحلول التقنية</button>
+      <button class="filter-btn" data-filter="branding">تصميم الهوية البصرية</button>
+      <button class="filter-btn" data-filter="ads">الحملات الإعلانية</button>
+      <button class="filter-btn" data-filter="profiles">الملفات التعريفية</button>
+      <button class="filter-btn" data-filter="content">صناعة المحتوى</button>
+    </div>
+
+    <!-- ====== الشبكة ====== -->
+    <div class="row g-4 justify-content-center" id="project-grid">
+      <!-- مشروع 1 -->
+      <div class="col-md-3 project-item" data-category="branding">
+        <div class="project-card shadow-lg">
+          <div class="project-img" style="background-image:url('{{ asset('img/analysis-1841158_1280.jpg') }}');"></div>
+          <div class="project-overlay">
+            <h5 class="fw-bold">شركة مساحة لتصميم الهوية</h5>
+            <a href="#" class="btn btn-sm btn-light mt-2">عرض التفاصيل</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- مشروع 2 -->
+      <div class="col-md-3 project-item" data-category="tech">
+        <div class="project-card shadow-lg">
+          <div class="project-img" style="background-image:url('{{ asset('img/world-4961456_1280.jpg') }}');"></div>
+          <div class="project-overlay">
+            <h5 class="fw-bold">نظام Axis اللوجستي</h5>
+            <a href="#" class="btn btn-sm btn-light mt-2">عرض التفاصيل</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- مشروع 3 -->
+      <div class="col-md-3 project-item" data-category="content">
+        <div class="project-card shadow-lg">
+          <div class="project-img" style="background-image:url('{{ asset('img/digital-marketing-4297723_1280.jpg') }}');"></div>
+          <div class="project-overlay">
+            <h5 class="fw-bold">حملة محتوى "بقاء"</h5>
+            <a href="#" class="btn btn-sm btn-light mt-2">عرض التفاصيل</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- مشروع 4 -->
+      <div class="col-md-3 project-item" data-category="ads">
+        <div class="project-card shadow-lg">
+          <div class="project-img" style="background-image:url('{{ asset('img/kaufmann-3821436_1280.jpg') }}');"></div>
+          <div class="project-overlay">
+            <h5 class="fw-bold">حملة إعلانية Second Brain</h5>
+            <a href="#" class="btn btn-sm btn-light mt-2">عرض التفاصيل</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- زر عرض الكل -->
+    <div class="mt-5">
+      <a href="#" class="btn btn-outline-light px-4 py-2">عرض جميع المشاريع</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==== التنسيقات ==== -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+  .filter-btn {
+    border: none;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-family: 'Cairo', sans-serif;
+  }
+  .filter-btn:hover,
+  .filter-btn.active {
+    background: #fff;
+    color: #000;
+  }
+
+  .project-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 260px;
+    transition: transform 0.4s ease;
+  }
+  .project-card:hover {
+    transform: translateY(-10px);
+  }
+
+  .project-img {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .project-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.4s ease;
+    text-align: center;
+  }
+  .project-card:hover .project-overlay {
+    opacity: 1;
+  }
+
+  #project-grid .col-md-3 {
+    transition: all 0.4s ease;
+  }
+</style>
+
+<!-- ==== سكربت الفلترة ==== -->
+<script>
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.getAttribute('data-filter');
+      document.querySelectorAll('.project-item').forEach(item => {
+        if (filter === 'all' || item.dataset.category === filter) {
+          item.style.display = 'block';
+          item.classList.add('animate__fadeInUp');
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
 {{--
 <section class="hero-video-section d-flex justify-content-center align-items-center text-center">
     <!-- خلفية الفيديو -->
@@ -579,7 +736,7 @@ document.addEventListener("DOMContentLoaded", function() {
         </h3>
 
         <p class="lead" style="font-family:'Cairo',sans-serif; line-height:1.9; font-size:1.15rem; color:#333;">
-          رؤيتنا الواضحة <span style="color:#007BFF; font-weight:bold;">تصنع محتوى</span> 
+          رؤيتنا الواضحة <span style="color:#007BFF; font-weight:bold;">تصنع محتوى</span>
           يُبنى عليه <span style="color:#28a745; font-weight:bold;">المجـــــــد</span>.
         </p>
 
@@ -592,7 +749,7 @@ document.addEventListener("DOMContentLoaded", function() {
       <div class="col-lg-6 text-center">
         <div class="image-wrapper position-relative d-inline-block">
           <img src="{{ asset('img/2.jpg') }}" alt="Vision" class="img-fluid rounded-4 shadow-lg floating-img">
-          
+
           <!-- تأثير الدوائر -->
           <div class="circle circle1"></div>
           <div class="circle circle2"></div>
@@ -656,7 +813,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   /* الزر المتدرج */
   .gradient-btn {
-    background: linear-gradient(90deg, #007BFF, #28a745, #ff9800);
+    background:  #007BFF;
     color: #fff;
     border: none;
     transition: all 0.3s ease;
@@ -796,7 +953,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-{{-- 
+{{--
 <section id="meetings" class="py-5" style="direction: rtl; background: linear-gradient(135deg, #ff9800, #007bff, #28a745); position: relative; overflow:hidden;">
   <!-- خلفية فيديو خافتة -->
   <video autoplay muted loop playsinline class="position-absolute w-100 h-100" style="object-fit: cover; z-index:0; opacity:0.1;">
@@ -1270,11 +1427,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
         <p class="lead mb-4" style="font-family:'Cairo',sans-serif; line-height:1.9; font-size:1.15rem; color:#333;">
           في <span style="color:#007BFF; font-weight:bold;">عالم متصل</span>، نحن لا نقدم خدمات تسويقية فقط،
-          بل ننشئ <span style="color:#ff9800; font-weight:bold;">مجتمعات</span> تفتح الأفق وتخلق 
+          بل ننشئ <span style="color:#ff9800; font-weight:bold;">مجتمعات</span> تفتح الأفق وتخلق
           <span style="color:#28a745; font-weight:bold;">فرصًا جديدة</span>.
-          من خلال مجموعاتنا العامة والخاصة، نُمكّن عملاءنا من 
-          <span style="color:#000; font-weight:bold;">التفاعل</span>، 
-          <span style="color:#ff9800; font-weight:bold;">التطور</span>، 
+          من خلال مجموعاتنا العامة والخاصة، نُمكّن عملاءنا من
+          <span style="color:#000; font-weight:bold;">التفاعل</span>،
+          <span style="color:#ff9800; font-weight:bold;">التطور</span>،
           وبناء علاقات تُسهم في فتح <span style="color:#007BFF; font-weight:bold;">أبواب النجاح</span>.
         </p>
 
@@ -1385,161 +1542,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 </style>
 
-<section id="projects" class="py-5" style="direction: rtl; background: linear-gradient(135deg, #007BFF, #28a745, #ff9800); position: relative; overflow:hidden;">
-  <!-- خلفية فيديو -->
-  <video autoplay muted loop playsinline class="position-absolute w-100 h-100" style="object-fit: cover; z-index:0; opacity:0.1;">
-    <source src="{{ asset('img/2.mp4') }}" type="video/mp4">
-  </video>
 
-  <div style="background: rgba(0,0,0,0.6); position:absolute; inset:0;"></div>
-
-  <div class="container position-relative z-3 text-white text-center">
-    <h2 class="fw-bold mb-4" style="font-family:'Cairo',sans-serif;">أعمالنــــــا</h2>
-    <p class="lead mb-5" style="max-width:750px; margin:auto; font-family:'Cairo',sans-serif; color: rgb(5, 27, 15);">
-      مجموعة من أبرز مشاريعنا الناجحة التي تعكس شغفنا بالإبداع والابتكار في تقديم الحلول الرقمية والتسويقية.
-    </p>
-
-    <!-- ====== الفلاتر ====== -->
-    <div class="mb-5 d-flex flex-wrap justify-content-center gap-2">
-      <button class="filter-btn active" data-filter="all">جميع الأعمال</button>
-      <button class="filter-btn" data-filter="tech">الحلول التقنية</button>
-      <button class="filter-btn" data-filter="branding">تصميم الهوية البصرية</button>
-      <button class="filter-btn" data-filter="ads">الحملات الإعلانية</button>
-      <button class="filter-btn" data-filter="profiles">الملفات التعريفية</button>
-      <button class="filter-btn" data-filter="content">صناعة المحتوى</button>
-    </div>
-
-    <!-- ====== الشبكة ====== -->
-    <div class="row g-4 justify-content-center" id="project-grid">
-      <!-- مشروع 1 -->
-      <div class="col-md-3 project-item" data-category="branding">
-        <div class="project-card shadow-lg">
-          <div class="project-img" style="background-image:url('{{ asset('img/analysis-1841158_1280.jpg') }}');"></div>
-          <div class="project-overlay">
-            <h5 class="fw-bold">شركة مساحة لتصميم الهوية</h5>
-            <a href="#" class="btn btn-sm btn-light mt-2">عرض التفاصيل</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- مشروع 2 -->
-      <div class="col-md-3 project-item" data-category="tech">
-        <div class="project-card shadow-lg">
-          <div class="project-img" style="background-image:url('{{ asset('img/world-4961456_1280.jpg') }}');"></div>
-          <div class="project-overlay">
-            <h5 class="fw-bold">نظام Axis اللوجستي</h5>
-            <a href="#" class="btn btn-sm btn-light mt-2">عرض التفاصيل</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- مشروع 3 -->
-      <div class="col-md-3 project-item" data-category="content">
-        <div class="project-card shadow-lg">
-          <div class="project-img" style="background-image:url('{{ asset('img/digital-marketing-4297723_1280.jpg') }}');"></div>
-          <div class="project-overlay">
-            <h5 class="fw-bold">حملة محتوى "بقاء"</h5>
-            <a href="#" class="btn btn-sm btn-light mt-2">عرض التفاصيل</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- مشروع 4 -->
-      <div class="col-md-3 project-item" data-category="ads">
-        <div class="project-card shadow-lg">
-          <div class="project-img" style="background-image:url('{{ asset('img/kaufmann-3821436_1280.jpg') }}');"></div>
-          <div class="project-overlay">
-            <h5 class="fw-bold">حملة إعلانية Second Brain</h5>
-            <a href="#" class="btn btn-sm btn-light mt-2">عرض التفاصيل</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- زر عرض الكل -->
-    <div class="mt-5">
-      <a href="#" class="btn btn-outline-light px-4 py-2">عرض جميع المشاريع</a>
-    </div>
-  </div>
-</section>
-
-<!-- ==== التنسيقات ==== -->
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
-
-  .filter-btn {
-    border: none;
-    background: rgba(255,255,255,0.15);
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 30px;
-    transition: all 0.3s ease;
-    font-family: 'Cairo', sans-serif;
-  }
-  .filter-btn:hover,
-  .filter-btn.active {
-    background: #fff;
-    color: #000;
-  }
-
-  .project-card {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-    height: 260px;
-    transition: transform 0.4s ease;
-  }
-  .project-card:hover {
-    transform: translateY(-10px);
-  }
-
-  .project-img {
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    width: 100%;
-  }
-
-  .project-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.6);
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: all 0.4s ease;
-    text-align: center;
-  }
-  .project-card:hover .project-overlay {
-    opacity: 1;
-  }
-
-  #project-grid .col-md-3 {
-    transition: all 0.4s ease;
-  }
-</style>
-
-<!-- ==== سكربت الفلترة ==== -->
-<script>
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const filter = btn.getAttribute('data-filter');
-      document.querySelectorAll('.project-item').forEach(item => {
-        if (filter === 'all' || item.dataset.category === filter) {
-          item.style.display = 'block';
-          item.classList.add('animate__fadeInUp');
-        } else {
-          item.style.display = 'none';
-        }
-      });
-    });
-  });
-</script>
 
 {{-- <section id="majlis" class="py-5" style="direction: rtl; background: linear-gradient(135deg, #007BFF, #28a745, #ff9800); position: relative; overflow:hidden;">
   <!-- خلفية فيديو -->
@@ -1671,7 +1674,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
   </div>
 </section>
-
+<br /><br />
 <!-- ===== CSS ===== -->
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
@@ -1718,7 +1721,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   /* زر التدرج */
   .gradient-btn {
-    background: linear-gradient(90deg, #007BFF, #28a745, #ff9800);
+    background:  #007BFF;
     border: none;
     transition: all 0.3s ease;
   }

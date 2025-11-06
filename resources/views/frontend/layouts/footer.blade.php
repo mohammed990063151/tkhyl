@@ -70,7 +70,7 @@
 
     <!-- الحقوق -->
     <div class="text-center small text-light">
-      © 2025 <span class="text-warning fw-bold">Tkhyl</span> | جميع الحقوق محفوظة
+      © 2025 <span class="text-warning fw-bold">تخيل </span> | جميع الحقوق محفوظة
       <br>
       <span class="text-secondary">تصميم وتنفيذ بفكر <span class="text-warning">تخيل</span> 💡</span>
     </div>
