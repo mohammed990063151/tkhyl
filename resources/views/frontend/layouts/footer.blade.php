@@ -1,3 +1,11 @@
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/966583116161"
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="تواصل عبر واتساب">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
 <footer id="footer" class="text-white pt-5" style="background: linear-gradient(135deg, #007BFF, #28a745, #ff9800); position: relative; overflow:hidden;">
   <div style="background: rgba(0,0,0,0.7); position:absolute; inset:0; z-index:0;"></div>
 
