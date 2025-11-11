@@ -97,7 +97,7 @@
     </div>
 
     <div class="mt-5">
-      <a href="#contact" class="btn gradient-btn btn-lg rounded-pill px-5 py-2 fw-bold shadow-sm">
+      <a href="{{ route('contact') }}" class="btn gradient-btn btn-lg rounded-pill px-5 py-2 fw-bold shadow-sm">
         تواصل معنا لمعرفة التفاصيل
       </a>
     </div>
@@ -144,7 +144,7 @@
 
   /* زر التدرج */
   .gradient-btn {
-    background: linear-gradient(90deg, #007BFF, #28a745, #ff9800);
+    background: #ff9800;
     color: #fff;
     border: none;
     transition: all 0.3s ease;

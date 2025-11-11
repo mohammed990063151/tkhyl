@@ -30,11 +30,11 @@
       <div class="col-lg-2 col-md-6">
         <h5 class="fw-bold mb-3 text-warning">روابط سريعة</h5>
         <ul class="list-unstyled small">
-          <li><a href="#" class="text-white text-decoration-none d-block mb-1 hover-link">الرئيسية</a></li>
-          <li><a href="#" class="text-white text-decoration-none d-block mb-1 hover-link">خدماتنا</a></li>
-          <li><a href="#" class="text-white text-decoration-none d-block mb-1 hover-link">مشاريعنا</a></li>
-          <li><a href="#" class="text-white text-decoration-none d-block mb-1 hover-link">المدونة</a></li>
-          <li><a href="#" class="text-white text-decoration-none d-block mb-1 hover-link">تواصل معنا</a></li>
+          <li><a href="{{ route('frontend.home') }}" class="text-white text-decoration-none d-block mb-1 hover-link">الرئيسية</a></li>
+          <li><a href="{{ route('frontend.our-services') }}" class="text-white text-decoration-none d-block mb-1 hover-link">خدماتنا</a></li>
+          <li><a href="{{ route('frontend.rooms') }}" class="text-white text-decoration-none d-block mb-1 hover-link">مشاريعنا</a></li>
+          <li><a href="{{ route('frontend.about-us') }}" class="text-white text-decoration-none d-block mb-1 hover-link">من نحن</a></li>
+          <li><a href="{{ route('contact') }}" class="text-white text-decoration-none d-block mb-1 hover-link">تواصل معنا</a></li>
         </ul>
       </div>
 
@@ -66,9 +66,10 @@
       <div class="col-12">
         <div class="map-wrapper rounded-4 overflow-hidden shadow-lg">
           <iframe
-            src="https://www.google.com/maps?q=Riyadh,Saudi%20Arabia&output=embed"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3625.2068990452426!2d46.69881748032686!3d24.685413421431836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03f25336a507%3A0x8efb4c0747c02a81!2sMakkah%20Al%20Mukarramah%20Br%20Rd%2C%20Riyadh!5e0!3m2!1sen!2ssa!4v1762880168026!5m2!1sen!2ssa"
             width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
           </iframe>
+          {{-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3625.2068990452426!2d46.69881748032686!3d24.685413421431836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03f25336a507%3A0x8efb4c0747c02a81!2sMakkah%20Al%20Mukarramah%20Br%20Rd%2C%20Riyadh!5e0!3m2!1sen!2ssa!4v1762880168026!5m2!1sen!2ssa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> --}}
         </div>
       </div>
     </div>

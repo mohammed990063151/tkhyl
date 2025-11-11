@@ -3,31 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
+use App\Models\ContactMessage;
 
 class ContactController extends Controller
 {
     public function send(Request $request)
     {
-        $validated = $request->validate([
-            'name' => 'required|string|max:150',
-            'email' => 'required|email',
-            'message' => 'required|string|max:2000',
+        // 1) التحقق من صحة البيانات
+        $data = $request->validate([
+            'name'    => 'required|string|max:255',
+            'email'   => 'required|email|max:255',
+            'message' => 'required|string|max:5000',
         ]);
 
-        try {
-            Mail::raw("📩 رسالة جديدة من موقع تخيّل:\n\n" .
-                      "👤 الاسم: {$validated['name']}\n" .
-                      "📧 البريد: {$validated['email']}\n" .
-                      "💬 الرسالة:\n{$validated['message']}", function($mail) use ($validated) {
-                $mail->to('mohammed.du.0063151@gmail.com') 
-                     ->subject('رسالة جديدة من نموذج تواصل تخيّل')
-                     ->from($validated['email'], $validated['name']);
-            });
+        // 2) حفظ الرسالة في قاعدة البيانات
+        ContactMessage::create($data);
 
-            return response()->json(['success' => true]);
-        } catch (\Exception $e) {
-            return response()->json(['success' => false, 'error' => $e->getMessage()]);
-        }
+        // 3) رجوع مع رسالة نجاح
+        return back()->with('success', 'تم إرسال رسالتك بنجاح، سنقوم بالرد عليك قريبًا.');
     }
 }

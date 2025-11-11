@@ -93,7 +93,7 @@
 
     <!-- زر عرض الكل -->
     <div class="mt-5">
-      <a href="#contact" class="btn gradient-btn btn-lg rounded-pill px-5 py-2 fw-bold shadow-sm">
+      <a href="{{ route('contact') }}" class="btn gradient-btn btn-lg rounded-pill px-5 py-2 fw-bold shadow-sm">
         اطلب عرضك الآن
       </a>
     </div>

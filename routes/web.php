@@ -11,6 +11,10 @@ Route::get('/custom-login', function() {
     return view('auth.custom-login');
 })->name('custom-login');
 
+
+
+Route::post('/contact-send', [ContactController::class, 'send'])->name('contact.send');
+
 // 🔹 الصفحة الرئيسية للموقع (الفرونت إند)
 Route::get('/', function () {
     return view('frontend.home'); // تشير إلى resources/views/frontend/home.blade.php

@@ -128,7 +128,7 @@
     <div class="hero-content container">
         <h3 class="animate__animated animate__fadeInDown mb-3 fw-semibold"
             style="font-size:1.5rem; letter-spacing:3px;">
-            <span style="background: linear-gradient(90deg, #4CAF50, #00BCD4, #FF9800);
+            <span style="background:  #FF9800;
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;">
                 تـخـيّــل
@@ -136,7 +136,7 @@
         </h3>
 
         <h1 class="animate__animated animate__fadeInUp display-4 fw-bold mb-4"
-            style="background: linear-gradient(90deg, #4CAF50, #00BCD4, #FF9800);
+            style="background: #FF9800;
                    -webkit-background-clip: text;
                    -webkit-text-fill-color: transparent;">
             من مجرّد أفكـــار إلى واقـــع ملمـــــــوس
@@ -147,7 +147,7 @@
         </p>
 
         <div class="animate__animated animate__zoomIn">
-            <a href="#services" class="btn btn-lg px-5 py-3 fw-bold hero-btn">
+            <a href="{{ route('frontend.our-services') }}" class="btn btn-lg px-5 py-3 fw-bold hero-btn">
                 اكتشف خدماتنا
             </a>
         </div>
@@ -270,7 +270,7 @@ document.addEventListener("DOMContentLoaded", function() {
       <button class="filter-btn" data-filter="tech">الحلول التقنية</button>
       <button class="filter-btn" data-filter="branding">تصميم الهوية البصرية</button>
       <button class="filter-btn" data-filter="ads">الحملات الإعلانية</button>
-      <button class="filter-btn" data-filter="profiles">الملفات التعريفية</button>
+      {{-- <button class="filter-btn" data-filter="profiles">الملفات التعريفية</button> --}}
       <button class="filter-btn" data-filter="content">صناعة المحتوى</button>
     </div>
 
@@ -282,7 +282,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <div class="project-img" style="background-image:url('{{ asset('img/analysis-1841158_1280.jpg') }}');"></div>
           <div class="project-overlay">
             <h5 class="fw-bold">شركة مساحة لتصميم الهوية</h5>
-            <a href="#" class="btn btn-sm btn-light mt-2">عرض التفاصيل</a>
+            <a href="{{ route('frontend.rooms') }}" class="btn btn-sm btn-light mt-2">عرض التفاصيل</a>
           </div>
         </div>
       </div>
@@ -293,7 +293,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <div class="project-img" style="background-image:url('{{ asset('img/world-4961456_1280.jpg') }}');"></div>
           <div class="project-overlay">
             <h5 class="fw-bold">نظام Axis اللوجستي</h5>
-            <a href="#" class="btn btn-sm btn-light mt-2">عرض التفاصيل</a>
+            <a href="{{ route('frontend.rooms') }}" class="btn btn-sm btn-light mt-2">عرض التفاصيل</a>
           </div>
         </div>
       </div>
@@ -304,7 +304,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <div class="project-img" style="background-image:url('{{ asset('img/digital-marketing-4297723_1280.jpg') }}');"></div>
           <div class="project-overlay">
             <h5 class="fw-bold">حملة محتوى "بقاء"</h5>
-            <a href="#" class="btn btn-sm btn-light mt-2">عرض التفاصيل</a>
+            <a href="{{ route('frontend.rooms') }}" class="btn btn-sm btn-light mt-2">عرض التفاصيل</a>
           </div>
         </div>
       </div>
@@ -315,7 +315,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <div class="project-img" style="background-image:url('{{ asset('img/kaufmann-3821436_1280.jpg') }}');"></div>
           <div class="project-overlay">
             <h5 class="fw-bold">حملة إعلانية Second Brain</h5>
-            <a href="#" class="btn btn-sm btn-light mt-2">عرض التفاصيل</a>
+            <a href="{{ route('frontend.rooms') }}" class="btn btn-sm btn-light mt-2">عرض التفاصيل</a>
           </div>
         </div>
       </div>
@@ -323,7 +323,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     <!-- زر عرض الكل -->
     <div class="mt-5">
-      <a href="#" class="btn btn-outline-light px-4 py-2">عرض جميع المشاريع</a>
+      <a href="{{ route('frontend.rooms') }}" class="btn btn-outline-light px-4 py-2">عرض جميع المشاريع</a>
     </div>
   </div>
 </section>
@@ -740,7 +740,7 @@ document.addEventListener("DOMContentLoaded", function() {
           يُبنى عليه <span style="color:#28a745; font-weight:bold;">المجـــــــد</span>.
         </p>
 
-        <a href="#services" class="btn gradient-btn btn-lg rounded-pill mt-4 px-4 py-2 fw-bold shadow-sm">
+        <a href="{{ route('frontend.our-services') }}" class="btn gradient-btn btn-lg rounded-pill mt-4 px-4 py-2 fw-bold shadow-sm">
           اكتشف خدماتنا
         </a>
       </div>
@@ -1435,7 +1435,7 @@ document.addEventListener("DOMContentLoaded", function() {
           وبناء علاقات تُسهم في فتح <span style="color:#007BFF; font-weight:bold;">أبواب النجاح</span>.
         </p>
 
-        <a href="#join" class="btn gradient-btn btn-lg rounded-pill px-4 py-2 fw-bold shadow-sm">انضم إلى مجتمعنا</a>
+        <a href="{{ route('contact') }}" class="btn gradient-btn btn-lg rounded-pill px-4 py-2 fw-bold shadow-sm">انضم إلى مجتمعنا</a>
       </div>
 
       <!-- الصورة الجانبية -->

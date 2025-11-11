@@ -103,7 +103,7 @@
           </div>
         </div>
 
-        <a href="#contact" class="btn btn-lg px-5 py-3 fw-bold about-btn">
+        <a href="{{ route('contact') }}" class="btn btn-lg px-5 py-3 fw-bold about-btn">
           تواصـل معنــا
         </a>
       </div>
@@ -157,7 +157,7 @@
 }
 
 .about-btn {
-  background: linear-gradient(90deg, #007BFF, #28a745, #FF9800);
+  background: #FF9800;
   border: none;
   color: #fff;
   border-radius: 50px;
@@ -258,7 +258,7 @@
           </div>
         </div>
 
-        <a href="#contact" class="btn gradient-btn btn-lg rounded-pill px-4 py-2 fw-bold shadow">تواصــل معنــا</a>
+        <a href="{{ route('contact') }}" class="btn gradient-btn btn-lg rounded-pill px-4 py-2 fw-bold shadow">تواصــل معنــا</a>
       </div>
 
       <!-- الصورة -->
@@ -332,7 +332,7 @@
   }
 
   .gradient-btn {
-    background: linear-gradient(90deg, #007BFF, #28a745, #ff9800);
+    background:  #ff9800;
     color: #fff;
     border: none;
     transition: all 0.3s ease;
