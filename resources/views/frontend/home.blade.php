@@ -260,7 +260,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   <div class="container position-relative z-3 text-white text-center">
     <h2 class="fw-bold mb-4" style="font-family:'Cairo',sans-serif;">أعمالنــــــا</h2>
-    <p class="lead mb-5" style="max-width:750px; margin:auto; font-family:'Cairo',sans-serif; color: rgb(5, 27, 15);">
+    <p class="lead mb-5" style="max-width:750px; margin:auto; font-family:'Cairo',sans-serif; color: rgb(204, 226, 214);">
       مجموعة من أبرز مشاريعنا الناجحة التي تعكس شغفنا بالإبداع والابتكار في تقديم الحلول الرقمية والتسويقية.
     </p>
 
@@ -1267,7 +1267,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <h2 class="fw-bold mb-4" style="font-family:'Cairo',sans-serif; font-size:2.5rem;">
       سلسلة <span class="text-warning">لقاءات تخيّل</span>
     </h2>
-    <p class="lead mb-5" style="max-width: 800px; margin:auto; font-family:'Cairo',sans-serif; color: rgb(5, 27, 15);">
+    <p class="lead mb-5" style="max-width: 800px; margin:auto; font-family:'Cairo',sans-serif;color: #fff;">
       لقاءات ملهمة تجمع نخبة من رواد الأعمال والمستشارين لتبادل الخبرات والرؤى حول التجارة، العلامات التجارية، والإبداع في بيئة الأعمال السعودية.
     </p>
 
@@ -1281,7 +1281,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <h5 class="text-warning fw-bold mt-3">اللقاء الأول</h5>
         <h4 class="fw-bold mb-2">الفرق بين التجارة التقليدية والتجارة الرقمية</h4>
         <p class="text-light small mb-2">د. أحمد الذهيبي</p>
-        <p class="small mb-0"  style=" color: rgb(5, 27, 15);">صاحب تطبيق <span class="text-info fw-bold">مقضاك</span>، دكتوراه في إدارة المعرفة، مستشار وخبير في التحول الرقمي ومدرب دولي معتمد في القيادة والتخطيط الإداري.</p>
+        <p class="small mb-0"  style=" color: #fff;">صاحب تطبيق <span class="text-info fw-bold">مقضاك</span>، دكتوراه في إدارة المعرفة، مستشار وخبير في التحول الرقمي ومدرب دولي معتمد في القيادة والتخطيط الإداري.</p>
       </div>
 
       <!-- اللقاء الثاني -->
@@ -1292,7 +1292,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <h5 class="text-warning fw-bold mt-3">اللقاء الثاني</h5>
         <h4 class="fw-bold mb-2">كيف تواجه المطاعم والمقاهي انخفاض المبيعات</h4>
         <p class="text-light small mb-2">م. عبد العزيز السلامة</p>
-        <p class="small mb-0" style=" color: rgb(5, 27, 15);">مدرب ومستشار ومستثمر في قطاع المطاعم والمقاهي، بخبرة في تطوير نماذج العمل واستراتيجيات زيادة الإيرادات.</p>
+        <p class="small mb-0" style=" color: #fff;">مدرب ومستشار ومستثمر في قطاع المطاعم والمقاهي، بخبرة في تطوير نماذج العمل واستراتيجيات زيادة الإيرادات.</p>
       </div>
 
       <!-- اللقاء الثالث -->
@@ -1303,7 +1303,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <h5 class="text-warning fw-bold mt-3">اللقاء الثالث</h5>
         <h4 class="fw-bold mb-2">رحلة التاجر من البدايات</h4>
         <p class="text-light small mb-2">أ. أحمد بن عامر بدوي</p>
-        <p class="small mb-0" style=" color: rgb(5, 27, 15);">رائد أعمال، حاصل على جائزة الشخصية الإعلامية المؤثرة، ناشط بيئي، وأمين حاضنة الوجيه لريادة الأعمال.</p>
+        <p class="small mb-0" style=" color: #fff;">رائد أعمال، حاصل على جائزة الشخصية الإعلامية المؤثرة، ناشط بيئي، وأمين حاضنة الوجيه لريادة الأعمال.</p>
       </div>
 
       <!-- اللقاء الرابع -->
@@ -1314,7 +1314,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <h5 class="text-warning fw-bold mt-3">اللقاء الرابع</h5>
         <h4 class="fw-bold mb-2">استراتيجية العلامة التجارية وأسرارها</h4>
         <p class="text-light small mb-2">د. خالد بن سليمان الراجحي</p>
-        <p class="small mb-0" style=" color: rgb(5, 27, 15);">نائب رئيس مجلس إدارة مجموعة الراجحي القابضة ومحاضر بجامعة اليمامة، بخبرة في بناء العلامات التجارية واستراتيجيات التسويق.</p>
+        <p class="small mb-0" style=" color: #fff;">نائب رئيس مجلس إدارة مجموعة الراجحي القابضة ومحاضر بجامعة اليمامة، بخبرة في بناء العلامات التجارية واستراتيجيات التسويق.</p>
       </div>
     </div>
 
