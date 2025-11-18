@@ -17,7 +17,7 @@ Route::post('/contact-send', [ContactController::class, 'send'])->name('contact.
 
 // 🔹 الصفحة الرئيسية للموقع (الفرونت إند)
 Route::get('/', function () {
-    return view('frontend.home1'); // تشير إلى resources/views/frontend/home.blade.php
+    return view('frontend.home2'); // تشير إلى resources/views/frontend/home.blade.php
 })->name('frontend.home');
 
 // 🔹 مثال لمسار لوحة التحكم (backend)
