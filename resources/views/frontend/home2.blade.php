@@ -78,7 +78,7 @@
     <title>Liberty NFT Marketplace - HTML CSS Template</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
     <!-- Additional CSS Files -->
@@ -189,11 +189,11 @@ https://templatemo.com/tm-577-liberty-market
           <h6 >شركة تخيّل للتسويق |  </h6>
           <h2 style="
     direction: rtl;
-">نساهم ونعزز من تواجدك الرقمي وابراز هويتك البصرية بتقنيات الذكاء الاصطناعي  إبداع أسرع، جودة أعلى.</h2>
+">نساهم ونعزز من تواجدك الرقمي وابراز هويتك البصرية بتقنيات   إبداع أسرع، جودة أعلى.</h2>
 
           <p>
             في <strong>تخيّل</strong> نبتكر هويات بصرية، شعارات، ألوان، نماذج، وبروفايلات شركات
-            باستخدام أحدث تقنيات الذكاء الاصطناعي.
+            باستخدام أحدث تقنيات .
             نجمع بين **الإبداع البشري** و**قوة الـ AI** لنقدم لك تصاميم احترافية
             تلائم علامتك التجارية وتظهرها بأفضل شكل.
           </p>
@@ -389,7 +389,7 @@ https://templatemo.com/tm-577-liberty-market
             <div class="col-lg-12">
               <div class="section-heading">
                 <div class="line-dec"></div>
-                <h2>خدمات <em>تخيّل</em> المتخصصة بالهوية البصرية والذكاء الاصطناعي</h2>
+                <h2>خدمات <em>تخيّل</em> المتخصصة بالهوية البصرية </h2>
               </div>
             </div>
 
@@ -399,7 +399,7 @@ https://templatemo.com/tm-577-liberty-market
                 <div class="icon">
                   <img src="assets/images/icon-01.png" alt="">
                 </div>
-                <h4>تصميم شعار بالذكاء الاصطناعي</h4>
+                <h4>تصميم شعار </h4>
                 <p style="font-size:13px; color:#555; margin-top:5px;">
                   ابتكار شعارات فريدة تمزج بين الإبداع والدقة باستخدام تقنيات AI الحديثة.
                 </p>
@@ -501,7 +501,7 @@ https://templatemo.com/tm-577-liberty-market
             <div class="col-lg-12">
               <div class="section-heading">
                 <div class="line-dec"></div>
-                <h2>استكشف بعض <em>الهويات البصرية</em> التي صممناها باستخدام الذكاء الاصطناعي</h2>
+                <h2>استكشف بعض <em>الهويات البصرية</em> التي صممناها باستخدام </h2>
               </div>
             </div>
 
@@ -1015,7 +1015,7 @@ https://templatemo.com/tm-577-liberty-market
 
     <p style="margin:0; font-family:'Cairo', sans-serif; font-size:15px; line-height:1.8;">
       جميع الحقوق محفوظة © {{ date('Y') }}
-      <span style="color:#ff9800; font-weight:bold;">تخيّل</span> — منصة الإبداع والهوية البصرية بالذكاء الاصطناعي.
+      <span style="color:#ff9800; font-weight:bold;">تخيّل</span> — منصة الإبداع والهوية البصرية ب.
       <br>
       تم التصميم والتطوير بواسطة فريق
       <span style="color:#007BFF; font-weight:bold;">تخيّل</span>.
@@ -1028,8 +1028,8 @@ https://templatemo.com/tm-577-liberty-market
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="vendors/jquery/jquery.min.js"></script>
+  <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
 
   <script src="assets/js/isotope.min.js"></script>
   <script src="assets/js/owl-carousel.js"></script>
