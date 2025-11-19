@@ -22,3 +22,14 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+/vendor/
+/node_modules/
+/storage/*.key
+/storage/clockwork/
+/storage/framework/sessions/
+/storage/framework/views/
+/storage/logs/
+/public/uploads/
+/uploads/
+/hisan.zip
+.DS_Store
