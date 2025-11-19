@@ -118,7 +118,7 @@ https://templatemo.com/tm-577-liberty-market
             <div class="col-12">
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
+                    <a href="{{ route('frontend.home') }}" class="logo">
                         <img src="assets/images/logo.svg" alt="" style="
     /* height: 100px; */
     width: 100px;
@@ -127,11 +127,11 @@ https://templatemo.com/tm-577-liberty-market
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                        <li><a href="index.html" class="active">الرئيسية </a></li>
-                        <li><a href="explore.html">خدمتنا</a></li>
-                        <li><a href="details.html">من نحن</a></li>
-                        <li><a href="author.html">تواصل معنا</a></li>
-                        {{-- <li><a href="create.html">Create Yours</a></li> --}}
+                        <li><a href="{{ route('frontend.home') }}" class="active">الرئيسية </a></li>
+                        <li><a href="{{ route('frontend.our-services') }}">خدمتنا</a></li>
+                        <li><a href="{{ route('frontend.about-us') }}">من نحن</a></li>
+                        <li><a href="{{ route('contact') }}">تواصل معنا</a></li>
+                        <li><a href="{{ route('frontend.rooms') }}">مجتماعتنا </a></li>
                     </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -581,7 +581,7 @@ https://templatemo.com/tm-577-liberty-market
                 <div class="owl-collection owl-carousel">
 
                     <!-- عمل 1 -->
-                    <div class="item">
+                    {{-- <div class="item">
                         <br />
                         <img src="https://images.pexels.com/photos/6476800/pexels-photo-6476800.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="هوية شركة تقنية">
                         <div class="down-content">
@@ -618,20 +618,68 @@ https://templatemo.com/tm-577-liberty-market
                                 <a href="#">عرض العمل</a>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
-                    <!-- عمل 4 -->
-                    <div class="item">
-                        <img src="img/WhatsApp Image 2025-10-20 at 11.25.53 AM.jpeg" alt="هوية شركة أعمال">
-                        <div class="down-content">
-                            <h4>هوية شركة أعمال</h4>
-                            <span class="collection">تفاصيل الهوية:<br><strong>شعار + بروفايل</strong></span>
-                            <span class="category">نوع الخدمة:<br><strong>تصميم بروفايل</strong></span>
-                            <div class="main-button">
-                                <a href="#">عرض العمل</a>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- بطاقة 1 -->
+<div class="item">
+    <img src="{{ asset('img/8.jpg') }}" alt="تصميم المحتوى الإبداعي">
+    <div class="down-content">
+        <h4>تصميم المحتوى الإبداعي</h4>
+        <span class="collection">
+            تفاصيل الخدمة:<br>
+            <strong>تصميمات جذابة + موشن جرافيك + محتوى تسويقي مكتوب</strong>
+        </span>
+        <span class="category">
+            نوع الخدمة:<br>
+            <strong>براند كونتنت – Content Creation</strong>
+        </span>
+        <div class="main-button">
+            <a href="#">عرض الخدمة</a>
+        </div>
+    </div>
+</div>
+
+<!-- بطاقة 2 -->
+<div class="item">
+    <img src="{{ asset('img/6.jpg') }}" alt="إدارة الحملات الإعلانية">
+    <div class="down-content">
+        <h4>إدارة الحملات الإعلانية المدفوعة</h4>
+        <span class="collection">
+            تفاصيل الخدمة:<br>
+            <strong>تحليل الجمهور + إعداد الإعلانات + تحسين النتائج + تقارير أسبوعية</strong>
+        </span>
+        <span class="category">
+            نوع الخدمة:<br>
+            <strong>تسويق مدفوع (Meta • Google • TikTok)</strong>
+        </span>
+        <div class="main-button">
+            <a href="#">عرض الخدمة</a>
+        </div>
+    </div>
+</div>
+
+<div class="item">
+    <img src="{{ asset('img/2.jpg') }}" alt="الهوية التسويقية">
+    <div class="down-content">
+        <h4>بناء الهوية التسويقية للشركات</h4>
+        <span class="collection">
+            تفاصيل الخدمة:<br>
+            <strong>تحليل السوق + صياغة الرسالة + تصميم هوية تسويقية مؤثرة</strong>
+        </span>
+        <span class="category">
+            نوع الخدمة:<br>
+            <strong>Brand Marketing – براند الشركات</strong>
+        </span>
+        <div class="main-button">
+            <a href="#">عرض الخدمة</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
 
                 </div> <!-- owl -->
             </div>
