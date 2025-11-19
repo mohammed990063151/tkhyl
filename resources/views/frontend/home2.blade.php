@@ -573,7 +573,7 @@ https://templatemo.com/tm-577-liberty-market
             <div class="col-lg-12">
                 <div class="section-heading">
                     <div class="line-dec"></div>
-                    <h2>استكشف بعض <em>الهويات البصرية</em> التي صممناها باستخدام الذكاء الاصطناعي</h2>
+                    <h2>استكشف بعض <em>الهويات البصرية</em> التي صممناها باستخدام  </h2>
                 </div>
             </div>
 
