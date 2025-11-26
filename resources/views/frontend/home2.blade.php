@@ -88,7 +88,7 @@
         }
     </style>
 
-    <title>Liberty NFT Marketplace - HTML CSS Template</title>
+    <title>شركة تخيل للتسويق</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -237,6 +237,13 @@ https://templatemo.com/tm-577-liberty-market
                 </div>
 
             </div>
+<<<<<<< HEAD
+=======
+            <div class="main-button">
+              <a href="https://wa.me/966583116161" target="_blank">اطلب هويتك الآن</a>
+            </div>
+          </div>
+>>>>>>> dd6909b (Clean project and ignore vendor + uploads)
         </div>
     </div>
 
@@ -783,6 +790,93 @@ https://templatemo.com/tm-577-liberty-market
             </div>
         </div>
     </div>
+<<<<<<< HEAD
+=======
+</div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id="contact-us" class="currently-market" style="direction: rtl; ">
+  <div class="container">
+
+    <!-- عنوان القسم -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold" style="font-family:'Cairo',sans-serif; font-size:2.5rem; color:#fff;">
+        تـــواصــــل <span style="color:#fff;">معنــــا</span>
+      </h2>
+      <p class="lead" style="max-width:750px; margin:auto; color:#fff;">
+        يسعدنا دائمًا استقبال استفساراتكم واقتراحاتكم،
+        فريق <strong style="color:#fff;">تخيّل</strong> جاهز لمساعدتك في أي وقت.
+      </p>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- نموذج التواصل -->
+      <div class="col-lg-6">
+        <div class="card shadow-sm p-4 rounded-4 border-0">
+          <h5 class="fw-bold mb-3" style="color:#fff;">أرسل لنا رسالة</h5>
+
+          <form action="{{ route('contact.send') }}" method="POST">
+            @csrf
+
+            <div class="mb-3">
+              <label class="form-label">الاسم الكامل</label>
+              <input type="text" name="name" class="form-control rounded-3" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">البريد الإلكتروني</label>
+              <input type="email" name="email" class="form-control rounded-3" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">رقم الهاتف</label>
+              <input type="text" name="phone" class="form-control rounded-3">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">رسالتك</label>
+              <textarea name="message" rows="5" class="form-control rounded-3" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-warning w-100 rounded-pill fw-bold" style="color:#fff;">
+              إرسال الرسالة
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- خريطة الموقع -->
+      <div class="col-lg-6">
+        <div class="card shadow-sm rounded-4 border-0 overflow-hidden">
+
+          <!-- العنوان -->
+          <h5 class="fw-bold p-3" style="color:#fff;">موقعنا على الخريطة</h5>
+
+          <!-- Google Map -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.891353230974!2d46.7339518!3d24.6962613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f0369685bf015%3A0x8814d20d7b0d8247!2z2KfYs9iq2KvZhdin2LHZg9mI2YUg2K3Yp9i22YbYqSDZiNmF2LPYsdi52Kkg2KfZhNij2LnZhdin2YQ!5e0!3m2!1sen!2ssa!4v1763534308367!5m2!1sen!2ssa"
+            width="100%"
+            height="380"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+>>>>>>> dd6909b (Clean project and ignore vendor + uploads)
 
 
 
@@ -1023,6 +1117,7 @@ https://templatemo.com/tm-577-liberty-market
     <footer style="background:#111; padding:25px 0; color:#ddd; direction:rtl;">
         <div class="container text-center">
 
+
             <p style="margin:0; font-family:'Cairo', sans-serif; font-size:15px; line-height:1.8;">
                 جميع الحقوق محفوظة © {{ date('Y') }}
                 <span style="color:#ff9800; font-weight:bold;">تخيّل</span> — منصة الإبداع والهوية البصرية ب.
@@ -1030,6 +1125,7 @@ https://templatemo.com/tm-577-liberty-market
                 تم التصميم والتطوير بواسطة فريق
                 <span style="color:#007BFF; font-weight:bold;">تخيّل</span>.
             </p>
+
 
         </div>
     </footer>

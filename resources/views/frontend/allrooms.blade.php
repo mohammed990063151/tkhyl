@@ -121,7 +121,7 @@
   }
 
   .filter-btn:hover, .filter-btn.active {
-    background: linear-gradient(90deg, #007BFF, #28a745, #ff9800);
+    background:#ff9800;
     color: #fff;
   }
 
@@ -163,7 +163,7 @@
 
   /* زر التدرج */
   .gradient-btn {
-    background: linear-gradient(90deg, #007BFF, #28a745, #ff9800);
+    background:#ff9800;
     color: #fff;
     border: none;
     transition: all 0.3s ease;

@@ -79,14 +79,17 @@
         <div class="info-section p-4">
           <h4 class="fw-bold mb-3" style="color:#28a745;">معلومات التواصل</h4>
 
-          <p class="mb-3"><i class="bi bi-geo-alt-fill text-primary me-2"></i> الرياض - المملكة العربية السعودية</p>
+          <p class="mb-3" style="
+    color: #1c1b1e;
+"><i class="bi bi-geo-alt-fill text-primary me-2" ></i>استثماركوم حاضنة ومسرعة الأعمال</p>
           <p class="mb-3"><i class="bi bi-telephone-fill text-success me-2"></i> <a href="tel:0568979769" class="text-dark text-decoration-none">0568979769</a></p>
           <p class="mb-3"><i class="bi bi-envelope-fill text-info me-2"></i> <a href="mailto:info@tkhyl.com.sa" class="text-dark text-decoration-none">info@tkhyl.com.sa</a></p>
           <p class="mb-4"><i class="bi bi-whatsapp text-success me-2"></i> <a href="https://wa.me/966568979769" target="_blank" class="text-dark text-decoration-none">واتساب مباشر</a></p>
 
           <div class="map-wrapper rounded-4 overflow-hidden shadow-sm mt-4">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3625.2068990452426!2d46.69881748032686!3d24.685413421431836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03f25336a507%3A0x8efb4c0747c02a81!2sMakkah%20Al%20Mukarramah%20Br%20Rd%2C%20Riyadh!5e0!3m2!1sen!2ssa!4v1762880168026!5m2!1sen!2ssa"
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.891353230974!2d46.7339518!3d24.6962613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f0369685bf015%3A0x8814d20d7b0d8247!2z2KfYs9iq2KvZhdin2LHZg9mI2YUg2K3Yp9i22YbYqSDZiNmF2LPYsdi52Kkg2KfZhNij2LnZhdin2YQ!5e0!3m2!1sen!2ssa!4v1763534308367!5m2!1sen!2ssa"
               width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.891353230974!2d46.7339518!3d24.6962613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f0369685bf015%3A0x8814d20d7b0d8247!2z2KfYs9iq2KvZhdin2LHZg9mI2YUg2K3Yp9i22YbYqSDZiNmF2LPYsdi52Kkg2KfZhNij2LnZhdin2YQ!5e0!3m2!1sen!2ssa!4v1763534308367!5m2!1sen!2ssa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
           </div>
         </div>
       </div>
@@ -125,7 +128,7 @@
   }
 
   .gradient-btn {
-    background: linear-gradient(90deg, #007BFF, #28a745, #ff9800);
+    background: #ff9800;
     color: #fff;
     border: none;
     transition: all 0.3s ease;
