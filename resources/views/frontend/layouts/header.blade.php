@@ -144,7 +144,7 @@ https://templatemo.com/tm-577-liberty-market
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li><a href="{{ route('frontend.home') }}" class="active" style="
-    color: #fff !important;
+    color: #1f1e23 !important;
 ">الرئيسية </a></li>
                             <li><a href="{{ route('frontend.our-services') }}">خدمتنا</a></li>
                             <li><a href="{{ route('frontend.about-us') }}">من نحن</a></li>

@@ -131,7 +131,7 @@
         /* body.dark-mode p, */
         body.dark-mode span,
         body.dark-mode a {
-        color: #f88808  f !important;
+        color: #7453fc  f !important;
         }
 
         body.dark-mode .header-area {
@@ -500,7 +500,7 @@ https://templatemo.com/tm-577-liberty-market
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li><a href="{{ route('frontend.home') }}" class="active" style="
-    color: #fff !important;
+    color: #1f1e23 !important;
 ">الرئيسية </a></li>
                             <li><a href="{{ route('frontend.our-services') }}">خدمتنا</a></li>
                             <li><a href="{{ route('frontend.about-us') }}">من نحن</a></li>
@@ -834,7 +834,7 @@ https://templatemo.com/tm-577-liberty-market
                             </div>
 
                             <button type="submit" class="btn btn-warning w-100 rounded-pill fw-bold"
-                                style="color:#7453fc;">
+                                style="color:#7453fc;background-color: #1f1e23; !important;     border-color: #1f1e23 !important;">
                                 إرسال الرسالة
                             </button>
                         </form>
@@ -873,7 +873,7 @@ https://templatemo.com/tm-577-liberty-market
                 <span style="color:#7453fc; font-weight:bold;">تخيّل</span> — منصة الإبداع والهوية البصرية ب.
                 <br>
                 تم التصميم والتطوير بواسطة فريق
-                <span style="color:#007BFF; font-weight:bold;">تخيّل</span>.
+                <span style="color:#7453fc; font-weight:bold;">تخيّل</span>.
             </p>
 
 
