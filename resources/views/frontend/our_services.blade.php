@@ -8,11 +8,11 @@
 
 <section id="services" class="py-5 categories-collections" style="direction: rtl; background:#fff;">
   <div class="container text-center ">
-    <h2 class="fw-bold mb-4" style="font-family:'Cairo',sans-serif; font-size:2.5rem; color:#222;">
-      خدمــــات <span style="color:#ff9800;">تـخـيّــــل</span>
+    <h2 class="fw-bold mb-4" style="font-family:'Cairo',sans-serif; font-size:2.5rem; color:#7453fc;">
+      خدمــــات <span style="color:#7453fc ;">تـخـيّــــل</span>
     </h2>
     <p class="lead mb-5" style="max-width:800px; margin:auto; color:#555; font-family:'Cairo',sans-serif;">
-      في <span style="color:#007BFF;">تخيّل</span> نبتكر حلولًا تسويقية وتقنية متكاملة
+      في <span style="color:#7453fc;">تخيّل</span> نبتكر حلولًا تسويقية وتقنية متكاملة
       تساعد الشركات والعلامات التجارية على النمو، التواصل، والتميز في السوق السعودي والعالمي.
     </p>
 
@@ -21,7 +21,7 @@
       <div class="col-md-4">
         <div class="service-card shadow-sm p-4 rounded-4 h-100">
           <div class="icon-box mb-3">
-            <i class="bi bi-megaphone-fill" style="color:#ff9800; font-size:2.5rem;"></i>
+            <i class="bi bi-megaphone-fill" style="color:#7453fc; font-size:2.5rem;"></i>
           </div>
           <h5 class="fw-bold mb-2" style="color:#111;">التسويق الإبداعي</h5>
           <p class="small mb-0" style="color:#444;">
@@ -34,7 +34,7 @@
       <div class="col-md-4">
         <div class="service-card shadow-sm p-4 rounded-4 h-100">
           <div class="icon-box mb-3">
-            <i class="bi bi-globe2" style="color:#007BFF; font-size:2.5rem;"></i>
+            <i class="bi bi-globe2" style="color:#7453fc; font-size:2.5rem;"></i>
           </div>
           <h5 class="fw-bold mb-2" style="color:#111;">الحلول التقنية</h5>
           <p class="small mb-0" style="color:#444;">
@@ -47,10 +47,10 @@
       <div class="col-md-4">
         <div class="service-card shadow-sm p-4 rounded-4 h-100">
           <div class="icon-box mb-3">
-            <i class="bi bi-brush-fill" style="color:#28a745; font-size:2.5rem;"></i>
+            <i class="bi bi-brush-fill" style="color:#7453fc; font-size:2.5rem;"></i>
           </div>
-          <h5 class="fw-bold mb-2" style="color:#111;">تصميم الهوية البصرية</h5>
-          <p class="small mb-0" style="color:#444;">
+          <h5 class="fw-bold mb-2" style="color:#7453fc;">تصميم الهوية البصرية</h5>
+          <p class="small mb-0" style="color:#7453fc;">
             نرسم هوية بصرية تعبّر عن قيم شركتك وتترك انطباعًا راسخًا في ذهن عملائك عبر تصميم احترافي شامل.
           </p>
         </div>
@@ -60,9 +60,9 @@
       <div class="col-md-4">
         <div class="service-card shadow-sm p-4 rounded-4 h-100">
           <div class="icon-box mb-3">
-            <i class="bi bi-file-earmark-text-fill" style="color:#ff9800; font-size:2.5rem;"></i>
+            <i class="bi bi-file-earmark-text-fill" style="color:#7453fc; font-size:2.5rem;"></i>
           </div>
-          <h5 class="fw-bold mb-2" style="color:#111;">إدارة المحتوى</h5>
+          <h5 class="fw-bold mb-2" style="color:#7453fc;">إدارة المحتوى</h5>
           <p class="small mb-0" style="color:#444;">
             نُنشئ محتوى ملهمًا وجذابًا، يعبّر عن رسالة علامتك التجارية، ويزيد من تفاعل جمهورك عبر مختلف المنصات.
           </p>
@@ -73,10 +73,10 @@
       <div class="col-md-4">
         <div class="service-card shadow-sm p-4 rounded-4 h-100">
           <div class="icon-box mb-3">
-            <i class="bi bi-graph-up-arrow" style="color:#007BFF; font-size:2.5rem;"></i>
+            <i class="bi bi-graph-up-arrow" style="color:#7453fc; font-size:2.5rem;"></i>
           </div>
-          <h5 class="fw-bold mb-2" style="color:#111;">تحليل الأداء</h5>
-          <p class="small mb-0" style="color:#444;">
+          <h5 class="fw-bold mb-2" style="color:#7453fc;">تحليل الأداء</h5>
+          <p class="small mb-0" style="color:#7453fc;">
             نتابع أداء حملاتك الرقمية ونقدّم تقارير ذكية لتحسين النتائج وضمان تحقيق أهدافك التسويقية بدقة.
           </p>
         </div>
@@ -86,10 +86,10 @@
       <div class="col-md-4">
         <div class="service-card shadow-sm p-4 rounded-4 h-100">
           <div class="icon-box mb-3">
-            <i class="bi bi-people-fill" style="color:#28a745; font-size:2.5rem;"></i>
+            <i class="bi bi-people-fill" style="color:#7453fc; font-size:2.5rem;"></i>
           </div>
-          <h5 class="fw-bold mb-2" style="color:#111;">الاستشارات والتطوير</h5>
-          <p class="small mb-0" style="color:#444;">
+          <h5 class="fw-bold mb-2" style="color:#7453fc;">الاستشارات والتطوير</h5>
+          <p class="small mb-0" style="color:#7453fc;">
             نقدم استشارات تسويقية وتقنية تساعد الشركات على النمو والتحول الرقمي عبر خطط واقعية ومبتكرة.
           </p>
         </div>
@@ -97,7 +97,9 @@
     </div>
 
     <div class="mt-5">
-      <a href="{{ route('contact') }}" class="btn gradient-btn btn-lg rounded-pill px-5 py-2 fw-bold shadow-sm">
+      <a href="{{ route('contact') }}" class="btn gradient-btn btn-lg rounded-pill px-5 py-2 fw-bold shadow-sm" style="
+    color: #fff !important;
+">
         تواصل معنا لمعرفة التفاصيل
       </a>
     </div>
@@ -144,7 +146,7 @@
 
   /* زر التدرج */
   .gradient-btn {
-    background: #ff9800;
+    background: #7453fc;
     color: #fff;
     border: none;
     transition: all 0.3s ease;

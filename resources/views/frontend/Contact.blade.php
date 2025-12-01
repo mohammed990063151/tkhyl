@@ -7,12 +7,12 @@
 <section id="contact" class="py-5 categories-collections" style="direction: rtl; background:#fff;">
   <div class="container">
     <div class="text-center mb-5">
-      <h2 class="fw-bold" style="font-family:'Cairo',sans-serif; font-size:2.5rem; color:#222;">
-        📬 تواصــل <span style="color:#ff9800;">معنا</span>
+      <h2 class="fw-bold" style="font-family:'Cairo',sans-serif; font-size:2.5rem; color:#7453fc;">
+        📬 تواصــل <span style="color:#7453fc;">معنا</span>
       </h2>
       <p class="lead" style="max-width:700px; margin:auto; color:#555;">
         يسعدنا التواصل معك — سواء كان لديك استفسار، اقتراح، أو ترغب في التعاون معنا.
-        فريق <span style="color:#007BFF;">تخيل</span> جاهز لخدمتك دائمًا.
+        فريق <span style="color:#7453fc;">تخيل</span> جاهز لخدمتك دائمًا.
       </p>
     </div>
 
@@ -20,7 +20,7 @@
       <!-- نموذج التواصل -->
       <div class="col-lg-6">
         <div class="contact-form p-4 p-md-5 rounded-4 shadow-sm">
-          <h4 class="fw-bold mb-4 text-center" style="color:#007BFF;">أرسل رسالتك الآن</h4>
+          <h4 class="fw-bold mb-4 text-center" style="color:#7453fc;">أرسل رسالتك الآن</h4>
 
 
           <form method="POST" action="{{ route('contact.send') }}">
@@ -60,9 +60,10 @@
       <!-- معلومات التواصل -->
       <div class="col-lg-6  text-lg-start">
         <div class="info-section p-4">
-          <h4 class="fw-bold mb-3" style="color:#28a745;">معلومات التواصل</h4>
+          <h4 class="fw-bold mb-3" style="color:#7453fc;">معلومات التواصل</h4>
 
-          <p class="mb-3" 
+          <p class="mb-3" style="
+    color: #7453fc !important;
 "><i class="bi bi-geo-alt-fill text-primary me-2" ></i>استثماركوم حاضنة ومسرعة الأعمال</p>
           <p class="mb-3"><i class="bi bi-telephone-fill text-success me-2"></i> <a href="tel:0568979769" class="text-dark text-decoration-none">0568979769</a></p>
           <p class="mb-3"><i class="bi bi-envelope-fill text-info me-2"></i> <a href="mailto:info@tkhyl.com.sa" class="text-dark text-decoration-none">info@tkhyl.com.sa</a></p>
@@ -105,12 +106,12 @@
   }
 
   .form-control:focus {
-    border-color: #28a745;
+    border-color: #7453fc;
     box-shadow: 0 0 10px rgba(40,167,69,0.2);
   }
 
   .gradient-btn {
-    background: #ff9800;
+    background: #7453fc;
     color: #fff;
     border: none;
     transition: all 0.3s ease;

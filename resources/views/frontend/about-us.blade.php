@@ -15,8 +15,8 @@
 
       <!-- النص -->
       <div class="col-lg-6">
-        <h6 class="fw-bold text-uppercase mb-3" style="color:#00BCD4; letter-spacing:2px;">من نحن</h6>
-        <h2 class="fw-bold mb-4" style="background: linear-gradient(90deg, #007BFF, #28a745, #FF9800);
+        <h6 class="fw-bold text-uppercase mb-3" style="color:#7453fc; letter-spacing:2px;">من نحن</h6>
+        <h2 class="fw-bold mb-4" style="background: linear-gradient(90deg, #007BFF, #7453fc, #7453fc);
                                         -webkit-background-clip: text;
                                         -webkit-text-fill-color: transparent;">
           في <span class="fw-bolder">تخــــيّــل</span>، نحـوّل الأفكــار إلى واقـــع ينبض بالإبداع
@@ -30,7 +30,7 @@
 
         <div class="row text-center g-3 mb-4">
           <div class="col-6 col-md-4">
-            <div class="about-box p-3 rounded-4 shadow-sm">
+            <div class="about-box p-3 rounded-4 ">
               <i class="bi bi-lightbulb-fill fs-3 text-warning"></i>
               <h6 class="fw-bold mt-2">إبداع</h6>
             </div>
@@ -49,7 +49,9 @@
           </div>
         </div>
 
-        <a href="{{ route('contact') }}" class="btn btn-lg px-5 py-3 fw-bold about-btn">
+        <a href="{{ route('contact') }}" class="btn btn-lg px-5 py-3 fw-bold about-btn" style="
+    color: #fff !important;
+">
           تواصـل معنــا
         </a>
       </div>
@@ -81,7 +83,7 @@
   right: -30px;
   width: 200px;
   height: 200px;
-  background: linear-gradient(135deg, #007BFF, #28a745, #FF9800);
+  background: linear-gradient(135deg, #007BFF, #7453fc, #7453fc);
   border-radius: 50%;
   z-index: 1;
   opacity: 0.2;
@@ -94,16 +96,16 @@
 }
 
 .about-box {
-  background: #fff;
+  background: #7453fc;
   transition: 0.3s ease;
 }
 .about-box:hover {
   transform: translateY(-6px);
-  background: linear-gradient(135deg, #007BFF20, #28a74520, #FF980020);
+  background: linear-gradient(135deg, #007BFF20, #7453fc, #7453fc);
 }
 
 .about-btn {
-  background: #FF9800;
+  background: #7453fc;
   border: none;
   color: #fff;
   border-radius: 50px;
@@ -133,32 +135,34 @@
       <!-- النص -->
       <div class="col-lg-6 text-center text-lg-start">
         <h2 class="fw-bold mb-4" style="font-family:'Cairo',sans-serif; font-size:2.4rem; color:#111;">
-          نشـــأة <span style="color:#ff9800;">تخـــيّل</span>
+          نشـــأة <span style="color:#7453fc;">تخـــيّل</span>
         </h2>
 
-        <p class="lead mb-4" style="font-family:'Cairo',sans-serif; line-height:1.9; font-size:1.15rem; color:#444;">
-          في <span style="color:#28a745; font-weight:bold;">بيئة تنافسية</span> حفزتنا نحو <span style="color:#007BFF; font-weight:bold;">الإبداع</span>
-          والتطور في أساليب التسويق <span style="color:#ff9800; font-weight:bold;">النوعية</span> التي تجمع بين
-          <span style="color:#000; font-weight:bold;">الأصالة</span> و<span style="color:#28a745; font-weight:bold;">التجديد</span>.
+        <p class="lead mb-4" style="font-family:'Cairo',sans-serif; line-height:1.9; font-size:1.15rem; color:#7453fc;">
+          في <span style="color:#7453fc; font-weight:bold;">بيئة تنافسية</span> حفزتنا نحو <span style="color:#7453fc; font-weight:bold;">الإبداع</span>
+          والتطور في أساليب التسويق <span style="color:#7453fc; font-weight:bold;">النوعية</span> التي تجمع بين
+          <span style="color:#000; font-weight:bold;">الأصالة</span> و<span style="color:#7453fc; font-weight:bold;">التجديد</span>.
         </p>
 
         <!-- القيم -->
         <div class="d-flex justify-content-center justify-content-lg-start gap-4 mb-4">
           <div class="value-box">
-            <i class="fas fa-lightbulb" style="color:#ff9800; font-size:2rem;"></i>
+            <i class="fas fa-lightbulb" style="color:#7453fc; font-size:2rem;"></i>
             <h6 class="fw-bold mt-2">إبداع</h6>
           </div>
           <div class="value-box">
-            <i class="fas fa-chart-line" style="color:#28a745; font-size:2rem;"></i>
+            <i class="fas fa-chart-line" style="color:#7453fc; font-size:2rem;"></i>
             <h6 class="fw-bold mt-2">تطور</h6>
           </div>
           <div class="value-box">
-            <i class="fas fa-handshake" style="color:#007BFF; font-size:2rem;"></i>
+            <i class="fas fa-handshake" style="color:#7453fc; font-size:2rem;"></i>
             <h6 class="fw-bold mt-2">شراكة</h6>
           </div>
         </div>
 
-        <a href="{{ route('contact') }}" class="btn gradient-btn btn-lg rounded-pill px-4 py-2 fw-bold shadow">تواصــل معنــا</a>
+        <a href="{{ route('contact') }}" class="btn gradient-btn btn-lg rounded-pill px-4 py-2 fw-bold shadow" style="
+    color: #fff !important;
+">تواصــل معنــا</a>
       </div>
 
       <!-- الصورة -->
@@ -232,7 +236,7 @@
   }
 
   .gradient-btn {
-    background:  #ff9800;
+    background:  #7453fc;
     color: #fff;
     border: none;
     transition: all 0.3s ease;

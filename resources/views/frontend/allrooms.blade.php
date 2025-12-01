@@ -5,8 +5,8 @@
 
 <section id="gallery" class="py-5 categories-collections" style="direction: rtl; background:#fff;">
   <div class="container text-center">
-    <h2 class="fw-bold mb-4" style="font-family:'Cairo',sans-serif; font-size:2.5rem; color:#222;">
-      معــــرض <span style="color:#ff9800;">أعمــــالنا</span>
+    <h2 class="fw-bold mb-4" style="font-family:'Cairo',sans-serif; font-size:2.5rem; color:#7453fc;">
+      معــــرض <span style="color:#7453fc;">أعمــــالنا</span>
     </h2>
     <p class="lead mb-5" style="max-width:800px; margin:auto; color:#555; font-family:'Cairo',sans-serif;">
       نستعرض في هذا المعرض مجموعة من مشاريعنا الإبداعية التي تعكس شغفنا في بناء حلول رقمية وتسويقية متكاملة،
@@ -93,7 +93,9 @@
 
     <!-- زر عرض الكل -->
     <div class="mt-5">
-      <a href="{{ route('contact') }}" class="btn gradient-btn btn-lg rounded-pill px-5 py-2 fw-bold shadow-sm">
+      <a href="{{ route('contact') }}" class="btn gradient-btn btn-lg rounded-pill px-5 py-2 fw-bold shadow-sm" style="
+    color: #fff !important;
+">
         اطلب عرضك الآن
       </a>
     </div>
@@ -121,7 +123,7 @@
   }
 
   .filter-btn:hover, .filter-btn.active {
-    background:#ff9800;
+    background:#7453fc;
     color: #fff;
   }
 
@@ -163,7 +165,7 @@
 
   /* زر التدرج */
   .gradient-btn {
-    background:#ff9800;
+    background:#7453fc;
     color: #fff;
     border: none;
     transition: all 0.3s ease;

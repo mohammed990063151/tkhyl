@@ -163,7 +163,7 @@ https://templatemo.com/tm-565-onix-digital
             left: 0;
             width: 0;
             height: 2px;
-            background: linear-gradient(90deg, #FF5E00, #00B2FF);
+            background: linear-gradient(90deg, #7453fc, #00B2FF);
             transition: width 0.3s ease;
         }
 
@@ -172,11 +172,11 @@ https://templatemo.com/tm-565-onix-digital
         }
 
         .header-area .main-nav a.active {
-            color: #ff9800 !important;
+            color: #7453fc !important;
         }
 
         .header-area .main-nav a:hover {
-            color: #ff9800 !important;
+            color: #7453fc !important;
         }
 
         .card {
@@ -214,7 +214,7 @@ https://templatemo.com/tm-565-onix-digital
         /* body.dark-mode p, */
         body.dark-mode span,
         body.dark-mode a {
-            color: #f0990e !important;
+            color: #7453fc !important;
         }
 
         body.dark-mode .header-area {
@@ -225,15 +225,15 @@ https://templatemo.com/tm-565-onix-digital
 
         body.dark-mode .header-area .main-nav a,
         body.dark-mode .header-area .main-nav span {
-            color: #f88808 !important;
+            color:#7453fc; !important;
         }
 
         body.dark-mode .header-area .main-nav a.active {
-            color: #FF5E00 !important;
+            color: #7453fc !important;
         }
 
         body.dark-mode .header-area .main-nav a:hover {
-            color: #FF5E00 !important;
+            color: #7453fc !important;
         }
 
         body.dark-mode .card {
@@ -266,7 +266,7 @@ https://templatemo.com/tm-565-onix-digital
 
         body.dark-mode .form-control:focus {
             background: #2a2a2a !important;
-            border-color: #FF5E00 !important;
+            border-color: #7453fc !important;
             box-shadow: 0 0 10px rgba(255, 94, 0, 0.2);
         }
 
@@ -297,7 +297,7 @@ https://templatemo.com/tm-565-onix-digital
 
         body.light-mode .form-control:focus {
             background: #f9f9f9 !important;
-            border-color: #FF5E00 !important;
+            border-color: #7453fc !important;
             box-shadow: 0 0 10px rgba(255, 94, 0, 0.1);
         }
 
@@ -321,7 +321,7 @@ https://templatemo.com/tm-565-onix-digital
 
         #themeToggle:hover {
             transform: scale(1.15) rotate(15deg);
-            border-color: #FF5E00;
+            border-color: #7453fc;
             box-shadow: 0 4px 12px rgba(255, 94, 0, 0.2);
         }
 
@@ -332,7 +332,7 @@ https://templatemo.com/tm-565-onix-digital
         }
 
         body.dark-mode #themeToggle:hover {
-            border-color: #FF5E00;
+            border-color: #7453fc;
             box-shadow: 0 4px 12px rgba(255, 94, 0, 0.3);
         }
 

@@ -80,7 +80,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: linear-gradient(90deg, #FF5E00, #00B2FF);
+            background: linear-gradient(90deg, #7453fc, #00B2FF);
             transition: width 0.3s ease;
         }
 
@@ -89,11 +89,11 @@
         }
 
         .header-area .main-nav a.active {
-            color: #ff9800 !important;
+            color: #7453fc !important;
         }
 
         .header-area .main-nav a:hover {
-            color: #ff9800 !important;
+            color: #7453fc !important;
         }
 
         .card {
@@ -131,7 +131,7 @@
         /* body.dark-mode p, */
         body.dark-mode span,
         body.dark-mode a {
-            color: #f0990e !important;
+        color: #f88808  f !important;
         }
 
         body.dark-mode .header-area {
@@ -142,15 +142,15 @@
 
         body.dark-mode .header-area .main-nav a,
         body.dark-mode .header-area .main-nav span {
-            color: #f88808 !important;
+            color:#7453fc; !important;
         }
 
         body.dark-mode .header-area .main-nav a.active {
-            color: #FF5E00 !important;
+            color: #7453fc !important;
         }
 
         body.dark-mode .header-area .main-nav a:hover {
-            color: #FF5E00 !important;
+            color: #7453fc !important;
         }
 
         body.dark-mode .card {
@@ -183,7 +183,7 @@
 
         body.dark-mode .form-control:focus {
             background: #2a2a2a !important;
-            border-color: #FF5E00 !important;
+            border-color: #7453fc !important;
             box-shadow: 0 0 10px rgba(255, 94, 0, 0.2);
         }
 
@@ -214,7 +214,7 @@
 
         body.light-mode .form-control:focus {
             background: #f9f9f9 !important;
-            border-color: #FF5E00 !important;
+            border-color: #7453fc !important;
             box-shadow: 0 0 10px rgba(255, 94, 0, 0.1);
         }
 
@@ -238,7 +238,7 @@
 
         #themeToggle:hover {
             transform: scale(1.15) rotate(15deg);
-            border-color: #FF5E00;
+            border-color: #7453fc;
             box-shadow: 0 4px 12px rgba(255, 94, 0, 0.2);
         }
 
@@ -249,7 +249,7 @@
         }
 
         body.dark-mode #themeToggle:hover {
-            border-color: #FF5E00;
+            border-color: #7453fc;
             box-shadow: 0 4px 12px rgba(255, 94, 0, 0.3);
         }
 
@@ -499,7 +499,9 @@ https://templatemo.com/tm-577-liberty-market
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="{{ route('frontend.home') }}" class="active">الرئيسية </a></li>
+                            <li><a href="{{ route('frontend.home') }}" class="active" style="
+    color: #fff !important;
+">الرئيسية </a></li>
                             <li><a href="{{ route('frontend.our-services') }}">خدمتنا</a></li>
                             <li><a href="{{ route('frontend.about-us') }}">من نحن</a></li>
                             <li><a href="{{ route('contact') }}">تواصل معنا</a></li>
@@ -595,7 +597,7 @@ https://templatemo.com/tm-577-liberty-market
                             <div class="col-lg-12">
                                 <div class="section-heading">
                                     <div class="line-dec"></div>
-                                    <h2>خدمات <em>تخيّل</em> المتخصصة بالهوية البصرية </h2>
+                                    <h2 style="color:#7453fc;">خدمات <em>تخيّل</em> المتخصصة بالهوية البصرية </h2>
                                 </div>
                             </div>
 
@@ -705,7 +707,7 @@ https://templatemo.com/tm-577-liberty-market
                             <div class="col-lg-12">
                                 <div class="section-heading">
                                     <div class="line-dec"></div>
-                                    <h2>استكشف بعض <em>الهويات البصرية</em> التي صممناها باستخدام </h2>
+                                    <h2 style="color:#7453fc;">استكشف بعض <em>الهويات البصرية</em> التي صممناها باستخدام </h2>
                                 </div>
                             </div>
 
@@ -792,12 +794,12 @@ https://templatemo.com/tm-577-liberty-market
 
             <!-- عنوان القسم -->
             <div class="text-center mb-5">
-                <h2 class="fw-bold" style="font-family:'Cairo',sans-serif; font-size:2.5rem; color:#fff;">
-                    تـــواصــــل <span style="color:#fff;">معنــــا</span>
+                <h2 class="fw-bold" style="font-family:'Cairo',sans-serif; font-size:2.5rem; color:#7453fc;">
+                    تـــواصــــل <span style="color:#7453fc;">معنــــا</span>
                 </h2>
-                <p class="lead" style="max-width:750px; margin:auto; color:#fff;">
+                <p class="lead" style="max-width:750px; margin:auto; color:#7453fc;">
                     يسعدنا دائمًا استقبال استفساراتكم واقتراحاتكم،
-                    فريق <strong style="color:#fff;">تخيّل</strong> جاهز لمساعدتك في أي وقت.
+                    فريق <strong style="color:#7453fc;">تخيّل</strong> جاهز لمساعدتك في أي وقت.
                 </p>
             </div>
 
@@ -806,7 +808,7 @@ https://templatemo.com/tm-577-liberty-market
                 <!-- نموذج التواصل -->
                 <div class="col-lg-6">
                     <div class="card shadow-sm p-4 rounded-4 border-0">
-                        <h5 class="fw-bold mb-3" style="color:#fff;">أرسل لنا رسالة</h5>
+                        <h5 class="fw-bold mb-3" style="color:#7453fc;">أرسل لنا رسالة</h5>
 
                         <form action="{{ route('contact.send') }}" method="POST">
                             @csrf
@@ -832,7 +834,7 @@ https://templatemo.com/tm-577-liberty-market
                             </div>
 
                             <button type="submit" class="btn btn-warning w-100 rounded-pill fw-bold"
-                                style="color:#fff;">
+                                style="color:#7453fc;">
                                 إرسال الرسالة
                             </button>
                         </form>
@@ -844,7 +846,7 @@ https://templatemo.com/tm-577-liberty-market
                     <div class="card shadow-sm rounded-4 border-0 overflow-hidden">
 
                         <!-- العنوان -->
-                        <h5 class="fw-bold p-3" style="color:#fff;">موقعنا على الخريطة</h5>
+                        <h5 class="fw-bold p-3" style="color:#7453fc;;">موقعنا على الخريطة</h5>
 
                         <!-- Google Map -->
                         <iframe
@@ -866,9 +868,9 @@ https://templatemo.com/tm-577-liberty-market
         <div class="container text-center">
 
 
-            <p style="margin:0; font-family:'Cairo', sans-serif; font-size:15px; line-height:1.8;color: #2f00ff !important;">
+            <p style="margin:0; font-family:'Cairo', sans-serif; font-size:15px; line-height:1.8;color:#7453fc; !important;">
                 جميع الحقوق محفوظة © {{ date('Y') }}
-                <span style="color:#ff9800; font-weight:bold;">تخيّل</span> — منصة الإبداع والهوية البصرية ب.
+                <span style="color:#7453fc; font-weight:bold;">تخيّل</span> — منصة الإبداع والهوية البصرية ب.
                 <br>
                 تم التصميم والتطوير بواسطة فريق
                 <span style="color:#007BFF; font-weight:bold;">تخيّل</span>.

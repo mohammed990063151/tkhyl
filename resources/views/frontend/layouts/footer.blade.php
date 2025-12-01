@@ -5,12 +5,12 @@
     <footer style="background:#111; padding:25px 0; color:#ddd; direction:rtl;">
         <div class="container text-center">
 
-            <p style="margin:0; font-family:'Cairo', sans-serif; font-size:15px; line-height:1.8; color: #2f00ff !important;">
+            <p style="margin:0; font-family:'Cairo', sans-serif; font-size:15px; line-height:1.8; color:#7453fc !important;">
                 جميع الحقوق محفوظة © {{ date('Y') }}
-                <span style="color:#ff9800; font-weight:bold;">تخيّل</span> — منصة الإبداع والهوية البصرية ب.
+                <span style="color:#7453fc; font-weight:bold;">تخيّل</span> — منصة الإبداع والهوية البصرية ب.
                 <br>
                 تم التصميم والتطوير بواسطة فريق
-                <span style="color:#007BFF; font-weight:bold;">تخيّل</span>.
+                <span style="color:#7453fc; font-weight:bold;">تخيّل</span>.
             </p>
 
         </div>
