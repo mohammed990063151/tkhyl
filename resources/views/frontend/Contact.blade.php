@@ -4,7 +4,7 @@
 
 @section('content')
 <br /><br /><br />
-<section id="contact" class="py-5" style="direction: rtl; background:#fff;">
+<section id="contact" class="py-5 categories-collections" style="direction: rtl; background:#fff;">
   <div class="container">
     <div class="text-center mb-5">
       <h2 class="fw-bold" style="font-family:'Cairo',sans-serif; font-size:2.5rem; color:#222;">
@@ -22,24 +22,7 @@
         <div class="contact-form p-4 p-md-5 rounded-4 shadow-sm">
           <h4 class="fw-bold mb-4 text-center" style="color:#007BFF;">أرسل رسالتك الآن</h4>
 
-          {{-- <form id="contactForm">
-            <div class="mb-3">
-              <label class="form-label fw-semibold">الاسم الكامل</label>
-              <input type="text" id="name" class="form-control rounded-pill" placeholder="اكتب اسمك" required>
-            </div>
-            <div class="mb-3">
-              <label class="form-label fw-semibold">البريد الإلكتروني</label>
-              <input type="email" id="email" class="form-control rounded-pill" placeholder="example@email.com" required>
-            </div>
-            <div class="mb-3">
-              <label class="form-label fw-semibold">الرسالة</label>
-              <textarea id="message" rows="4" class="form-control rounded-4" placeholder="اكتب رسالتك..." required></textarea>
-            </div>
-            <div class="text-center">
-              <button type="submit" class="btn gradient-btn rounded-pill px-5 py-2 fw-bold">إرسال</button>
-            </div>
-            <p id="successMsg" class="text-center mt-3 text-success fw-bold" style="display:none;">✅ تم إرسال رسالتك بنجاح</p>
-          </form> --}}
+
           <form method="POST" action="{{ route('contact.send') }}">
     @csrf
 
@@ -79,8 +62,7 @@
         <div class="info-section p-4">
           <h4 class="fw-bold mb-3" style="color:#28a745;">معلومات التواصل</h4>
 
-          <p class="mb-3" style="
-    color: #1c1b1e;
+          <p class="mb-3" 
 "><i class="bi bi-geo-alt-fill text-primary me-2" ></i>استثماركوم حاضنة ومسرعة الأعمال</p>
           <p class="mb-3"><i class="bi bi-telephone-fill text-success me-2"></i> <a href="tel:0568979769" class="text-dark text-decoration-none">0568979769</a></p>
           <p class="mb-3"><i class="bi bi-envelope-fill text-info me-2"></i> <a href="mailto:info@tkhyl.com.sa" class="text-dark text-decoration-none">info@tkhyl.com.sa</a></p>

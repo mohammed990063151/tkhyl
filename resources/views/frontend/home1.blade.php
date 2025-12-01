@@ -3,95 +3,451 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تخيل</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>تخيل - منصة التسويق والإبداع</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;700&family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link href="templatemo-electric-xtra.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        /* خلفية الفيديو */
-.video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.55);
-    z-index: -1;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        html {
+            scroll-behavior: smooth;
+        }
 
-.whatsapp-float {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: #25D366;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-    z-index: 999;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-}
+        :root {
+            --primary-color: #FF5E00;
+            --secondary-color: #00B2FF;
+            --dark-bg: #0a0a0a;
+            --light-bg: #ffffff;
+            --text-dark: #f1f1f1;
+            --text-light: #333;
+            --card-dark: #1a1a1a;
+            --card-light: #f8f9fa;
+            --border-dark: #333;
+            --border-light: #e0e0e0;
+        }
 
-/* الأيقونة */
-.whatsapp-float i {
-    font-size: 28px;
-}
+        body {
+            font-family: 'Cairo', 'Rajdhani', sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+            overflow-x: hidden;
+        }
 
-/* الخلفية الخضراء المتوهجة */
-.whatsapp-float::before {
-    content: "";
-    position: absolute;
-    inset: -10px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(37, 211, 102, 0.7) 0%, rgba(37, 211, 102, 0) 65%);
-    opacity: 0.9;
-    z-index: -1;
-    filter: blur(2px);
-    animation: whatsapp-pulse 1.8s infinite ease-out;
-}
+        body.light-mode {
+            background: var(--light-bg);
+            color: var(--text-light);
+        }
 
-/* حركة النبض */
-@keyframes whatsapp-pulse {
-    0% {
-        transform: scale(0.9);
-        opacity: 0.8;
-    }
-    70% {
-        transform: scale(1.15);
-        opacity: 0;
-    }
-    100% {
-        transform: scale(1.25);
-        opacity: 0;
-    }
-}
+        body.light-mode h1,
+        body.light-mode h2,
+        body.light-mode h3,
+        body.light-mode h4,
+        body.light-mode h5,
+        body.light-mode h6,
+        body.light-mode p,
+        body.light-mode span,
+        body.light-mode label {
+            color: var(--text-light);
+        }
 
-/* تأثير الهوفر */
-.whatsapp-float:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
-    background: #1ebe5b;
-}
+        /* Navbar Styling */
+        #navbar {
+            background: #1a1a1a;
+            border-bottom: 1px solid #333;
+            transition: all 0.3s ease;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 997;
+        }
 
-/* نصوص Glitch تدعم العربية */
-</style>
-<!--
+        #navbar .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
 
-TemplateMo 596 Electric Xtra
+        #navbar .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+            color: #FF5E00;
+        }
 
-https://templatemo.com/tm-596-electric-xtra
+        #navbar .logo-svg {
+            width: 40px;
+            height: 40px;
+        }
 
--->
+        #navbar .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        #navbar .nav-link {
+            color: #f1f1f1;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            font-weight: 500;
+        }
+
+        #navbar .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #FF5E00, #00B2FF);
+            transition: width 0.3s ease;
+        }
+
+        #navbar .nav-link:hover::after {
+            width: 100%;
+        }
+
+        #navbar .nav-link:hover {
+            color: #FF5E00;
+        }
+
+        /* Light Mode Navbar */
+        body.light-mode #navbar {
+            background: #ffffff;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        body.light-mode #navbar .logo-link {
+            color: #FF5E00;
+        }
+
+        body.light-mode #navbar .nav-link {
+            color: #333;
+        }
+
+        body.light-mode #navbar .nav-link:hover {
+            color: #FF9800;
+        }
+
+        /* Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #FF5E00;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        body.light-mode .menu-toggle span {
+            background: #FF5E00;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(10px, 10px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            #navbar .nav-links {
+                position: absolute;
+                top: 70px;
+                right: 0;
+                left: 0;
+                flex-direction: column;
+                gap: 0;
+                background: #1a1a1a;
+                padding: 20px;
+                display: none;
+                border-top: 1px solid #333;
+            }
+
+            body.light-mode #navbar .nav-links {
+                background: #ffffff;
+                border-top: 1px solid #e0e0e0;
+            }
+
+            #navbar .nav-links.active {
+                display: flex;
+            }
+
+            #navbar .nav-links li {
+                padding: 15px 0;
+                border-bottom: 1px solid #333;
+            }
+
+            body.light-mode #navbar .nav-links li {
+                border-bottom: 1px solid #e0e0e0;
+            }
+
+            #navbar .nav-links li:last-child {
+                border-bottom: none;
+            }
+        }
+
+        body.light-mode .header-area {
+            background: var(--light-bg) !important;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        body.light-mode nav {
+            background: var(--light-bg) !important;
+        }
+
+        body.light-mode nav a,
+        body.light-mode nav span {
+            color: var(--text-light) !important;
+        }
+
+        body.light-mode .card,
+        body.light-mode .content-panel {
+            background: var(--card-light) !important;
+            border: 1px solid var(--border-light) !important;
+            color: var(--text-light) !important;
+        }
+
+        body.light-mode footer {
+            background: var(--card-light) !important;
+            color: var(--text-light) !important;
+            border-top: 1px solid var(--border-light);
+        }
+
+        body.light-mode .form-control,
+        body.light-mode input,
+        body.light-mode textarea {
+            background: var(--light-bg) !important;
+            color: var(--text-light) !important;
+            border: 1px solid var(--border-light) !important;
+        }
+
+        body.light-mode .form-control::placeholder,
+        body.light-mode input::placeholder,
+        body.light-mode textarea::placeholder {
+            color: #999 !important;
+        }
+
+        /* Video Overlay */
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 10, 10, 0.6);
+            z-index: 1;
+            transition: background 0.3s ease;
+        }
+
+        body.light-mode .video-overlay {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #25D366, #20BA5F);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+            z-index: 999;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .whatsapp-float i {
+            font-size: 28px;
+            animation: whatsapp-bounce 2s infinite ease-in-out;
+        }
+
+        .whatsapp-float::before {
+            content: "";
+            position: absolute;
+            inset: -10px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(37, 211, 102, 0.6) 0%, rgba(37, 211, 102, 0) 70%);
+            opacity: 0.8;
+            z-index: -1;
+            filter: blur(3px);
+            animation: whatsapp-pulse 2s infinite ease-out;
+        }
+
+        @keyframes whatsapp-pulse {
+            0% {
+                transform: scale(0.8);
+                opacity: 0.9;
+            }
+            50% {
+                opacity: 0.4;
+            }
+            100% {
+                transform: scale(1.3);
+                opacity: 0;
+            }
+        }
+
+        @keyframes whatsapp-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.15) translateY(-5px);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
+        }
+
+        /* Theme Toggle Button */
+        .theme-toggle-btn {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 94, 0, 0.2);
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 24px;
+            z-index: 998;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .theme-toggle-btn:hover {
+            background: rgba(255, 94, 0, 0.3);
+            transform: scale(1.1) rotate(20deg);
+        }
+
+        body.light-mode .theme-toggle-btn {
+            background: rgba(255, 200, 100, 0.2);
+            border-color: #FF9800;
+            color: #FF9800;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                bottom: 16px;
+                right: 16px;
+                width: 55px;
+                height: 55px;
+            }
+
+            .whatsapp-float i {
+                font-size: 24px;
+            }
+
+            .theme-toggle-btn {
+                top: 20px;
+                left: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .whatsapp-float {
+                bottom: 12px;
+                right: 12px;
+                width: 50px;
+                height: 50px;
+            }
+
+            .whatsapp-float i {
+                font-size: 20px;
+            }
+
+            .theme-toggle-btn {
+                top: 15px;
+                left: 15px;
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+        }
+
+        /* Smooth scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--dark-bg);
+        }
+
+        body.light-mode ::-webkit-scrollbar-track {
+            background: var(--light-bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+        }
+
+        /* Loading Animation */
+        @keyframes shimmer {
+            0% { background-position: -1000px 0; }
+            100% { background-position: 1000px 0; }
+        }
+
+        .loading {
+            animation: shimmer 2s infinite;
+            background: linear-gradient(90deg, transparent, rgba(255,94,0,0.3), transparent);
+            background-size: 1000px 100%;
+        }
+    </style>
 </head>
-<body style="
-    direction: rtl;
-">
+<body style="direction: rtl;">
+    <!-- Theme Toggle Button -->
+    <button id="themeToggle" class="theme-toggle-btn" title="تبديل الوضع الليلي/النهاري">
+        🌙
+    </button>
+
     <!-- Animated Grid Background -->
     <div class="grid-bg"></div>
     <div class="gradient-overlay"></div>
@@ -795,7 +1151,204 @@ https://templatemo.com/tm-596-electric-xtra
 
 <script src="templatemo-electric-scripts.js"></script>
 
+<script>
+    // ============================================
+    // نظام Dark/Light Mode المحسّن
+    // ============================================
+    const themeToggle = document.getElementById('themeToggle');
+    const htmlElement = document.documentElement;
+    const body = document.body;
 
+    // الحصول على الوضع المحفوظ أو تعيين الافتراضي (dark)
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+
+    // تطبيق الوضع عند التحميل
+    function applyTheme(theme) {
+        if (theme === 'light') {
+            body.classList.add('light-mode');
+            body.classList.remove('dark-mode');
+            themeToggle.textContent = '🌙';
+            htmlElement.style.colorScheme = 'light';
+        } else {
+            body.classList.remove('light-mode');
+            body.classList.add('dark-mode');
+            themeToggle.textContent = '☀️';
+            htmlElement.style.colorScheme = 'dark';
+        }
+        localStorage.setItem('theme', theme);
+    }
+
+    // تطبيق الوضع المحفوظ
+    applyTheme(savedTheme);
+
+    // معالج الضغط على الزر
+    themeToggle.addEventListener('click', function() {
+        const currentTheme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        applyTheme(newTheme);
+    });
+
+    // دعم تفضيلات النظام
+    if (window.matchMedia) {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            if (!localStorage.getItem('theme')) {
+                applyTheme(e.matches ? 'dark' : 'light');
+            }
+        });
+    }
+
+    // ============================================
+    // تحسينات الأداء والحركات
+    // ============================================
+
+    // Smooth scroll behavior
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href !== '#' && document.querySelector(href)) {
+                e.preventDefault();
+                document.querySelector(href).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe all sections and cards
+    document.querySelectorAll('section, .card, .feature-tabs, .about-content').forEach(el => {
+        observer.observe(el);
+    });
+
+    // ============================================
+    // Form Validation والتحسينات
+    // ============================================
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            // التحقق البسيط
+            if (!name || !email || !subject || !message) {
+                alert('الرجاء ملء جميع الحقول');
+                return;
+            }
+
+            // التحقق من صيغة البريد الإلكتروني
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('الرجاء إدخال بريد إلكتروني صحيح');
+                return;
+            }
+
+            // إضافة تأثير تحميل
+            const submitBtn = this.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'جاري الإرسال...';
+            submitBtn.disabled = true;
+
+            // محاكاة إرسال
+            setTimeout(() => {
+                alert('شكرًا! تم استلام رسالتك بنجاح');
+                this.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 1500);
+        });
+    }
+
+    // ============================================
+    // Responsive Menu
+    // ============================================
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            this.classList.toggle('active');
+        });
+
+        // إغلاق القائمة عند الضغط على رابط
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+    }
+
+    // ============================================
+    // Performance Optimization
+    // ============================================
+
+    // Lazy load images
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        imageObserver.unobserve(img);
+                    }
+                }
+            });
+        });
+
+        document.querySelectorAll('img.lazy').forEach(img => imageObserver.observe(img));
+    }
+
+    // ============================================
+    // Parallax effect (optional enhancement)
+    // ============================================
+    const parallaxElements = document.querySelectorAll('[data-parallax]');
+    if (parallaxElements.length > 0) {
+        window.addEventListener('scroll', () => {
+            parallaxElements.forEach(el => {
+                const scrolled = window.pageYOffset;
+                const rate = scrolled * 0.5;
+                el.style.transform = `translateY(${rate}px)`;
+            });
+        }, { passive: true });
+    }
+
+    // ============================================
+    // Prevent layout shift (CLS optimization)
+    // ============================================
+    document.documentElement.style.scrollBehavior = 'smooth';
+
+    // Add page visibility handler
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            console.log('Page is hidden');
+        } else {
+            console.log('Page is visible');
+        }
+    });
+</script>
 
 </body>
+</html>
 </html>

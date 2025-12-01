@@ -5,7 +5,7 @@
     <footer style="background:#111; padding:25px 0; color:#ddd; direction:rtl;">
         <div class="container text-center">
 
-            <p style="margin:0; font-family:'Cairo', sans-serif; font-size:15px; line-height:1.8;">
+            <p style="margin:0; font-family:'Cairo', sans-serif; font-size:15px; line-height:1.8; color: #2f00ff !important;">
                 جميع الحقوق محفوظة © {{ date('Y') }}
                 <span style="color:#ff9800; font-weight:bold;">تخيّل</span> — منصة الإبداع والهوية البصرية ب.
                 <br>

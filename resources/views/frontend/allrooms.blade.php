@@ -3,7 +3,7 @@
 @section('content')
 
 
-<section id="gallery" class="py-5" style="direction: rtl; background:#fff;">
+<section id="gallery" class="py-5 categories-collections" style="direction: rtl; background:#fff;">
   <div class="container text-center">
     <h2 class="fw-bold mb-4" style="font-family:'Cairo',sans-serif; font-size:2.5rem; color:#222;">
       معــــرض <span style="color:#ff9800;">أعمــــالنا</span>

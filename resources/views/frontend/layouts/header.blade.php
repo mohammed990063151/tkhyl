@@ -148,6 +148,22 @@ https://templatemo.com/tm-577-liberty-market
                             <li><a href="{{ route('frontend.about-us') }}">من نحن</a></li>
                             <li><a href="{{ route('contact') }}">تواصل معنا</a></li>
                             <li><a href="{{ route('frontend.rooms') }}">مجتماعتنا </a></li>
+                             <li>
+    <button id="themeToggle" class="btn btn-sm" style="
+        background:#222;
+        color:#fff;
+        border-radius:50%;
+        width:40px;
+        height:40px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        border:none;
+        cursor:pointer;
+    ">
+        🌓
+    </button>
+</li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>

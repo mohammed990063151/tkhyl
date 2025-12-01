@@ -1,61 +1,7 @@
 @extends('frontend.layouts.master')
-
-<!-- ===== CSS ===== -->
-{{-- <style>
-  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
-
-  #origin {
-    font-family: 'Cairo', sans-serif;
-  }
-
-  .floating-img {
-    animation: float 4s ease-in-out infinite;
-    max-width: 100%;
-  }
-  @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-  }
-
-  .circle {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.1);
-    animation: pulse 6s infinite ease-in-out;
-    z-index: -1;
-  }
-  .circle1 {
-    width: 180px;
-    height: 180px;
-    top: -40px;
-    left: -30px;
-  }
-  .circle2 {
-    width: 250px;
-    height: 250px;
-    bottom: -50px;
-    right: -20px;
-    animation-delay: 2s;
-  }
-
-  @keyframes pulse {
-    0%, 100% { transform: scale(1); opacity: 0.5; }
-    50% { transform: scale(1.3); opacity: 0.2; }
-  }
-
-  .btn-light {
-    border-radius: 30px;
-    font-weight: 700;
-    transition: all 0.3s ease;
-  }
-  .btn-light:hover {
-    background: #ffca2c;
-    color: #000;
-  }
-</style> --}}
 @section('content')
 <br /><br /><br /><br />
-<section id="about" class="about-section py-5" style="direction: rtl; background: #f8f9fa;">
+<section id="about" class="about-section py-5 categories-collections" style="direction: rtl; background: #f8f9fa;">
   <div class="container">
     <div class="row align-items-center g-5">
 
@@ -175,57 +121,11 @@
 </style>
 
 <br /><br />
-{{-- <section id="origin" class="py-5" style="direction: rtl; background: linear-gradient(135deg, #007BFF, #28a745, #ff9800); position: relative; overflow:hidden;">
-  <!-- خلفية فيديو خافتة -->
-  <video autoplay muted loop playsinline class="position-absolute w-100 h-100" style="object-fit: cover; z-index:0; opacity:0.12;">
-    <source src="{{ asset('img/3.mp4') }}" type="video/mp4">
-  </video>
 
-  <!-- طبقة شفافة -->
-  <div style="background: rgba(0,0,0,0.6); position:absolute; inset:0; "></div>
 
-  <div class="container position-relative z-3 text-white">
-    <div class="row align-items-center g-5">
-
-      <!-- النص -->
-      <div class="col-lg-6 text-center text-lg-start">
-        <h2 class="fw-bold mb-3" style="font-family:'Cairo',sans-serif; font-size:2.3rem;">
-          نشـــأة <span class="text-warning">تخـــــيّل</span>
-        </h2>
-
-        <p class="lead mb-4" style="font-family:'Cairo',sans-serif; line-height:1.9; font-size:1.2rem; color: rgb(6, 5, 21);">
-          في <span class="text-success fw-bold">بيئة تنافسية</span> جعلتنا أكثر <span class="text-info fw-bold">ابتكارًا</span>
-          لطرق تسويقية <span class="text-warning fw-bold">نوعية ومختلفة</span>،
-          مغلفة بهويتنا <span class="text-light fw-bold">المحلية</span>، نصنع فيها
-          <span class="text-warning fw-bold">الأصالة</span> و<span class="text-success fw-bold">الإبداع</span>
-          لنصنع <span class="text-info fw-bold">اللحظة</span>.
-        </p>
-
-        <a href="#vision" class="btn btn-light btn-lg rounded-pill px-4 py-2 fw-bold">اكتشف رؤيتنا</a>
-      </div>
-
-      <!-- الصورة الجانبية -->
-      <div class="col-lg-6 text-center">
-        <div class="image-wrapper position-relative">
-          <img src="{{ asset('img/3.jpg') }}" alt="تخيل الإبداع" class="img-fluid rounded-4 shadow-lg floating-img">
-          <!-- تأثيرات دائرية -->
-          <div class="circle circle1"></div>
-          <div class="circle circle2"></div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section> --}}
-
-<section id="origin" class="py-5" style="direction: rtl; background: #fff; position: relative; overflow:hidden;">
+<section id="origin" class="py-5 categories-collections" style="direction: rtl; background: #fff; position: relative; overflow:hidden;">
   <!-- خلفية فيديو خافتة شفافة أعلى -->
-  <video autoplay muted loop playsinline class="position-absolute w-100 h-100" style="object-fit: cover; z-index:0; opacity:0.07;">
-    <source src="{{ asset('img/3.mp4') }}" type="video/mp4">
-  </video>
-
-  <!-- طبقة شفافة بيضاء -->
-  <div style="background: rgba(255,255,255,0.9); position:absolute; inset:0;"></div>
+{{--  --}}
 
   <div class="container position-relative z-3 text-dark">
     <div class="row align-items-center g-5">
