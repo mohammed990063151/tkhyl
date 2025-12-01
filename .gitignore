@@ -1,36 +1,40 @@
-# *.log
-# .DS_Store
-# .env
-# .env.backup
-# .env.production
-# .phpactor.json
-# .phpunit.result.cache
-# /.fleet
-# /.idea
-# /.nova
-# /.phpunit.cache
-# /.vscode
-# /.zed
-# /auth.json
-# /node_modules
-# /public/build
-# /public/hot
-# /public/storage
-# /storage/*.key
-# /storage/pail
-# /vendor
-# Homestead.json
-# Homestead.yaml
-# Thumbs.db
 # ============================================
 # Laravel + Hosting Safe Git Ignore
-# يمنع رفع vendor, storage, الصور, وغيرها
+# يمنع رفع vendor, storage, logs, cache, node_modules,
+# والصور والملفات التي تتسبب في مشاكل Git على Windows
 # ============================================
 
-# النظام
-# ============= Laravel Ignore =============
+# --------------------------------------------
+# Laravel Core
+# --------------------------------------------
 /vendor
 /node_modules
+
+# --------------------------------------------
+# Storage (لا يتم رفعها أبداً)
+# --------------------------------------------
+/storage/*
+!/storage/app/
+!/storage/framework/
+!/storage/app/public/
+!/storage/app/.gitignore
+/storage/framework/cache
+/storage/framework/sessions
+/storage/framework/views
+/storage/logs
+
+# --------------------------------------------
+# Public (يمنع رفع كل شيء ما عدا الملفات الأساسية)
+# --------------------------------------------
+/public/*
+!/public/index.php
+!/public/.htaccess
+!/public/favicon.ico
+!/public/robots.txt
+
+# --------------------------------------------
+# Public Uploads (تتغير على السيرفر فقط)
+# --------------------------------------------
 /public/storage
 /public/uploads
 /public/upload
@@ -38,40 +42,38 @@
 /public/gallery
 /public/product_images
 /uploads
-/storage/*.key
-/storage/logs
-/storage/framework/cache
-/storage/framework/sessions
-/storage/framework/views
 
-# phpunit
-.phpunit.cache
+# --------------------------------------------
+# Environment Files
+# --------------------------------------------
+.env
+.env.*
+!.env.example
+
+# --------------------------------------------
+# PHPUnit Cache
+# --------------------------------------------
 .phpunit.result.cache
+.phpunit.cache
 
-# IDE
-/.idea
-/.vscode
+# --------------------------------------------
+# OS Files
+# --------------------------------------------
 .DS_Store
 Thumbs.db
 
-/vendor/
-/node_modules/
-/storage/*.key
-/storage/clockwork/
-/storage/framework/sessions/
-/storage/framework/views/
-/storage/logs/
-/public/uploads/
-/uploads/
-/hisan.zip
-.DS_Store
+# --------------------------------------------
+# IDE Files
+# --------------------------------------------
+/.idea
+/.vscode
+/.fleet
+/.zed
+/.nova
 
-
-# Composer & npm
+# --------------------------------------------
+# Misc
+# --------------------------------------------
 composer.lock
 npm-debug.log
-
-# Misc
-.env
-.env.*
-
+/hisan.zip
