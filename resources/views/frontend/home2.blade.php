@@ -487,7 +487,9 @@ https://templatemo.com/tm-577-liberty-market
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <nav class="main-nav">
+                    <nav class="main-nav" style="
+    background: #fff;
+">
                         <!-- ***** Logo Start ***** -->
                         <a href="{{ route('frontend.home') }}" class="logo">
                             <img src="assets/images/logo.svg" alt=""
