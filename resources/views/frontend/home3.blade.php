@@ -5,6 +5,297 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تخيّل | شريكك للنمو الرقمي</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #FF5F1F;
+            --primary-soft: #FFE6DB;
+            --dark: #0B0B0F;
+            --light: #FFFFFF;
+            --gray: #777;
+            --transition: all 0.35s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
+        body { background: var(--light); color: var(--dark); line-height: 1.7; overflow-x: hidden; }
+        .container { width: 90%; max-width: 1200px; margin: auto; }
+        section { padding: 80px 0; }
+        .section-title { text-align: center; font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 50px; font-weight: 900; }
+
+        /* --- Navbar --- */
+        .navbar {
+            position: sticky; top: 0; z-index: 1000;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 10px 5%; background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px); box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+        .logo-img { height: 70px; width: auto; }
+        .nav-links { display: flex; gap: 25px; list-style: none; align-items: center; }
+        .nav-links a { text-decoration: none; font-weight: 700; color: var(--dark); transition: var(--transition); }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary); }
+        .cta-nav {
+            background: var(--primary); color: #fff; padding: 10px 24px;
+            border-radius: 40px; font-weight: 800; text-decoration: none;
+            box-shadow: 0 8px 20px rgba(255, 95, 31, 0.25); transition: var(--transition);
+        }
+        .menu-toggle { display: none; font-size: 1.8rem; cursor: pointer; }
+
+        /* --- Hero --- */
+        .hero { background: radial-gradient(circle at top right, #fff4ee, #fff); padding: 60px 0; }
+        .hero-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+        .badge {
+            background: var(--primary-soft); color: var(--primary);
+            padding: 6px 18px; border-radius: 30px; font-weight: 800;
+            display: inline-block; margin-bottom: 20px; font-size: 0.9rem;
+        }
+        .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 20px; line-height: 1.3; }
+        .gradient-text { background: linear-gradient(90deg, var(--primary), #ff9f6b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 1.1rem; color: #444; margin-bottom: 30px; }
+        .hero-image img { width: 100%; border-radius: 35px; box-shadow: 0 30px 70px rgba(0,0,0,.1); }
+
+        /* --- Services --- */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .service-card {
+            background: #fff; padding: 40px; border-radius: 25px; border: 1px solid #eee;
+            transition: var(--transition); height: 100%;
+        }
+        .service-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.08); border-color: var(--primary); }
+        .service-card h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.4rem; }
+
+        /* --- USP (Dark) --- */
+        .usp { background: var(--dark); color: #fff; }
+        .usp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .usp-card {
+            padding: 35px; border-radius: 25px; background: rgba(255,255,255,.04);
+            border: 1px solid rgba(255,255,255,.1); transition: var(--transition);
+        }
+        .usp-card:hover { background: rgba(255,255,255,0.08); }
+        .usp-card i { font-size: 2.4rem; color: var(--primary); margin-bottom: 20px; }
+
+        /* --- FAQ --- */
+        .faq-container { max-width: 800px; margin: auto; }
+        .faq-item { background: #fff; border-radius: 15px; margin-bottom: 15px; border: 1px solid #eee; overflow: hidden; }
+        .faq-question { padding: 20px; cursor: pointer; font-weight: 800; display: flex; justify-content: space-between; align-items: center; }
+        .faq-answer { max-height: 0; overflow: hidden; padding: 0 20px; color: var(--gray); transition: 0.3s ease; }
+        .faq-item.active .faq-answer { padding-bottom: 20px; max-height: 300px; }
+        .faq-item.active .fa-chevron-down { transform: rotate(180deg); }
+
+        /* --- WhatsApp --- */
+        .whatsapp-button {
+            position: fixed; bottom: 30px; right: 30px; background: #25D366;
+            color: #fff; font-weight: bold; padding: 12px 25px; border-radius: 50px;
+            display: flex; align-items: center; gap: 10px; z-index: 1000;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3); text-decoration: none; transition: var(--transition);
+        }
+
+        /* --- Footer --- */
+        footer { background: #0B0B0F; color: #fff; padding: 70px 0 30px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+        .footer-logo img { height: 80px; margin-bottom: 20px; }
+        .footer-links ul { list-style: none; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a { color: #aaa; text-decoration: none; transition: var(--transition); }
+        .footer-links a:hover { color: #fff; padding-right: 5px; }
+        .socials { display: flex; gap: 15px; margin-top: 20px; }
+        .socials a { font-size: 1.5rem; color: #fff; transition: var(--transition); }
+        .socials a:hover { color: var(--primary); transform: translateY(-3px); }
+
+        /* --- Responsive --- */
+        @media (max-width: 991px) {
+            .hero-wrapper { grid-template-columns: 1fr; text-align: center; }
+            .hero-image { order: -1; max-width: 500px; margin: 0 auto; }
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle { display: block; }
+            .nav-links {
+                position: absolute; top: 100%; right: 0; width: 100%;
+                background: #fff; flex-direction: column; padding: 30px;
+                box-shadow: 0 15px 30px rgba(0,0,0,0.1); display: none; gap: 20px;
+            }
+            .nav-links.show { display: flex; }
+            .cta-nav { display: none; }
+            .whatsapp-button span { display: none; }
+            .whatsapp-button { padding: 15px; border-radius: 50%; bottom: 20px; right: 20px; }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">
+        <a href="#">
+            <img src="{{ asset('public/img/logo-text.png') }}" alt="تخيّل" class="logo-img">
+        </a>
+    </div>
+
+    <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="{{ route('frontend.home') }}" class="active">الرئيسية</a></li>
+        <li><a href="{{ route('frontend.about-us') }}">من نحن</a></li>
+        <li><a href="{{ route('contact') }}">تواصل معنا</a></li>
+        <li><a href="{{ route('frontend.rooms') }}">مجتمعنا</a></li>
+    </ul>
+
+    <a href="{{ route('contact') }}" class="cta-nav">ابدأ رحلة نموك</a>
+</nav>
+
+
+<section class="hero">
+    <div class="container hero-wrapper">
+        <div data-aos="fade-left">
+            <span class="badge">الذكاء الاصطناعي + الإبداع البشري</span>
+            <h1>شريكك الاستراتيجي للنمو الرقمي<br><span class="gradient-text">نحوّل أفكارك إلى تجارب واقعية مؤثرة</span></h1>
+            <p>في "تخيل"، لا نكتفي بجلب الزوار، بل نبني لك المنصة التي تحولهم إلى عملاء دائمين من خلال دمج الإبداع البشري بأحدث تقنيات الذكاء الاصطناعي.</p>
+            <a href="{{ route('contact') }}" class="cta-nav" style="display:inline-block">ابدأ رحلة نموك الآن</a>
+        </div>
+        <div class="hero-image" data-aos="zoom-in">
+            <img src="../assets/images/banner-01.png" alt="النمو الرقمي">
+        </div>
+    </div>
+</section>
+
+<section id="services" style="background:#f9f9f9;">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">خدماتنا</h2>
+        <div class="services-grid">
+            <div class="service-card" data-aos="fade-up">
+                <h3>الهوية واستراتيجيات النمو</h3>
+                <p>تحليل المنافسين، تموضع العلامة وصياغة الرسائل، تخطيط الحملات، وأبحاث السوق.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <h3>الإبداع والتصميم</h3>
+                <p>هوية بصرية، متاجر إلكترونية، موشن و CGI بلمسة إبداعية متميزة.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <h3>التسويق الرقمي</h3>
+                <p>إدارة المحتوى وحملات المؤثرين وبناء الظهور الرقمي الفعال.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up">
+                <h3>الإعلانات المدفوعة</h3>
+                <p>حملات Google و Meta و TikTok بأفضل عائد على الاستثمار (ROI).</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <h3>تحليلات البيانات</h3>
+                <p>رصد وتحليل أداء الحملات والمواقع لاتخاذ قرارات دقيقة واستراتيجية.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <h3>استشارات رقمية</h3>
+                <p>تقديم استشارات متكاملة لتطوير المشاريع الرقمية وتحقيق أهدافك بسرعة.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="usp">
+    <div class="container">
+        <h2 class="section-title" style="color:#fff;" data-aos="fade-up">بصمة تخيّل</h2>
+        <div class="usp-grid">
+            <div class="usp-card" data-aos="zoom-in">
+                <i class="fas fa-landmark"></i>
+                <h3>من مورد إلى شريك نمو</h3>
+                <p>علاقتنا تحالف استراتيجي طويل المدى لتحقيق أهدافك التجارية.</p>
+            </div>
+            <div class="usp-card" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fas fa-chart-pie"></i>
+                <h3>نظام السكواد المخصص</h3>
+                <p>فريق يعمل كأنه جزء من فريقك الداخلي لضمان سرعة التنفيذ ودقة النتائج.</p>
+            </div>
+            <div class="usp-card" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fas fa-microscope"></i>
+                <h3>اقتصاد النتائج</h3>
+                <p>نركز على نمو حصتك السوقية وأرباحك الفعلية بدلاً من مجرد التفاعل.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="faq" style="background:#f9f9f9;">
+    <div class="container faq-container">
+        <h2 class="section-title" data-aos="fade-up">الأسئلة الشائعة</h2>
+        <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">كيف تضمنون تحقيق نتائج فعلية؟ <i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer">نعمل بلغة الأرقام وتقارير أداء مرتبطة بالعائد الحقيقي لضمان ROI فعلي ومستدام.</div>
+        </div>
+        <div class="faq-item" data-aos="fade-up">
+            <div class="faq-question">هل تستخدمون الذكاء الاصطناعي؟ <i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer">نعم، نستخدم الذكاء الاصطناعي لتعزيز الإبداع البشري، تحليل البيانات الضخمة، وتسريع وتيرة التنفيذ.</div>
+        </div>
+    </div>
+</section>
+
+<a href="https://wa.me/966583116161" class="whatsapp-button" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span>تواصل معنا</span>
+</a>
+
+<footer>
+    <div class="container footer-grid">
+        <div>
+            <div class="footer-logo"><img src="{{ asset('public/img/logo-text.png') }}" alt="تخيّل"></div>
+            <p style="color: #888;">شريكك الموثوق لتحويل الأفكار إلى واقع رقمي ملموس.</p>
+            <div class="socials">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h4 style="margin-bottom:20px;">روابط سريعة</h4>
+            <ul>
+             <li><a href="{{ route('frontend.home') }}" class="active">الرئيسية</a></li>
+            <li><a href="{{ route('frontend.about-us') }}">من نحن</a></li>
+            <li><a href="{{ route('contact') }}">تواصل معنا</a></li>
+            <li><a href="{{ route('frontend.rooms') }}">مجتمعنا</a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h4 style="margin-bottom:20px;">معلومات التواصل</h4>
+            <p style="color: #888;">الرياض، المملكة العربية السعودية</p>
+            <p style="color: #888;">info@tkhyl-ai.com</p>
+        </div>
+    </div>
+    <p style="text-align:center; margin-top:50px; color:#555; font-size:0.9rem;">© 2025 tkhyl-ai.com | جميع الحقوق محفوظة</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init({ duration: 1000, once: true });
+
+    // Menu Toggle
+    document.getElementById('menuToggle').addEventListener('click', function() {
+        document.getElementById('navLinks').classList.toggle('show');
+    });
+
+    // FAQ Toggle
+    document.querySelectorAll('.faq-question').forEach(item => {
+        item.addEventListener('click', () => {
+            const parent = item.parentElement;
+            parent.classList.toggle('active');
+            const answer = item.nextElementSibling;
+            if (parent.classList.contains('active')) {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+            } else {
+                answer.style.maxHeight = "0";
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
+{{-- <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تخيّل | شريكك للنمو الرقمي</title>
+
     <!-- Libraries -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -185,27 +476,107 @@
   }
 }
 
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo-img {
+    height: 80px;
+    max-width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #1f1e23;
+    font-weight: 500;
+}
+
+.nav-links a.active {
+    font-weight: 700;
+}
+
+.cta-nav {
+    background: #FF5F1F;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* 📱 موبايل */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        display: none;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .cta-nav {
+        display: none;
+    }
+
+    .logo-img {
+        height: 60px;
+    }
+}
+
     </style>
 </head>
 
 <body>
 
-<nav class="navbar">
-    {{-- <div class="logo"><span>.</span></div> --}}
-    <div class="logo"><a href="{{ route('frontend.home') }}">
-    <img src="../public/img/logo-text.png" alt="تخيّل" style="height:100px;"></a>
-</div>
 
-    <ul class="nav-links">
-       <li><a href="{{ route('frontend.home') }}" class="active" style="
-    color: #1f1e23 !important;
-">الرئيسية </a></li>
+<nav class="navbar">
+    <div class="logo">
+        <a href="{{ route('frontend.home') }}">
+            <img src="{{ asset('public/img/logo-text.png') }}" alt="تخيّل" class="logo-img">
+        </a>
+    </div>
+
+    <div class="menu-toggle" id="menuToggle">☰</div>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="{{ route('frontend.home') }}" class="active">الرئيسية</a></li>
         <li><a href="{{ route('frontend.about-us') }}">من نحن</a></li>
         <li><a href="{{ route('contact') }}">تواصل معنا</a></li>
         <li><a href="{{ route('frontend.rooms') }}">مجتمعنا</a></li>
     </ul>
-    <a href="{{ route('contact') }}" class="cta-nav">ابدأ رحلة نموك</a>
+
+     <a href="{{ route('contact') }}" class="cta-nav">ابدأ رحلة نموك</a>
 </nav>
+
 
 <!-- HERO -->
 <section class="hero">
@@ -232,33 +603,6 @@
     </div>
 </section>
 
-{{-- <section class="usp">
-  <div class="container">
-    <h2 class="section-title" data-aos="fade-up">بصمة تخيّل</h2>
-    <div class="footprint-grid">
-      <div class="footprint-card" data-aos="fade-up">
-        <div class="icon"><i class="fas fa-handshake"></i></div>
-        <h3>من مورد إلى شريك نمو</h3>
-        <p>علاقتنا تحالف استراتيجي طويل المدى لتحقيق أهدافك التجارية.</p>
-      </div>
-      <div class="footprint-card" data-aos="fade-up" data-aos-delay="100">
-        <div class="icon"><i class="fas fa-users-cog"></i></div>
-        <h3>نظام السكواد المخصص</h3>
-        <p>فريق يعمل كأنه جزء من فريقك الداخلي لضمان سرعة التنفيذ ودقة النتائج.</p>
-      </div>
-      <div class="footprint-card" data-aos="fade-up" data-aos-delay="200">
-        <div class="icon"><i class="fas fa-chart-line"></i></div>
-        <h3>اقتصاد النتائج</h3>
-        <p>نركز على نمو حصتك السوقية وأرباحك الفعلية بدلاً من الاكتفاء بمقاييس التفاعل التقليدية.</p>
-      </div>
-      <div class="footprint-card" data-aos="fade-up" data-aos-delay="300">
-        <div class="icon"><i class="fas fa-map-marked-alt"></i></div>
-        <h3>التوطين الإبداعي</h3>
-        <p>دمج الثقافة السعودية مع أحدث تقنيات الذكاء الاصطناعي لضمان وصول الرسالة بصدق.</p>
-      </div>
-    </div>
-  </div>
-</section> --}}
 
 <section id="services" style="background:#f9f9f9;padding:100px 0;">
   <div class="container">
@@ -315,11 +659,7 @@
               <h3>اقتصاد النتائج</h3>
         <p>نركز على نمو حصتك السوقية وأرباحك الفعلية بدلاً من الاكتفاء بمقاييس التفاعل التقليدية.</p>
             </div>
-             {{-- <div class="usp-card">
-                <i class="fas fa-microscope"></i>
-                 <h3>التوطين الإبداعي</h3>
-        <p>دمج الثقافة السعودية مع أحدث تقنيات الذكاء الاصطناعي لضمان وصول الرسالة بصدق.</p>
-            </div> --}}
+
         </div>
     </div>
 </section>
@@ -489,238 +829,30 @@
 
   cards.forEach(card => observer.observe(card));
 </script>
-</body>
-</html>
+<script>
+document.getElementById('menuToggle').addEventListener('click', function() {
+    document.getElementById('navLinks').classList.toggle('show');
+});
+</script>
 
-
-{{-- <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تخيّل | شريكك للنمو الرقمي</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #FF5F1F;
-            --dark: #0a0a0a;
-            --light: #fdfdfd;
-            --gray: #666;
-            --transition: all 0.3s ease-in-out;
-        }
-
-        * {
-            margin: 0; padding: 0; box-sizing: border-box;
-            font-family: 'Cairo', sans-serif;
-        }
-
-        body {
-            background-color: var(--light);
-            color: var(--dark);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
-
-        /* Navigation */
-        .navbar {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 20px 5%; background: rgba(255,255,255,0.8);
-            backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000;
-        }
-
-        .logo { font-size: 1.8rem; font-weight: 900; color: var(--dark); }
-        .logo span { color: var(--primary); }
-
-        .nav-links { display: flex; list-style: none; gap: 30px; }
-        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 600; transition: var(--transition); }
-        .nav-links a:hover { color: var(--primary); }
-
-        .cta-nav {
-            background: var(--primary); color: white; padding: 10px 20px;
-            border-radius: 50px; text-decoration: none; font-weight: bold;
-            box-shadow: 0 4px 15px rgba(255, 95, 31, 0.3);
-        }
-
-        /* Sections General */
-        section { padding: 80px 0; }
-        .section-title { text-align: center; margin-bottom: 50px; font-size: 2.5rem; }
-
-        /* Hero Section */
-        .hero { padding: 120px 0; background: radial-gradient(circle at top right, #fff5f0, #ffffff); }
-        .hero-wrapper { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 50px; }
-        .hero-content h1 { font-size: 3rem; line-height: 1.3; margin-bottom: 20px; }
-        .gradient-text { background: linear-gradient(90deg, var(--primary), #ff9f6b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .badge { background: #fff0e9; color: var(--primary); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: 700; margin-bottom: 15px; display: inline-block; }
-        .hero-image img { width: 100%; border-radius: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-
-        /* USP Section */
-        .usp { background: var(--dark); color: white; }
-        .usp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .usp-card { padding: 30px; border: 1px solid #333; border-radius: 20px; transition: 0.3s; }
-        .usp-card:hover { border-color: var(--primary); background: #1a1a1a; }
-        .usp-card i { color: var(--primary); font-size: 2rem; margin-bottom: 20px; }
-
-        /* Service Cards */
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .service-card { background: white; padding: 30px; border-radius: 20px; transition: var(--transition); border: 1px solid #eee; }
-        .service-card:hover { transform: translateY(-10px); border-color: var(--primary); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
-
-        /* FAQ */
-        .faq-item { background: white; margin-bottom: 15px; border-radius: 10px; border: 1px solid #eee; overflow: hidden; }
-        .faq-question { padding: 20px; cursor: pointer; font-weight: 700; display: flex; justify-content: space-between; align-items: center; }
-        .faq-answer { padding: 0 20px; max-height: 0; overflow: hidden; transition: 0.3s ease-out; color: var(--gray); }
-        .faq-item.active .faq-answer { padding: 0 20px 20px 20px; max-height: 200px; }
-
-        /* Footer */
-        footer { padding: 60px 0 20px; background: #000; color: white; text-align: center; }
-        .footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; margin-bottom: 40px; }
-        .socials a { color: white; font-size: 1.5rem; margin: 0 10px; transition: 0.3s; }
-        .socials a:hover { color: var(--primary); }
-
-        @media (max-width: 768px) {
-            .hero-wrapper { grid-template-columns: 1fr; text-align: center; }
-            .nav-links { display: none; }
-        }
-    </style>
-</head>
-<body>
-
-    <nav class="navbar">
-        <div class="logo">تخيّل<span>.</span></div>
-        <ul class="nav-links">
-            <li><a href="#services">خدماتنا</a></li>
-            <li><a href="#philosophy">بصمة تخيّل</a></li>
-            <li><a href="#faq">الأسئلة الشائعة</a></li>
-        </ul>
-        <a href="#" class="cta-nav">ابدأ رحلة نموك</a>
-    </nav>
-
-    <section class="hero">
-        <div class="container hero-wrapper">
-            <div class="hero-content" data-aos="fade-left">
-                <span class="badge">الذكاء الاصطناعي + الإبداع البشري</span>
-                <h1>شريكك الاستراتيجي للنمو الرقمي: <br> <span class="gradient-text">نحوّل أفكارك إلى تجارب واقعية مؤثرة</span></h1>
-                <p>في "تخيل"، لا نكتفي بجلب الزوار، بل نبني لك المنصة التي تحولهم إلى عملاء دائمين من خلال دمج الإبداع البشري بأحدث تقنيات الذكاء الاصطناعي.</p>
-                <div class="hero-btns" style="margin-top: 30px;">
-                    <a href="#" class="cta-nav" style="padding: 15px 40px;">ابدأ رحلة نموك الآن</a>
-                </div>
-            </div>
-            <div class="hero-image" data-aos="zoom-in">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="Strategy">
-            </div>
-        </div>
-    </section>
-
-    <section class="usp">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">لماذا نحن؟</h2>
-            <div class="usp-grid">
-                <div class="usp-card" data-aos="fade-up">
-                    <i class="fas fa-landmark"></i>
-                    <h3>الفهم العميق للسوق</h3>
-                    <p>نحن لا نترجم المحتوى، بل نصيغه بروح الثقافة المحلية لتصل رسالتك إلى قلب جمهورك السعودي.</p>
-                </div>
-                <div class="usp-card" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fas fa-chart-pie"></i>
-                    <h3>التركيز على العائد (ROI)</h3>
-                    <p>كل تصميم أو حملة نطلقها لها هدف واحد: نمو أرباحك الفعلية وحصتك السوقية.</p>
-                </div>
-                <div class="usp-card" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fas fa-microscope"></i>
-                    <h3>عقلية المختبر</h3>
-                    <p>نخصص مواردنا لتجربة الخوارزميات الجديدة فور صدورها، لنمنحك "ميزة المبادرة الأولى".</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">خدماتنا</h2>
-            <div class="services-grid">
-                <div class="service-card" data-aos="zoom-in">
-                    <h3>الهوية واستراتيجيات النمو</h3>
-                    <p>تحليل المنافسين، تموضع العلامة، وصياغة الرسائل التسويقية.</p>
-                </div>
-                <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
-                    <h3>الإبداع والتصميم</h3>
-                    <p>بناء الهوية البصرية، تطوير المتاجر، وإنتاج فيديوهات CGI وموشنجرافيك.</p>
-                </div>
-                <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
-                    <h3>التسويق وإدارة الظهور</h3>
-                    <p>إدارة حسابات التواصل، صناعة المحتوى الإبداعي، وحملات المؤثرين.</p>
-                </div>
-                <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
-                    <h3>الإعلانات المدفوعة</h3>
-                    <p>حملات موجهة عبر (Meta, TikTok, Snapchat) لضمان تصدر النتائج.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="philosophy" style="background: #f0f0f0;">
-        <div class="container">
-            <h2 class="section-title">بصمة تخيّل</h2>
-            <div class="usp-grid">
-                <div style="text-align: center;">
-                    <h4>من مورد إلى شريك نمو</h4>
-                    <p>علاقتنا تحالف استراتيجي وليست مجرد تنفيذ طلبات عابرة.</p>
-                </div>
-                <div style="text-align: center;">
-                    <h4>نظام "السكواد" المخصص</h4>
-                    <p>فريق عمل رشيق يعاملك كأنه جزء من فريقك الداخلي.</p>
-                </div>
-                <div style="text-align: center;">
-                    <h4>التزامنا Together</h4>
-                    <p>شعارنا التزام بالعمل المشترك في كل خطوة.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="faq">
-        <div class="container" style="max-width: 800px;">
-            <h2 class="section-title">الأسئلة الشائعة</h2>
-            <div class="faq-item">
-                <div class="faq-question">كيف تضمنون تحقيق نتائج فعلية لأعمالي؟ <i class="fas fa-chevron-down"></i></div>
-                <div class="faq-answer">نحن نؤمن بلغة الأرقام؛ تقاريرنا واضحة ودقيقة ومرتبطة بالأداء الفعلي لضمان أعلى عائد على الاستثمار.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">هل تستخدمون الذكاء الاصطناعي في تنفيذ المشاريع؟ <i class="fas fa-chevron-down"></i></div>
-                <div class="faq-answer">نعم، نستخدمه كأداة لتعزيز الإبداع البشري وليس لاستبداله، مما يسرع التنفيذ ويرفع الجودة.</div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="logo" style="color: white;">تخيّل<span>.</span></div>
-                <div>We Will Do It Together.</div>
-                <div class="socials">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            <p>tkhyl-ai.com © 2025</p>
-        </div>
-    </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        AOS.init({ duration: 1000, once: true });
-
-        // FAQ Toggle Logic
-        document.querySelectorAll('.faq-question').forEach(item => {
-            item.addEventListener('click', () => {
-                const parent = item.parentElement;
-                parent.classList.toggle('active');
-            });
-        });
-    </script>
 </body>
 </html> --}}
+
+
+{{--
+<div class="logo">
+        <a href="{{ route('frontend.home') }}">
+            <img src="{{ asset('public/img/logo-text.png') }}" alt="تخيّل" class="logo-img">
+        </a>
+    </div>
+
+    <div class="menu-toggle" id="menuToggle">☰</div>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="{{ route('frontend.home') }}" class="active">الرئيسية</a></li>
+        <li><a href="{{ route('frontend.about-us') }}">من نحن</a></li>
+        <li><a href="{{ route('contact') }}">تواصل معنا</a></li>
+        <li><a href="{{ route('frontend.rooms') }}">مجتمعنا</a></li>
+    </ul>
+
+     <a href="{{ route('contact') }}" class="cta-nav">ابدأ رحلة نموك</a> --}}
