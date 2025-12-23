@@ -153,7 +153,7 @@ textarea{resize:none;height:140px}
 <nav class="navbar">
     {{-- <div class="logo"><span>.</span></div> --}}
     <div class="logo"><a href="{{ route('frontend.home') }}">
-    <img src="../img/logo-text.png" alt="تخيّل" style="height:100px;"></a>
+    <img src="../img/public/logo-text.png" alt="تخيّل" style="height:100px;"></a>
 </div>
 
     <ul class="nav-links">
@@ -307,7 +307,7 @@ textarea{resize:none;height:140px}
         <div class="footer-grid" style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:30px;align-items:center;">
             <!-- شعار -->
             <div class="logo" style="font-size:2rem;font-weight:900;"><a href="{{ route('frontend.home') }}">
-    <img src="../img/logo-text.png" alt="تخيّل" style="height:100px;"></a></div>
+    <img src="../img/public/logo-text.png" alt="تخيّل" style="height:100px;"></a></div>
 
             <!-- روابط سريعة -->
             <div style="display:flex;flex-direction:column;gap:10px;">
