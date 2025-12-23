@@ -135,9 +135,9 @@
         <li><a href="{{ route('frontend.rooms') }}">مجتمعنا</a></li>
     </ul>
 
-    <div style="display: flex; align-items: center; gap: 15px;">
+    {{-- <div style="display: flex; align-items: center; gap: 15px;"> --}}
         <a href="{{ route('contact') }}" class="cta-nav">ابدأ رحلة نموك</a>
-        <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
+        {{-- <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div> --}}
 
 </nav>
 
