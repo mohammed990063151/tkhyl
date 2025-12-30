@@ -309,16 +309,16 @@ h1, h2, h3, h4, .section-title {
         <h2 class="section-title" data-aos="fade-up">شركاؤنا / عملائنا</h2>
         <div class="partners-grid" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="slide"><img src="{{ asset('img/cleint/13.png') }}"></div>
-        <div class="slide"><img src="{{ asset('img/cleint/15.png') }}"></div>
-        <div class="slide"><img src="{{ asset('img/cleint/16.png') }}"></div>
-        <div class="slide"><img src="{{ asset('img/cleint/17.png') }}"></div>
-        <div class="slide"><img src="{{ asset('img/cleint/18.png') }}"></div>
-        <div class="slide"><img src="{{ asset('img/cleint/19.png') }}"></div>
-        <div class="slide"><img src="{{ asset('img/cleint/20.png') }}"></div>
-        <div class="slide"><img src="{{ asset('img/cleint/21.png') }}"></div>
-        <div class="slide"><img src="{{ asset('img/cleint/22.png') }}"></div>
-        <div class="slide"><img src="{{ asset('img/cleint/23.png') }}"></div>
+        <div class="slide"><img src="{{ asset('public/img/cleint/13.png') }}"></div>
+        <div class="slide"><img src="{{ asset('public/img/cleint/15.png') }}"></div>
+        <div class="slide"><img src="{{ asset('public/img/cleint/16.png') }}"></div>
+        <div class="slide"><img src="{{ asset('public/img/cleint/17.png') }}"></div>
+        <div class="slide"><img src="{{ asset('public/img/cleint/18.png') }}"></div>
+        <div class="slide"><img src="{{ asset('public/img/cleint/19.png') }}"></div>
+        <div class="slide"><img src="{{ asset('public/img/cleint/20.png') }}"></div>
+        <div class="slide"><img src="{{ asset('public/img/cleint/21.png') }}"></div>
+        <div class="slide"><img src="{{ asset('public/img/cleint/22.png') }}"></div>
+        <div class="slide"><img src="{{ asset('public/img/cleint/23.png') }}"></div>
             <!-- كرر حسب عدد الصور -->
         </div>
     </div>
