@@ -1,229 +1,3 @@
-{{-- <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <!-- ================= BASIC SEO ================= -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>تخيّل | شركة تسويق رقمي ونمو أعمال بالذكاء الاصطناعي في السعودية</title>
-
-    <meta name="description" content="تخيّل شركة تسويق رقمي في السعودية متخصصة في نمو الأعمال، الإعلانات المدفوعة، بناء الهوية الرقمية، وتحليل البيانات باستخدام الذكاء الاصطناعي لتحقيق نتائج فعلية.">
-
-    <meta name="keywords" content="شركة تسويق رقمي, تسويق إلكتروني السعودية, شركة تسويق في الرياض, إعلانات مدفوعة, نمو الأعمال, الذكاء الاصطناعي في التسويق, تخيل">
-
-    <link rel="canonical" href="https://tkhyl-ai.com">
-
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="ar">
-
-    <!-- ================= OPEN GRAPH ================= -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="تخيّل | شركة تسويق رقمي ونمو أعمال في السعودية">
-    <meta property="og:description" content="نحوّل أفكارك إلى نمو رقمي حقيقي باستخدام الذكاء الاصطناعي والإبداع البشري.">
-    <meta property="og:url" content="https://tkhyl-ai.com">
-    <meta property="og:image" content="https://tkhyl-ai.com/public/img/logo-text.png">
-
-    <!-- ================= TWITTER ================= -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="تخيّل | شركة تسويق رقمي في السعودية">
-    <meta name="twitter:description" content="شريكك الاستراتيجي للنمو الرقمي وتحقيق نتائج فعلية.">
-
-    <!-- ================= PERFORMANCE ================= -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- ================= STYLES ================= -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
-
-    <style>
-        @font-face {
-            font-family: 'Lyon Arabic Display';
-            src: url('/fonts/LyonArabicDisplay-Bold.woff2') format('woff2');
-            font-weight: bold;
-            font-style: normal;
-        }
-
-        h1,h2,h3,h4,.section-title{
-            font-family:'Lyon Arabic Display',serif;
-        }
-
-        :root{
-            --primary:#FF5F1F;
-            --primary-soft:#FFE6DB;
-            --dark:#0B0B0F;
-            --light:#FFFFFF;
-            --gray:#777;
-            --transition:all .35s ease;
-        }
-
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{
-            font-family:'IBM Plex Sans Arabic',sans-serif;
-            background:#fff;color:#0B0B0F;
-            line-height:1.7;overflow-x:hidden
-        }
-
-        .container{width:90%;max-width:1200px;margin:auto}
-        section{padding:80px 0}
-        .section-title{text-align:center;font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:50px;font-weight:900}
-
-        /* NAVBAR */
-        .navbar{
-            position:sticky;top:0;z-index:1000;
-            display:flex;justify-content:space-between;align-items:center;
-            padding:10px 5%;background:rgba(255,255,255,.95);
-            backdrop-filter:blur(12px);box-shadow:0 2px 15px rgba(0,0,0,.05)
-        }
-        .logo-img{height:70px}
-        .nav-links{display:flex;gap:25px;list-style:none}
-        .nav-links a{text-decoration:none;font-weight:700;color:#0B0B0F}
-        .nav-links a:hover,.nav-links a.active{color:var(--primary)}
-        .cta-nav{
-            background:var(--primary);color:#fff;padding:10px 24px;
-            border-radius:40px;font-weight:800;text-decoration:none
-        }
-        .menu-toggle{display:none;font-size:1.8rem}
-
-        /* HERO */
-        .hero{background:radial-gradient(circle at top right,#fff4ee,#fff)}
-        .hero-wrapper{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-        .badge{
-            background:var(--primary-soft);color:var(--primary);
-            padding:6px 18px;border-radius:30px;font-weight:800
-        }
-        .hero h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.3}
-        .gradient-text{
-            background:linear-gradient(90deg,var(--primary),#ff9f6b);
-            -webkit-background-clip:text;-webkit-text-fill-color:transparent
-        }
-
-        /* SERVICES */
-        .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px}
-        .service-card{
-            background:#fff;padding:40px;border-radius:25px;
-            border:1px solid #eee;transition:.3s
-        }
-        .service-card h3{color:var(--primary)}
-
-        /* CLIENTS */
-        .clients-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:40px}
-        .client-logo img{max-width:120px;filter:grayscale(100%)}
-
-        /* FAQ */
-        .faq-item{background:#fff;border-radius:15px;border:1px solid #eee;margin-bottom:15px}
-        .faq-question{padding:20px;font-weight:800;cursor:pointer}
-        .faq-answer{padding:0 20px 20px;color:#777;display:none}
-        .faq-item.active .faq-answer{display:block}
-
-        /* WHATSAPP */
-        .whatsapp-button{
-            position:fixed;bottom:30px;right:30px;
-            background:#25D366;color:#fff;padding:12px 25px;
-            border-radius:50px;text-decoration:none;z-index:1000
-        }
-
-        footer{background:#0B0B0F;color:#fff;padding:70px 0 30px}
-
-        @media(max-width:991px){
-            .hero-wrapper{grid-template-columns:1fr;text-align:center}
-        }
-    </style>
-</head>
-
-<body>
-
-<nav class="navbar">
-    <a href="{{ route('frontend.home') }}">
-        <img src="{{ asset('public/img/cleint/logo.jpg') }}" alt="شركة تخيّل للتسويق الرقمي في السعودية" class="logo-img">
-    </a>
-
-    <ul class="nav-links">
-        <li><a href="{{ route('frontend.home') }}" class="active">الرئيسية</a></li>
-        <li><a href="{{ route('frontend.about-us') }}">من نحن</a></li>
-        <li><a href="{{ route('frontend.rooms') }}">مجتمعنا</a></li>
-        <li><a href="{{ route('contact') }}">تواصل معنا</a></li>
-    </ul>
-
-    <a href="{{ route('contact') }}" class="cta-nav">ابدأ رحلة نموك</a>
-</nav>
-
-<section class="hero">
-    <div class="container hero-wrapper">
-        <div>
-            <span class="badge">الذكاء الاصطناعي + الإبداع البشري</span>
-            <h1>
-                شركة تسويق رقمي ونمو أعمال في السعودية<br>
-                <span class="gradient-text">نحوّل أفكارك إلى نتائج حقيقية</span>
-            </h1>
-            <p>
-                تخيّل شريكك الاستراتيجي لبناء الهوية الرقمية، إدارة الإعلانات المدفوعة،
-                وتحقيق نمو مستدام باستخدام أحدث تقنيات الذكاء الاصطناعي.
-            </p>
-            <a href="{{ route('contact') }}" class="cta-nav">تواصل معنا الآن</a>
-        </div>
-
-        <img src="../assets/images/banner-01.png"
-             alt="شركة تسويق رقمي ونمو أعمال في السعودية"
-             loading="lazy">
-    </div>
-</section>
-
-<section id="services">
-    <div class="container">
-        <h2 class="section-title">خدماتنا</h2>
-        <div class="services-grid">
-            <div class="service-card"><h3>الهوية واستراتيجيات النمو</h3></div>
-            <div class="service-card"><h3>التصميم والإبداع</h3></div>
-            <div class="service-card"><h3>التسويق الرقمي</h3></div>
-            <div class="service-card"><h3>الإعلانات المدفوعة</h3></div>
-            <div class="service-card"><h3>تحليل البيانات</h3></div>
-            <div class="service-card"><h3>الاستشارات الرقمية</h3></div>
-        </div>
-    </div>
-</section>
-
-<footer>
-    <div class="container">
-        <p>© 2025 تخيّل – شركة تسويق رقمي في السعودية</p>
-    </div>
-</footer>
-
-<!-- ================= SCHEMA ================= -->
-@verbatim
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MarketingAgency",
-  "name": "تخيّل",
-  "url": "https://tkhyl-ai.com",
-  "logo": "https://tkhyl-ai.com/public/img/logo-text.png",
-  "email": "contact@tkhyl-ai.com",
-  "telephone": "+966568979769",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "الرياض",
-    "addressCountry": "SA"
-  },
-  "sameAs": [
-    "https://x.com/tkhyl_sa",
-    "https://www.instagram.com/tkhyl_sa",
-    "https://www.tiktok.com/@tkhyl_sa",
-    "https://www.linkedin.com/company/tkhyl-sa"
-  ]
-}
-</script>
-@endverbatim
-
-
-</body>
-</html> --}}
-
-
-
 
 
 <!DOCTYPE html>
@@ -393,70 +167,30 @@ h1, h2, h3, h4, .section-title {
             .whatsapp-button span { display: none; }
             .whatsapp-button { padding: 15px; border-radius: 50%; bottom: 20px; right: 20px; }
         }
-     /* --- حاوية الشريط المتحرك --- */
-.slider-container {
-    width: 100%;
-    overflow: hidden; /* إخفاء العناصر التي تخرج عن الشاشة */
-    padding: 40px 0;
-    position: relative;
-    background: #fcfcfc;
-}
-
-/* --- الصف الداخلي الذي سيتحرك --- */
-.slider-track {
+.partners-grid {
     display: flex;
-    width: calc(250px * 20); /* عرض الشريط الكلي (عرض الشعار * عدد الشعارات) */
-    animation: scroll 40s linear infinite; /* الحركة المستمرة */
-}
-
-/* إيقاف التحريك عند مرور الماوس لمن يريد التركيز على شعار معين */
-.slider-track:hover {
-    animation-play-state: paused;
-}
-
-/* --- تصميم الشعار الفردي داخل الشريط --- */
-.slide {
-    width: 250px; /* مساحة كل شعار */
-    height: 120px;
-    display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
 }
 
-.slide img {
-    max-width: 160px;
+.partners-grid img {
+    max-width: 150px;
     max-height: 80px;
     object-fit: contain;
     filter: grayscale(100%);
-    opacity: 0.6;
-    transition: all 0.3s ease;
+    transition: filter 0.3s ease, transform 0.3s ease;
 }
 
-.slide img:hover {
+
+.partners-grid img:hover {
     filter: grayscale(0%);
-    opacity: 1;
-    transform: scale(1.1);
+    transform: scale(1.2); /* زيادة الحجم عند المرور */
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* --- تعريف حركة الأنميشن من اليمين لليسار --- */
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        /* يتحرك بمقدار نصف طول الشريط (لأننا سنكرر الشعارات لضمان عدم وجود فراغ) */
-        transform: translateX(calc(-250px * 10));
-    }
-}
-
-/* تحسين للجوال لتقليل سرعة الحركة أو أحجام الشعارات */
-@media (max-width: 768px) {
-    .slide { width: 180px; }
-    @keyframes scroll {
-        100% { transform: translateX(calc(-180px * 10)); }
-    }
-}
     </style>
 
 </head>
@@ -551,37 +285,50 @@ h1, h2, h3, h4, .section-title {
         </div>
     </div>
 </section>
-<section id="clients">
+{{-- <section id="clients">
     <div class="container">
         <h2 class="section-title" data-aos="fade-up">شركاء النجاح</h2>
     </div>
 
-    <div class="slider-container">
-        <div class="slider-track">
-            <div class="slide"><img src="{{ asset('public/img/cleint/13.png') }}" alt="Client"></div>
-            <div class="slide"><img src="{{ asset('public/img/cleint/15.png') }}" alt="Client"></div>
-            <div class="slide"><img src="{{ asset('public/img/cleint/16.png') }}" alt="Client"></div>
-            <div class="slide"><img src="{{ asset('public/img/cleint/17.png') }}" alt="Client"></div>
-            <div class="slide"><img src="{{ asset('public/img/cleint/18.png') }}" alt="Client"></div>
-            <div class="slide"><img src="{{ asset('public/img/cleint/19.png') }}" alt="Client"></div>
-            <div class="slide"><img src="{{ asset('public/img/cleint/20.png') }}" alt="Client"></div>
-            <div class="slide"><img src="{{ asset('public/img/cleint/21.png') }}" alt="Client"></div>
-            <div class="slide"><img src="{{ asset('public/img/cleint/22.png') }}" alt="Client"></div>
-            <div class="slide"><img src="{{ asset('public/img/cleint/23.png') }}" alt="Client"></div>
+<div class="slider-container">
+    <div class="slider-track" id="sliderTrack">
+        <div class="slide"><img src="{{ asset('img/cleint/13.png') }}"></div>
+        <div class="slide"><img src="{{ asset('img/cleint/15.png') }}"></div>
+        <div class="slide"><img src="{{ asset('img/cleint/16.png') }}"></div>
+        <div class="slide"><img src="{{ asset('img/cleint/17.png') }}"></div>
+        <div class="slide"><img src="{{ asset('img/cleint/18.png') }}"></div>
+        <div class="slide"><img src="{{ asset('img/cleint/19.png') }}"></div>
+        <div class="slide"><img src="{{ asset('img/cleint/20.png') }}"></div>
+        <div class="slide"><img src="{{ asset('img/cleint/21.png') }}"></div>
+        <div class="slide"><img src="{{ asset('img/cleint/22.png') }}"></div>
+        <div class="slide"><img src="{{ asset('img/cleint/23.png') }}"></div>
+    </div>
+</div> --}}
+<section style="background: #f9f9f9; padding: 60px 0;">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">شركاؤنا / عملائنا</h2>
+        <div class="partners-grid" data-aos="fade-up" data-aos-delay="100">
 
-            <div class="slide"><img src="{{ asset('public/img/cleint/13.png') }}" alt="Client"></div>
-            <div class="slide"><img src="{{ asset('public/img/cleint/15.png') }}" alt="Client"></div>
-            <div class="slide"><img src="{{ asset('public/img/cleint/16.png') }}" alt="Client"></div>
-            <div class="slide"><img src="{{ asset('public/img/cleint/17.png') }}" alt="Client"></div>
-            <div class="slide"><img src="{{ asset('public/img/cleint/18.png') }}" alt="Client"></div>
-            <div class="slide"><img src="{{ asset('public/img/cleint/19.png') }}" alt="Client"></div>
-            <div class="slide"><img src="{{ asset('public/img/cleint/20.png') }}" alt="Client"></div>
-            <div class="slide"><img src="{{ asset('public/img/cleint/21.png') }}" alt="Client"></div>
-            <div class="slide"><img src="{{ asset('public/img/cleint/22.png') }}" alt="Client"></div>
-            <div class="slide"><img src="{{ asset('public/img/cleint/23.png') }}" alt="Client"></div>
+        <div class="slide"><img src="{{ asset('img/cleint/13.png') }}"></div>
+        <div class="slide"><img src="{{ asset('img/cleint/15.png') }}"></div>
+        <div class="slide"><img src="{{ asset('img/cleint/16.png') }}"></div>
+        <div class="slide"><img src="{{ asset('img/cleint/17.png') }}"></div>
+        <div class="slide"><img src="{{ asset('img/cleint/18.png') }}"></div>
+        <div class="slide"><img src="{{ asset('img/cleint/19.png') }}"></div>
+        <div class="slide"><img src="{{ asset('img/cleint/20.png') }}"></div>
+        <div class="slide"><img src="{{ asset('img/cleint/21.png') }}"></div>
+        <div class="slide"><img src="{{ asset('img/cleint/22.png') }}"></div>
+        <div class="slide"><img src="{{ asset('img/cleint/23.png') }}"></div>
+            <!-- كرر حسب عدد الصور -->
         </div>
     </div>
 </section>
+
+
+
+
+
+{{-- </section> --}}
 
 <section id="faq" style="background:#f9f9f9;">
     <div class="container faq-container">
