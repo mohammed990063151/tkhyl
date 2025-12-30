@@ -393,41 +393,70 @@ h1, h2, h3, h4, .section-title {
             .whatsapp-button span { display: none; }
             .whatsapp-button { padding: 15px; border-radius: 50%; bottom: 20px; right: 20px; }
         }
-        #clients {
-    background: #fff;
+     /* --- حاوية الشريط المتحرك --- */
+.slider-container {
+    width: 100%;
+    overflow: hidden; /* إخفاء العناصر التي تخرج عن الشاشة */
+    padding: 40px 0;
+    position: relative;
+    background: #fcfcfc;
 }
 
-.clients-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 40px;
-    align-items: center;
+/* --- الصف الداخلي الذي سيتحرك --- */
+.slider-track {
+    display: flex;
+    width: calc(250px * 20); /* عرض الشريط الكلي (عرض الشعار * عدد الشعارات) */
+    animation: scroll 40s linear infinite; /* الحركة المستمرة */
 }
 
-.client-logo {
-    background: #fff;
-    padding: 25px;
-    border-radius: 18px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+/* إيقاف التحريك عند مرور الماوس لمن يريد التركيز على شعار معين */
+.slider-track:hover {
+    animation-play-state: paused;
+}
+
+/* --- تصميم الشعار الفردي داخل الشريط --- */
+.slide {
+    width: 250px; /* مساحة كل شعار */
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: var(--transition);
+    padding: 20px;
 }
 
-.client-logo img {
-    max-width: 120px;
-    max-height: 70px;
+.slide img {
+    max-width: 160px;
+    max-height: 80px;
+    object-fit: contain;
     filter: grayscale(100%);
-    opacity: 0.8;
-    transition: var(--transition);
+    opacity: 0.6;
+    transition: all 0.3s ease;
 }
 
-.client-logo:hover img {
-    filter: grayscale(0);
+.slide img:hover {
+    filter: grayscale(0%);
     opacity: 1;
+    transform: scale(1.1);
 }
 
+/* --- تعريف حركة الأنميشن من اليمين لليسار --- */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* يتحرك بمقدار نصف طول الشريط (لأننا سنكرر الشعارات لضمان عدم وجود فراغ) */
+        transform: translateX(calc(-250px * 10));
+    }
+}
+
+/* تحسين للجوال لتقليل سرعة الحركة أو أحجام الشعارات */
+@media (max-width: 768px) {
+    .slide { width: 180px; }
+    @keyframes scroll {
+        100% { transform: translateX(calc(-180px * 10)); }
+    }
+}
     </style>
 
 </head>
@@ -437,7 +466,7 @@ h1, h2, h3, h4, .section-title {
 <nav class="navbar">
     <div class="logo">
         <a href="#">
-            <img src="{{ asset('public/img/cleint/logo.jpg') }}" alt="تخيّل" class="logo-img">
+            <img src="{{ asset('public/img/cleint/log.jpg') }}" alt="تخيّل" class="logo-img">
         </a>
     </div>
 
@@ -524,43 +553,32 @@ h1, h2, h3, h4, .section-title {
 </section>
 <section id="clients">
     <div class="container">
-        <h2 class="section-title" data-aos="fade-up">عملاؤنا</h2>
+        <h2 class="section-title" data-aos="fade-up">شركاء النجاح</h2>
+    </div>
 
-        <div class="clients-grid" data-aos="fade-up">
-            <!-- Logo -->
-            <div class="client-logo">
-                <img src="{{ asset('public/img/cleint/13.png') }}" alt="Client">
-            </div>
-            <div class="client-logo">
-                <img src="{{ asset('public/img/cleint/15.png') }}" alt="Client">
-            </div>
-            <div class="client-logo">
-                     <img src="{{ asset('public/img/cleint/16.png') }}" alt="Client">
-  </div>
+    <div class="slider-container">
+        <div class="slider-track">
+            <div class="slide"><img src="{{ asset('public/img/cleint/13.png') }}" alt="Client"></div>
+            <div class="slide"><img src="{{ asset('public/img/cleint/15.png') }}" alt="Client"></div>
+            <div class="slide"><img src="{{ asset('public/img/cleint/16.png') }}" alt="Client"></div>
+            <div class="slide"><img src="{{ asset('public/img/cleint/17.png') }}" alt="Client"></div>
+            <div class="slide"><img src="{{ asset('public/img/cleint/18.png') }}" alt="Client"></div>
+            <div class="slide"><img src="{{ asset('public/img/cleint/19.png') }}" alt="Client"></div>
+            <div class="slide"><img src="{{ asset('public/img/cleint/20.png') }}" alt="Client"></div>
+            <div class="slide"><img src="{{ asset('public/img/cleint/21.png') }}" alt="Client"></div>
+            <div class="slide"><img src="{{ asset('public/img/cleint/22.png') }}" alt="Client"></div>
+            <div class="slide"><img src="{{ asset('public/img/cleint/23.png') }}" alt="Client"></div>
 
-             <div class="client-logo">
-                <img src="{{ asset('public/img/cleint/17.png') }}" alt="Client">
-            </div>
-            <div class="client-logo">
-                <img src="{{ asset('public/img/cleint/18.png') }}" alt="Client">
-            </div>
-            <div class="client-logo">
-                <img src="{{ asset('public/img/cleint/19.png') }}" alt="Client">
-            </div>
-             <div class="client-logo">
-                <img src="{{ asset('public/img/cleint/20.png') }}" alt="Client">
-            </div>
-
-             <div class="client-logo">
-                <img src="{{ asset('public/img/cleint/21.png') }}" alt="Client">
-            </div>
-            <div class="client-logo">
-                <img src="{{ asset('public/img/cleint/22.png') }}" alt="Client">
-            </div>
-             <div class="client-logo">
-                <img src="{{ asset('public/img/cleint/23.png') }}" alt="Client">
-            </div>
-            <!-- كرر حسب عدد الشعارات -->
+            <div class="slide"><img src="{{ asset('public/img/cleint/13.png') }}" alt="Client"></div>
+            <div class="slide"><img src="{{ asset('public/img/cleint/15.png') }}" alt="Client"></div>
+            <div class="slide"><img src="{{ asset('public/img/cleint/16.png') }}" alt="Client"></div>
+            <div class="slide"><img src="{{ asset('public/img/cleint/17.png') }}" alt="Client"></div>
+            <div class="slide"><img src="{{ asset('public/img/cleint/18.png') }}" alt="Client"></div>
+            <div class="slide"><img src="{{ asset('public/img/cleint/19.png') }}" alt="Client"></div>
+            <div class="slide"><img src="{{ asset('public/img/cleint/20.png') }}" alt="Client"></div>
+            <div class="slide"><img src="{{ asset('public/img/cleint/21.png') }}" alt="Client"></div>
+            <div class="slide"><img src="{{ asset('public/img/cleint/22.png') }}" alt="Client"></div>
+            <div class="slide"><img src="{{ asset('public/img/cleint/23.png') }}" alt="Client"></div>
         </div>
     </div>
 </section>
@@ -587,7 +605,7 @@ h1, h2, h3, h4, .section-title {
 <footer>
     <div class="container footer-grid">
         <div>
-            <div class="footer-logo"><img src="{{ asset('public/img/logo-text.png') }}" alt="تخيّل"></div>
+            <div class="footer-logo"><img src="{{ asset('public/img/cleint/log.jpg') }}" alt="تخيّل" ></div>
             <p style="color: #888;">شريكك الموثوق لتحويل الأفكار إلى واقع رقمي ملموس.</p>
             <div class="socials">
     <a href="https://www.linkedin.com/company/tkhyl-sa" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -608,11 +626,31 @@ h1, h2, h3, h4, .section-title {
         </div>
         <div class="footer-links">
             <h4 style="margin-bottom:20px;">معلومات التواصل</h4>
-           <p style="color: #ccc; font-size: 0.9rem;">استثماركوم حاضنة ومسرعة الأعمال
-حي, Ar Rabwah, Riyadh 12211
+    <p style="color:#ccc;font-size:0.9rem;">
+    <i class="fas fa-envelope"></i>
+    <a href="mailto:contact@tkhyl-ai.com" style="color:#ccc;text-decoration:none;">
+        contact@tkhyl-ai.com
+    </a>
 </p>
-            <p style="color: #888;">contact@tkhyl-ai.com</p>
-            <p style="color: #888;">+966 568 979 769</p>
+<br />
+<p style="color:#ccc;font-size:0.9rem;">
+    <i class="fas fa-phone"></i>
+    <a href="tel:+966568979769" style="color:#ccc;text-decoration:none;">
+        966568979769
+    </a>
+</p>
+<br />
+<p style="color:#ccc;font-size:0.9rem;">
+    <i class="fas fa-map-marker-alt"></i>
+    <a href="https://maps.app.goo.gl/1ZMUJ9L4vsjscCVw9"
+       target="_blank"
+       style="color:#ccc;text-decoration:none;">
+        استثماركوم حاضنة ومسرعة الأعمال<br>
+        حي, Ar Rabwah, Riyadh 12211
+    </a>
+</p>
+
+<br />
 
 
         </div>

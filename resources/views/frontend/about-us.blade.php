@@ -131,7 +131,7 @@ h1, h2, h3, h4, .section-title {
 <nav class="navbar">
     <div class="logo">
         <a href="#">
-            <img src="{{ asset('public/img/logo-text.png') }}" alt="تخيّل" class="logo-img">
+            <img src="{{ asset('public/img/cleint/log.jpg') }}" alt="تخيّل" class="logo-img">
         </a>
     </div>
 
@@ -230,7 +230,7 @@ h1, h2, h3, h4, .section-title {
 <footer>
     <div class="container footer-wrapper">
         <div class="footer-logo">
-            <img src="{{ asset('public/img/logo-text.png') }}" alt="تخيّل">
+           <img src="{{ asset('public/img/cleint/log.jpg') }}" alt="تخيّل" >
             <p style="color: #666; font-size: 0.9rem;">نحوّل الخيال إلى واقع رقمي مبهر.</p>
             <div class="socials">
            <a href="https://www.linkedin.com/company/tkhyl-sa" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -250,11 +250,32 @@ h1, h2, h3, h4, .section-title {
         </div>
         <div class="footer-links">
             <h4>تواصل</h4>
-            <p style="color: #ccc; font-size: 0.9rem;">استثماركوم حاضنة ومسرعة الأعمال
-حي, Ar Rabwah, Riyadh 12211
+              <p style="color:#ccc;font-size:0.9rem;">
+    <i class="fas fa-envelope"></i>
+    <a href="mailto:contact@tkhyl-ai.com" style="color:#ccc;text-decoration:none;">
+        contact@tkhyl-ai.com
+    </a>
 </p>
-           <p style="color: #888;">contact@tkhyl-ai.com</p>
-            <p style="color: #888;">+966 568 979 769</p>
+<br />
+<p style="color:#ccc;font-size:0.9rem;">
+    <i class="fas fa-phone"></i>
+    <a href="tel:+966568979769" style="color:#ccc;text-decoration:none;">
+        966568979769
+    </a>
+</p>
+<br />
+<p style="color:#ccc;font-size:0.9rem;">
+    <i class="fas fa-map-marker-alt"></i>
+    <a href="https://maps.app.goo.gl/1ZMUJ9L4vsjscCVw9"
+       target="_blank"
+       style="color:#ccc;text-decoration:none;">
+        استثماركوم حاضنة ومسرعة الأعمال<br>
+        حي, Ar Rabwah, Riyadh 12211
+    </a>
+</p>
+
+<br />
+
         </div>
     </div>
     <div class="copy">
