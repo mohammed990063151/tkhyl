@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مجتمعنا | تخيّل</title>
+        <meta name="description" content="تخيّل هي الوجهة الرائدة في السعودية للابتكار الرقمي، بناء الهويات، وصناعة المحتوى الإبداعي باستخدام أحدث التقنيات.">
+    <meta name="keywords" content="تخيل، تسويق رقمي، تصميم هوية، إنتاج فيديو، الرياض، ابتكار رقمي">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -23,7 +25,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Cairo', sans-serif;
+          font-family: 'IBM Plex Sans Arabic', sans-serif;
         }
 
         body {
@@ -38,7 +40,9 @@
             max-width: 1200px;
             margin: auto;
         }
-
+h1, h2, h3, h4, .section-title {
+    font-family: 'Lyon Arabic Display', serif;
+}
         section {
             padding: 60px 0;
         }
@@ -538,9 +542,10 @@
                     <img src="{{ asset('public/img/logo-text.png') }}" alt="تخيّل">
                     <p>We Will Do It Together.</p>
                     <div style="display: flex; gap: 15px; margin-top: 20px;">
-                        <a href="#" style="color: #fff;"><i class="fab fa-linkedin fa-lg"></i></a>
-                        <a href="#" style="color: #fff;"><i class="fab fa-instagram fa-lg"></i></a>
-                        <a href="#" style="color: #fff;"><i class="fab fa-twitter fa-lg"></i></a>
+                           <a href="https://www.linkedin.com/company/tkhyl-sa" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://www.instagram.com/tkhyl_sa" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@tkhyl_sa" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://x.com/tkhyl_sa" target="_blank"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
                 <div class="footer-links">
@@ -554,8 +559,11 @@
                 </div>
                 <div class="footer-links">
                     <h4 style="margin-bottom: 20px; color: var(--primary);">تواصل معنا</h4>
-                    <p style="color: #ccc; font-size: 0.9rem;">الرياض، المملكة العربية السعودية</p>
-                    <p style="color: #ccc; font-size: 0.9rem;">info@tkhyl-ai.com</p>
+                    <p style="color: #ccc; font-size: 0.9rem;">استثماركوم حاضنة ومسرعة الأعمال
+حي, Ar Rabwah, Riyadh 12211
+</p>
+                   <p style="color: #888;">contact@tkhyl-ai.com</p>
+            <p style="color: #888;">+966 568 979 769</p>
                 </div>
             </div>
             <div style="text-align: center; margin-top: 50px; color: #555; font-size: 0.8rem;">

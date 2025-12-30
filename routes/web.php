@@ -12,8 +12,9 @@ Route::get('/custom-login', function() {
 })->name('custom-login');
 
 
+Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
 
-Route::post('/contact-send', [ContactController::class, 'send'])->name('contact.send');
+// Route::post('/contact-send', [ContactController::class, 'send'])->name('contact.send');
 
 // 🔹 الصفحة الرئيسية للموقع (الفرونت إند)
 Route::get('/', function () {
@@ -71,7 +72,7 @@ Route::post('/contact-send', function (Request $request) {
 
 
 
-Route::post('/contact-send', [ContactController::class, 'send'])->name('contact.send');
+// Route::post('/contact-send', [ContactController::class, 'send'])->name('contact.send');
 
 
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
