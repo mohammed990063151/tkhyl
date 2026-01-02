@@ -287,7 +287,7 @@ h1, h2, h3, h4, .section-title {
     </div>
 </section>
 
-<a href="https://wa.me/966583116161" class="whatsapp-button" target="_blank">
+<a href="https://wa.me/966568979769" class="whatsapp-button" target="_blank">
     <i class="fab fa-whatsapp"></i>
     <span>تواصل معنا</span>
 </a>

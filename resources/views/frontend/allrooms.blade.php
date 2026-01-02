@@ -441,7 +441,7 @@ h1, h2, h3, h4, .section-title {
         {{-- <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div> --}}
 
     </nav>
-
+{{--
     <section class="hero">
         <div class="container hero-grid">
             <div data-aos="fade-left">
@@ -528,9 +528,115 @@ h1, h2, h3, h4, .section-title {
                 <a href="#">انضم إلينا الآن</a>
             </div>
         </div>
-    </section>
+    </section> --}}
  {{-- <section> --}}
-    <a href="https://wa.me/966583116161" class="whatsapp-button" target="_blank">
+    <section class="hero">
+    <div class="container hero-grid">
+        <div data-aos="fade-left">
+            <h1>مجتمع <span>تخيّل</span><br>ليس مجرد تجمع… بل رحلة في السعودية</h1>
+            <p>
+                أنشأنا مجتمعًا يؤمن أن النجاح يُبنى بالمشاركة، التجربة، والدعم الحقيقي بين المبدعين ورواد الأعمال في السعودية.
+            </p>
+
+            <div class="stats">
+                <div class="stat">
+                    <h3>500+</h3>
+                    <p>عضو نشط</p>
+                </div>
+                <div class="stat">
+                    <h3>40+</h3>
+                    <p>ورشة عمل</p>
+                </div>
+                <div class="stat">
+                    <h3>120+</h3>
+                    <p>فرصة تعاون</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-box" data-aos="zoom-in">
+            <h3 style="margin-bottom: 15px; color: var(--primary);">ماذا يميزنا؟</h3>
+            <p>
+                نحن لا نبحث عن الأعداد، بل عن العقول الطموحة التي تسعى لترك بصمة حقيقية في عالم النمو الرقمي.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section style="background: #fff;">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">عن مجتمع تخيّل</h2>
+
+        <div style="max-width: 900px; margin: auto; line-height: 2; font-size: 1.05rem;" data-aos="fade-up">
+
+            <p>
+                مجتمع تخيّل هو الباكورة التي انطلقت منها الشركة، والنواة الأساسية التي تشكّل عليها الكيان الذي نحن عليه اليوم. بدأ كمبادرة لبناء مجموعات متخصصة تهدف إلى تبادل الخبرات والمعرفة، وتطوّر ليصبح مجتمعًا مهنيًا فاعلًا يجمع روّاد الأعمال والخبراء وصنّاع القرار في بيئة قائمة على الثقة والتأثير.
+            </p>
+
+            <p>
+                يرتكز المجتمع في أساسه على مجموعات واتساب متخصصة عبر واتساب، تضم نخبة من المستشارين والخبراء، ومقسّمة حسب مجالات محددة تشمل:
+            </p>
+
+            <ul style="margin: 15px 25px;">
+                <li>التقنية المالية</li>
+                <li>التجارة الإلكترونية</li>
+                <li>المطاعم والمقاهي</li>
+                <li>تجربة العميل</li>
+                <li>التجزئة</li>
+                <li>الجملة</li>
+            </ul>
+
+            <p>
+                ومن خلال هذه المجموعات، انطلقت لقاءات دورية ومساحات حوارية متخصصة عبر منصة X، أسهمت في تعميق النقاشات، وبناء علاقات مهنية قوية، وتحويل المعرفة المتبادلة إلى فرص عملية وشراكات حقيقية.
+            </p>
+
+            <p>
+                وقد شكّلت هذه اللقاءات والمجموعات البيئة التي بُنيت فيها الثقة، والتي نتج عنها دخول مستثمرين وشركاء استراتيجيين إلى الشركة، إيمانًا بقوة المجتمع، وجودة الحوار، وعمق العلاقات التي نشأت داخله.
+            </p>
+
+            <p>
+                في تخيّل، نؤمن أن المجتمعات المتخصصة والعلاقات هي نقطة القوة لأي كيان ناجح، وأن اللقاءات الهادفة والتواصل المستمر هما الأساس الحقيقي لبناء الشركات والاستثمارات المستدامة
+            </p>
+
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">ماذا ستجد في الداخل؟</h2>
+        <div class="glass-grid">
+            <div class="glass" data-aos="fade-up">
+                <i class="fas fa-users"></i>
+                <h3>عقول ملهمة</h3>
+                <p>تواصل مع نخبة من الخبراء والمبدعين الذين يشاركونك نفس الشغف والاهتمام.</p>
+            </div>
+            <div class="glass" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-brain"></i>
+                <h3>محتوى تطبيقي</h3>
+                <p>دروس من واقع السوق وتجارب حقيقية بعيداً عن التنظير الأكاديمي المجرد.</p>
+            </div>
+            <div class="glass" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-rocket"></i>
+                <h3>نمو متسارع</h3>
+                <p>احصل على الدعم اللازم لإطلاق مشروعك أو تطوير مهاراتك بشكل احترافي.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="cta" data-aos="flip-up">
+            <h2>هل أنت مستعد للتغيير؟</h2>
+            <p>انضم الآن إلى المجتمع الرقمي الأكثر تفاعلاً في السعودية</p>
+            <a href="#">انضم إلينا الآن</a>
+        </div>
+    </div>
+</section>
+
+
+    <a href="https://wa.me/966568979769" class="whatsapp-button" target="_blank">
         <i class="fab fa-whatsapp"></i>
         <span>تواصل معنا</span>
     </a>
