@@ -33,6 +33,7 @@
 @include('frontend.layouts.head')
 
 <body>
+    @include('partials.google-tag-manager-body')
     @include('frontend.layouts.header')
     @yield('content')
 

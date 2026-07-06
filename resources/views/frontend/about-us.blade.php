@@ -2,6 +2,8 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+    @include('partials.google-tag-manager-head')
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>من نحن | تخيّل - ابتكار رقمي سعودي</title>
@@ -127,6 +129,7 @@ h1, h2, h3, h4, .section-title {
 </head>
 
 <body>
+    @include('partials.google-tag-manager-body')
 
 <nav class="navbar">
     <div class="logo">
