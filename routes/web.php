@@ -14,26 +14,32 @@ Route::get('/custom-login', function() {
 
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
 
-// 🔹 الصفحة الرئيسية للموقع
+// 🔹 الصفحة الرئيسية — Elite Plus
 Route::get('/', function () {
-    return view('frontend.home3'); // أو home4 إذا أردت
+    return view('frontend.elite-home');
 })->name('frontend.home');
 
-// 🔹 صفحة home4 للاختبار
-Route::get('/home4', function () {
-    return view('frontend.home4');
-})->name('frontend.home4');
+// 🔹 أقسام Elite Plus (روابط الناف بار في الموقع الأصلي)
+Route::get('/portfolio', fn () => redirect('/#sectors'))->name('elite.portfolio');
+Route::get('/sectors', fn () => redirect('/#sectors'))->name('elite.sectors');
+Route::get('/platform', fn () => redirect('/#platform'))->name('elite.platform');
+Route::get('/partnership', fn () => redirect('/#partnership'))->name('elite.partnership');
+Route::get('/request-access', fn () => redirect('/#contact'))->name('elite.request-access');
 
-// 🔹 رابط اختبار سريع
+// 🔹 نسخ الصفحات الرئيسية السابقة
+Route::get('/home1', fn () => view('frontend.home1'))->name('frontend.home1');
+Route::get('/home2', fn () => view('frontend.home2'))->name('frontend.home2');
+Route::get('/home3', fn () => view('frontend.home3'))->name('frontend.home3');
+Route::get('/home4', fn () => view('frontend.home4'))->name('frontend.home4');
+
 Route::get('/test-page', function() {
     return "<h1 style='color: green; text-align: center; margin-top: 50px;'>
             ✅ الصفحة تعمل بدون قاعدة بيانات!
             </h1>";
 });
 
-// 🔹 رابط آخر للاختبار
 Route::get('/test-simple', function() {
-    return view('test'); // ستقوم بإنشاء هذا الملف
+    return view('test');
 });
 
 Route::get('/dashboard', function () {
@@ -46,7 +52,6 @@ Route::get('/contact', function () {
     return view('frontend.Contact');
 })->name('contact');
 
-// بقية الروابط...
 Route::get('/our-services', function () {
     return view('frontend.our_services');
 })->name('frontend.our-services');
@@ -91,3 +96,9 @@ Route::get('/rooms', function () {
 
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// SPA fallback — أي مسار غير معرّف يفتح Elite Plus (مثل الموقع الأصلي)
+Route::get('/{any}', function () {
+    return view('frontend.elite-home');
+})->where('any', '^(?!api|sanctum|storage|assets|public|vendor|build|css|js|img|fonts).*$')
+  ->name('frontend.spa-fallback');
