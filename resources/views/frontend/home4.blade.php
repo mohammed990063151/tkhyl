@@ -3,6 +3,8 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+    @include('partials.google-tag-manager-head')
+
     <!-- ================= BASIC SEO ================= -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -198,6 +200,7 @@ h1, h2, h3, h4, .section-title {
 </head>
 
 <body>
+    @include('partials.google-tag-manager-body')
 
 <nav class="navbar">
     <div class="logo">

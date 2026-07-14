@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    @include('partials.google-tag-manager-head')
 
     <meta charset="utf-8">
     <meta name="author" content="templatemo">
@@ -468,6 +469,7 @@ https://templatemo.com/tm-577-liberty-market
 </head>
 
 <body>
+    @include('partials.google-tag-manager-body')
 
     <!-- ***** Preloader Start ***** -->
     <div id="js-preloader" class="js-preloader">

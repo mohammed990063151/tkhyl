@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    @include('partials.google-tag-manager-head')
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تخيل - منصة التسويق والإبداع</title>
@@ -443,6 +445,8 @@
     </style>
 </head>
 <body style="direction: rtl;">
+    @include('partials.google-tag-manager-body')
+
     <!-- Theme Toggle Button -->
     <button id="themeToggle" class="theme-toggle-btn" title="تبديل الوضع الليلي/النهاري">
         🌙
